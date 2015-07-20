@@ -1,0 +1,41 @@
+/* @group Inscription */
+
+		.form-retour { margin-top: 20px; text-align: center; }
+
+	/* @end Inscription */
+
+
+
+		/* @group Mon profil */
+
+			// Menu Dashboard
+			.menu-dashboard { margin: 20px 0 50px;
+				.menu { .clearfix; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid @texte2;
+					li { float: left; width: 25%; 
+						a { display: block; padding: 10px; color: @texte2; text-align: center; text-transform: uppercase; border-bottom: 4px solid #FFF;
+							&:hover, &:focus, &.active { border-bottom: 4px solid @vertAplat; }
+						}
+					}
+				}
+			}
+
+			.bloc-profil { .clearfix;
+				.profil-header { position: relative; border-bottom: 1px dashed @texte;
+					.check { position: absolute; top: 0; left: 0; .text-hidden; .ico-check;
+						&:before { position: absolute; top: 0; left: 0; font-size: 3em; line-height: 0.5; color: @vertTexte; }
+					}
+					&.actif {
+						.btn-edit { display: none; }
+					}
+					h2 { font-family: 'brandon_grotesqueblack'; font-size: 1.15em; font-weight: normal; text-align: center; text-transform: uppercase; }
+					.btn-edit { position: absolute; top: 0; right: 0;
+						a { .ico-pencil; color: @texte; 
+							&:after { margin-left: 5px; }
+						}
+					}
+				}
+			}
+
+		
+
+	/* @end Mon profil */

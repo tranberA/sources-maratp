@@ -5,6 +5,8 @@ var less = require('gulp-less');
 var uglify = require('gulp-uglify');
 var resolveDependencies = require('gulp-resolve-dependencies');
 
+var fileinclude = require('gulp-file-include');
+
 //var imagemin = require('gulp-imagemin');
 
 var basePaths = {
@@ -12,9 +14,11 @@ var basePaths = {
   dest: '../dist/'
 }
 
-gulp.task('default', ['less','js'], function() {
+
+gulp.task('default', ['less','js','fileinclude'], function() {
   gulp.watch(basePaths.src+'less/**/*.less', ['less']);
   gulp.watch(basePaths.src+'js/**/*.js', ['js']);
+  gulp.watch(basePaths.src+'html/**/*.html',['fileinclude']);
   //gulp.watch(basePaths.src+'images/**/*', ['images']);
 });
 
@@ -25,6 +29,16 @@ gulp.task('less', function () {
     //.pipe(concat('core.css'))
     .pipe(gulp.dest(basePaths.dest+'css'));
 });
+
+gulp.task('fileinclude', function() {
+  gulp.src(basePaths.src+'html/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest(basePaths.dest));
+});
+
 
 gulp.task('js', function () {
   gulp.src(basePaths.src+'js/core.js')

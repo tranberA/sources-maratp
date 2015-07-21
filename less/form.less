@@ -78,8 +78,7 @@
 
 		&:focus {
 			outline: none;
-			background: @vert-lighter;
-			border-color: @vertTexte;
+			border-color: @border;
 		}
 	}
 
@@ -110,6 +109,7 @@
 	.form-type-number,
 	.form-type-code-postal {
 		width: 40%;
+
 		input { width: 100%; }
 	}
 
@@ -207,14 +207,6 @@
 		padding-left: 2px;
 	}
 
-	input[type="radio"]:focus + label::before,
-	input[type="checkbox"]:focus + label::before {
-  	/* add focus effect for radio and check buttons */
-  	outline: none;
-		background: @vert-lighter;
-		border-color: @vertTexte;
-}
-
 	input[type="radio"]:checked + label::after,
 	input[type="checkbox"]:checked + label::after {
 		display: block;
@@ -268,7 +260,7 @@
 		background: url('../img/cd-required.svg') no-repeat top right;
 	}
 
-	.messages { display: none; // A EFFACER 
+	.messages {  // A EFFACER 
 		color: @texte;
 		font-family: @primary-font;
 		font-size: 1em;
@@ -328,5 +320,4 @@
 			.transform(scale(.9));
 		}
 	}
-
 

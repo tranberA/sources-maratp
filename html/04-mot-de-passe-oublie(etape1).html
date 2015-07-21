@@ -1,22 +1,9 @@
-<!doctype html>
-<html lang="fr"><!--<html lang="en">-->
-	<head>
-		<meta charset="utf-8" />
-		<title>Mon profil - Réinitialisation du Mot de passe - Etape 1</title>
-		<link rel="shortcut icon" href="img/favicon.ico" />
-		<link rel="stylesheet" href="css/core.css" type="text/css" title="maRATP" />
-		<!--[if IE 8]><script src="js/jquery-1.11.3.min.js" type="text/javascript"></script><![endif]-->
-		<!--[if gte IE 9]><script src="js/jquery-2.1.4.min.js" type="text/javascript"></script><![endif]-->
-		<!--[if !IE]><!--><script src="js/jquery-2.1.4.min.js" type="text/javascript"></script><!--<![endif]-->
-	</head>
+
+	@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Réinitialisation du Mot de passe - Etape 1"})
 <body>
 
 	<div id="maratp">
-		<ul id="skiplinks">
-				<li><a href="#main">Aller au contenu</a></li>
-				<li><a href="#navigation">Aller au menu</a></li>
-				<li><a href="#search">Aller à la recherche</a></li>
-			</ul>
+		@@include('./inc/parts/skip-links.html')
 
 			<section>
 				@@include('./inc/parts/header.html')
@@ -47,5 +34,6 @@
 
 
 	</div>
-	<script src="js/maratp.js" type="text/javascript"></script>
+  @@include('./inc/parts/foot.html')
 </body>
+</html>

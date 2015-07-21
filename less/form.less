@@ -48,15 +48,25 @@
 		color: @texte;
 	}
 
+  input,textarea
+  {
+    &:focus
+    {
+      background-color: #e7fdfb !important;
+      border-color: #86c7bd !important;
+      //color: #86c7bd;
+    }
+  }
+
 	label {
 		font-size: 0.8em;
 		color: @vertTexte;
 	}
 
-	input[type="text"], 
-	input[type="email"], 
-	input[type="password"], 
-	textarea, 
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea,
 	select,
 	legend {
 		display: block;
@@ -65,11 +75,11 @@
 		.placeholder;
 	}
 
-	input[type="text"], 
-	input[type="email"], 
-	input[type="password"], 
-	input[type="number"], 
-	textarea, 
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"],
+	textarea,
 	select {
 		/* general style for input elements */
 		padding: 12px;
@@ -157,7 +167,7 @@
 		z-index: 2;
 	}
 
-	input[type="radio"] + label, 
+	input[type="radio"] + label,
 	input[type="checkbox"] + label {
 		padding-left: 24px;
 	}
@@ -260,7 +270,7 @@
 		background: url('../img/cd-required.svg') no-repeat top right;
 	}
 
-	.messages {  // A EFFACER 
+	.messages {  // A EFFACER
 		color: @texte;
 		font-family: @primary-font;
 		font-size: 1em;
@@ -274,7 +284,7 @@
 		color: red !important;
 	}
 
-	
+
 } /* fin bloc-formulaire */
 
 
@@ -285,13 +295,13 @@
 		p { margin: 0; }
 		a { font-family: @primary-font-bold; color: @texte; }
 	}
-	
+
 }
 
 // boutons > lien
-.bloc-btn { 
-	margin: 20px 0; 
-	text-align: center; 
+.bloc-btn {
+	margin: 20px 0;
+	text-align: center;
 }
 
 .btn {
@@ -320,4 +330,3 @@
 			.transform(scale(.9));
 		}
 	}
-

@@ -10,7 +10,7 @@
 		<!--[if !IE]><!--><script src="js/jquery-2.1.4.min.js" type="text/javascript"></script><!--<![endif]-->
 	</head>
 <body>
-	
+
 	<div id="maratp">
 		<ul id="skiplinks">
 				<li><a href="#main">Aller au contenu</a></li>
@@ -19,15 +19,12 @@
 			</ul>
 
 			<section>
-				<header class="mini-header" role="banner">
-					<p class="logo"><a href="#" title="RATP, aimer la ville - Accueil"><img src="img/maRATPmini@2x.png" alt="RATP, aimer la ville" height="111" width="189" /></a></p>
-					<h1>Mon dashboard</h1>
-					<div class="closePage"><a href="">X</a></div>
-				</header>
+				
+				@@include('./inc/parts/mini-header.html')
 
 				<main role="main" id="main" tabindex="-1">
 					<section class="container">
-						
+
 						<div class="menu-dashboard">
 							<ul class="menu">
 								<li class="first"><a class="active" href="#">Mon profil</a></li>
@@ -253,7 +250,7 @@
 							<div class="profil-body">
 
 								<div class="bloc-formulaire">
-									<form accept-charset="UTF-8" method="" action="">	
+									<form accept-charset="UTF-8" method="" action="">
 
 										<div class="form-item form-type-number">
 									    <label for="nombreEnfant" class="visually-hidden">Nombre d'enfants</label>
@@ -278,7 +275,7 @@
 										</div>
 
 									</form>
-								</div>								
+								</div>
 
 							</div>
 						</article>

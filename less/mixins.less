@@ -46,6 +46,12 @@
   -ms-user-select: @variable;
 }
 
+.border-radius(@variable) {
+  -moz-border-radius: @variable;
+  -webkit-border-radius: @variable;
+  border-radius: @variable;
+}
+
 // équivalent text-indent pour accéssibilité
 .visually-hidden { /*http://developer.yahoo.com/blogs/ydn/posts/2012/10/clip-your-hidden-content-for-better-accessibility/*/
     position: absolute !important;
@@ -74,8 +80,8 @@
 }
 
 .transition (@transition) {
-  -webkit-transition: @transition;  
+  -webkit-transition: @transition;
   -moz-transition:    @transition;
-  -ms-transition:     @transition; 
-  -o-transition:      @transition;  
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
 }

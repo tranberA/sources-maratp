@@ -1,0 +1,131 @@
+.block-article
+{
+  border: 1px solid #ececec;
+
+  border-top-width: 4px;
+  border-top-color: @vertAplat;
+
+  & + .block-article
+  {
+    margin-top: 2em;
+  }
+
+  p
+  {
+    margin: 0;
+  }
+
+  header
+  {
+    background-color: #eaeaea;
+    overflow: hidden;
+
+    h3
+    {
+      margin: 0.2em 0 0.4em;
+      font-size: 1.2em;
+    }
+
+    p
+    {
+      &.rubrique
+      {
+        font-size: 0.8em;
+      }
+
+      &.date
+      {
+        font-size: 0.8em;
+      }
+    }
+
+    .meta
+    {
+      float: left;
+      text-transform: uppercase;
+      padding: 1em 1em 0;
+    }
+
+    figure
+    {
+      float: right;
+
+      img
+      {
+        display: block;
+      }
+    }
+  }
+
+  .block-content
+  {
+    padding: 1em;
+
+    h4
+    {
+      text-transform: uppercase;
+      margin: 0 0 0.6em;
+      font-size: 1.1em;
+    }
+
+    p
+    {
+      margin: 0 0 0.4em;
+    }
+  }
+
+  footer
+  {
+    overflow: hidden;
+    padding: 0 1em 1em;
+  }
+
+  .block-action
+  {
+    display: inline-block;
+    background-color: @vertAplat;
+    color: #fff;
+    padding: 0.8em 5em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  .action
+  {
+    float: left;
+  }
+
+  .lieu
+  {
+    float: right;
+    text-align: right;
+
+    p
+    {
+      margin: 0;
+    }
+  }
+
+  .metro
+  {
+    display: inline-block;
+    line-height: 1.4;
+    width: 1.4em;
+    text-align: center;
+    .border-radius(50%);
+    font-weight: bold;
+    margin-left: 0.5em;
+
+    &.ligne-2
+    {
+      background-color: #0461b0;
+      color: #fff;
+    }
+
+    &.ligne-12
+    {
+      background-color: #0a793d;
+      color: #fff;
+    }
+  }
+}

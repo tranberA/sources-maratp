@@ -22,18 +22,36 @@
 	legend {
 		padding-bottom: 10px;
 		margin-bottom: 20px;
-		font-size: 2rem;
+		font-size: 2em;
 		border-bottom: 1px solid @border;
 	}
 
-	div {
+	.form-item {
 		/* form element wrapper */
-		position: relative;
-		margin: 20px 0;
+		position: relative; 
+		margin: 40px 0;
+		background-color:#FFF;
+		border: 1px solid @border;
+		z-index: 1; 
+
+		&:focus {
+			outline: none;
+			background-color: @vert-lighter;
+			border-color: @vertTexte;
+		}
+
+		.visually-hidden {
+			 + select,
+			 + input { width: 100%; }
+		}
+	}
+
+	p + .form-item { 
+		margin-top: 10px;
 	}
 
 	h4 {
-		font-size: 1.3rem;
+		font-size: 1.3em;
 		color: @texte;
 		margin-bottom: 10px;
 	}
@@ -44,7 +62,7 @@
 
 	input, textarea, select, label, .label {
 		font-family: @primary-font;
-		font-size: 1.6rem;
+		font-size: 1em;
 		color: @texte;
 	}
 
@@ -59,8 +77,15 @@
   }
 
 	label {
-		font-size: 0.8em;
+		font-size: 1em;
 		color: @vertTexte;
+		display: inline-block;
+		padding-left: 0.5em;
+		pointer-events: none;
+		overflow: hidden;
+		.transition(transform 0.25s ease-in-out);
+		z-index: 100;
+		vertical-align: middle;
 	}
 
 	input[type="text"],
@@ -82,20 +107,23 @@
 	textarea,
 	select {
 		/* general style for input elements */
-		padding: 12px;
-		border: 1px solid @border;
-		background-color:#FFF;
+		display: inline-block;
+		width: auto;
+		padding: 0.75em 0.75em 0.75em 0.5em;
+		background: #FFF;
+		border: none;
+		vertical-align: middle;
+		
 
 		&:focus {
 			outline: none;
-			border-color: @border;
 		}
 	}
 
 	.form-type-select {
 		/* select element wapper */
 		position: relative;
-		width: 40%;
+		width: 60%;
 		.ico-fleche-bottom;
 
 		&:after {
@@ -113,14 +141,13 @@
 		  top: 0;
 		  text-align: center;
 		}
+
 	}
 
 	.form-type-date,
 	.form-type-number,
 	.form-type-code-postal {
-		width: 40%;
-
-		input { width: 100%; }
+		width: 60%;
 	}
 
 	.form-type-checkbox {
@@ -270,13 +297,14 @@
 		background: url('../img/cd-required.svg') no-repeat top right;
 	}
 
-	.messages {  // A EFFACER
+
+	.messages {  display:none; // A EFFACER 
 		color: @texte;
 		font-family: @primary-font;
 		font-size: 1em;
 		text-align: left;
 		.font-smoothing;
-		margin: 0;
+		margin: -25px 0 0;
 		padding: 10px 0;
 	}
 
@@ -330,3 +358,19 @@
 			.transform(scale(.9));
 		}
 	}
+
+
+
+// effet sur les labels
+
+.bloc-formulaire form .input--filled label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 0;
+	font-size: 0.8em;
+	font-weight: bold;
+	-webkit-transform: translate3d(0, -20px, 0);
+	transform: translate3d(0, -20px, 0);
+
+}

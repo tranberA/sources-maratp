@@ -1,0 +1,332 @@
+/* styles pour les formulaires */
+
+// Champs de recherche du surheader
+ header {
+ 	form { position: relative; }
+	input[type="search"] { -webkit-appearance: none; background-color: #fff; border: none; border-left: solid 1px #e5e4e3; border-right: solid 1px #e5e4e3; color: #787778; font-size: 1em; font-weight: bold; margin: 0; padding: 9px 25px 10px 10px; vertical-align: bottom; }
+	input[type="image"] { margin-top: -8px; position: absolute; right: 10px; top: 50%; }
+ }
+
+// formulaire dans le contenu
+.bloc-formulaire form {
+
+	width: 90%;
+	max-width: 695px; // breakpoints inside partials > _layout.scss
+	margin: 2em auto;
+	.clearfix;
+
+	fieldset {
+		margin: 24px 0;
+	}
+
+	legend {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		font-size: 2rem;
+		border-bottom: 1px solid @border;
+	}
+
+	div {
+		/* form element wrapper */
+		position: relative;
+		margin: 20px 0;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+		color: @texte;
+		margin-bottom: 10px;
+	}
+
+	.label {
+		display: block;
+	}
+
+	input, textarea, select, label, .label {
+		font-family: @primary-font;
+		font-size: 1.6rem;
+		color: @texte;
+	}
+
+	label {
+		font-size: 0.8em;
+		color: @vertTexte;
+	}
+
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"], 
+	textarea, 
+	select,
+	legend {
+		display: block;
+		width: 100%;
+		.appearance(none);
+		.placeholder;
+	}
+
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"], 
+	input[type="number"], 
+	textarea, 
+	select {
+		/* general style for input elements */
+		padding: 12px;
+		border: 1px solid @border;
+		background-color:#FFF;
+
+		&:focus {
+			outline: none;
+			background: @vert-lighter;
+			border-color: @vertTexte;
+		}
+	}
+
+	.form-type-select {
+		/* select element wapper */
+		position: relative;
+		width: 40%;
+		.ico-fleche-bottom;
+
+		&:after {
+			/* arrow icon for select element */
+   	 	border-left: 1px solid @border;
+		  display: block;
+		  font-size:0.5em;
+		  line-height: 50px;
+		  min-height: 50px;
+		  min-width: 50px;
+		  // padding: 0 3%;
+		  pointer-events: none;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  text-align: center;
+		}
+	}
+
+	.form-type-date,
+	.form-type-number,
+	.form-type-code-postal {
+		width: 40%;
+		input { width: 100%; }
+	}
+
+	.form-type-checkbox {
+		label {
+			color: @texte;
+			font-size: 1em;
+			font-family: @primary-font-bold;
+		}
+	}
+
+	select {
+		cursor: pointer;
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	.form-radios, .form-radios {
+		margin-top: 16px;
+		.clearfix;
+
+		.form-item {
+			/* wrapper for radio and checkbox input types */
+			display: inline-block;
+			position: relative;
+			.user-select(none);
+			margin: 0 26px 16px 0;
+			float: left;
+		}
+	}
+
+
+	input[type=radio],
+	input[type=checkbox] {
+		/* hide original check and radio buttons */
+		position: absolute;
+		left: 0;
+		top: 50%;
+		.transform(translateY(-50%));
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+		z-index: 2;
+	}
+
+	input[type="radio"] + label, 
+	input[type="checkbox"] + label {
+		padding-left: 24px;
+	}
+
+	input[type="radio"] + label::before,
+	input[type="radio"] + label::after,
+	input[type="checkbox"] + label::before,
+	input[type="checkbox"] + label::after {
+		/* custom radio and check boxes */
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -8px;
+		width: 16px;
+		height: 16px;
+		color: @vertTexte;
+	}
+
+	input[type="radio"] + label::before,
+	input[type="checkbox"] + label::before {
+		border: 1px solid @border;
+		background: #FFF;
+	}
+
+	input[type="radio"] + label::after,
+	input[type="checkbox"] + label::after {
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: none;
+	}
+
+	input[type="radio"] + label::after {
+		/* custom image for radio button */
+		/* background-image: url('../img/cd-icon-radio.svg'); */
+		content: "●";
+		font-size: 0.9em;
+		padding-left: 2px;
+	}
+
+	input[type="checkbox"] + label::after {
+		/* custom image for checkbox */
+		/* background-image: url('../img/cd-icon-check.svg'); */
+		content: "✔";
+		font-size: 0.9em;
+		padding-left: 2px;
+	}
+
+	input[type="radio"]:focus + label::before,
+	input[type="checkbox"]:focus + label::before {
+  	/* add focus effect for radio and check buttons */
+  	outline: none;
+		background: @vert-lighter;
+		border-color: @vertTexte;
+}
+
+	input[type="radio"]:checked + label::after,
+	input[type="checkbox"]:checked + label::after {
+		display: block;
+	}
+
+	textarea {
+		min-height: 200px;
+		resize: vertical;
+		overflow: auto;
+	}
+
+	input[type="submit"],
+	button[type="submit"],
+	.btn {
+		/* button style */
+		border: none;
+		background: @vertAplat;
+		padding: 10px 20px;
+		margin-top: 10px;
+		color: #FFF;
+		font-size: @primary-font-bold;
+		font-weight: normal;
+		cursor: pointer;
+		text-transform: uppercase;
+		.font-smoothing;
+		.appearance(none);
+
+		.no-touch &:hover {
+			background: @vertTexte;
+		}
+
+		&:focus {
+			outline: none;
+			background: @vertTexte;
+		}
+
+		&:active {
+			.transform(scale(.9));
+		}
+	}
+
+	.form-actions {
+		clear: both;
+		text-align: center;
+
+		a { font-family: @primary-font-bold; color: @texte; text-decoration: underline;}
+	}
+
+
+	[required] {
+		background: url('../img/cd-required.svg') no-repeat top right;
+	}
+
+	.messages { display: none; // A EFFACER 
+		color: @texte;
+		font-family: @primary-font;
+		font-size: 1em;
+		text-align: left;
+		.font-smoothing;
+		margin: 0;
+		padding: 10px 0;
+	}
+
+	.error {
+		color: red !important;
+	}
+
+	
+} /* fin bloc-formulaire */
+
+
+// ajustements
+
+.bloc-formulaire form {
+	.user-links { float: right; margin: 0;
+		p { margin: 0; }
+		a { font-family: @primary-font-bold; color: @texte; }
+	}
+	
+}
+
+// boutons > lien
+.bloc-btn { 
+	margin: 20px 0; 
+	text-align: center; 
+}
+
+.btn {
+		/* button style */
+		border: none;
+		background: @vertAplat;
+		display: inline-block;
+		padding: 10px 20px;
+		margin-top: 10px;
+		color: #FFF;
+		font-weight: normal;
+		font-size: 0.9em;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-family: @primary-font-bold;
+		.font-smoothing;
+		.appearance(none);
+
+
+		&:focus {
+			outline: none;
+			background: @vertTexte;
+		}
+
+		&:active {
+			.transform(scale(.9));
+		}
+	}
+
+

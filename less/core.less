@@ -64,7 +64,7 @@ abbr {
 
 /* ==> STRUCTURE */
 
-	#maratp { position: relative; width: @L; min-height: 100%; margin: 0 auto; background-color: #fff;
+	#maratp { position: relative; max-width: @L; min-height: 100%; margin: 0 auto; background-color: #fff;
 		 h1.page-title { font-family: @primary-font-bold; font-size: 1.3em; font-weight: normal; text-align: center; text-transform: uppercase; }
 		 .chapo { font-family: @primary-font-bold; font-size: 1.15em; text-align: center; }
 
@@ -211,14 +211,14 @@ abbr {
 			}
 		}
 
+.stretch-content
+{
+	width: 60%;
+	margin: 0 auto;
+}
+
 body
 {
-	.stretch-content
-	{
-		width: 60%;
-		margin: 0 auto;
-	}
-
 	& > footer { padding: 32px 0 0 0; font-family: "Parisine",Arial,Helvetica,sans-serif;
 		h1 { margin: 0 0 26px 0; border-bottom: solid 1px @gray-dark; text-align: left;}
 		h2 { font-weight: normal; }

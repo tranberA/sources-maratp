@@ -13,35 +13,38 @@
 				<main role="main" id="main" tabindex="-1">
 					<section>
 						<h1 class="page-title">Connexion</h1>
-						<p class="chapo">Tous les champs sont obligatoires</p>
 
 						<div class="bloc-formulaire">
 							<form accept-charset="UTF-8" method="" action="">
 
 							  <div class="form-item">
-							    <label for="mail" class="visually-hidden">Email</label>
-							    <input type="email" class="form-control" id="mail" placeholder="Email">
+							    <label for="mail">Email<span class="form-required" title="Ce champ est requis.">*</span></label>
+							    <input type="email" class="form-control" id="mail" placeholder="(ex: mail@domaine.com)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
 							  <div class="form-item">
-							    <label for="password" class="visually-hidden">Mot de passe</label>
-							    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+							    <label for="password">Mot de passe<span class="form-required" title="Ce champ est requis.">*</span></label>
+							    <input type="password" class="form-control" id="password" placeholder="(8 caractères min.)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
 								<div class="form-item form-type-checkbox">
-								  <input for="connecte" type="checkbox" value="">
-								  <label id="connecte"> Rester connecté </label>
+								  <input id="connecte" type="checkbox" value="">
+								  <label for="connecte">Rester connecté</label>
 
 								  <div class="user-links">
 										<p><a href="">Mot de passe oublié ?</a></p>
 									</div>
 								</div>
 
+								<div class="details">
+									<p>* Champ obligatoire</p>
+								</div>
+
 								<div class="form-actions">
-									<button type="submit" class="btn">Se connecter</button>
-									<p>Pas encore inscrit ? <a href="">Inscrivez-vous</a></p>
+									<button type="submit" class="btn">Me connecter</button>
+									<p>Pas encore inscrit ? <a href="">je m'inscris</a></p>
 								</div>
 
 							</form>

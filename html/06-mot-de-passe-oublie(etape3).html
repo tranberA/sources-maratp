@@ -11,14 +11,13 @@
 				<main role="main" id="main" tabindex="-1">
 					<section>
 						<h1 class="page-title">Mot de passe oublié</h1>
-						<p class="chapo">Merci de saisir un mot de passe composé de 8 caractères minimum :</p>
 
 						<div class="bloc-formulaire">
 							<form accept-charset="UTF-8" method="" action="">
 
 							  <div class="form-item">
-							    <label for="password" class="visually-hidden">Mot de passe</label>
-							    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+							    <label for="password">Mot de passe<span class="form-required" title="Ce champ est requis.">*</span></label>
+							    <input type="password" class="form-control" id="password" placeholder="(8 caractères min.)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
@@ -29,7 +28,7 @@
 							  </div>
 
 								<div class="form-actions">
-									<button type="submit" class="btn">Envoyer</button>
+									<button aria-label="Je valide mon nouveau mot de passe" type="submit" class="btn">Envoyer</button>
 								</div>
 
 							</form>

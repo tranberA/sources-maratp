@@ -40,6 +40,13 @@ gulp.task('fileinclude', function() {
 });
 
 
+gulp.task('drupal', function() {
+  gulp.src(basePaths.src+'drupal/**/*.*')
+    
+    .pipe(gulp.dest(basePaths.dest));
+});
+
+
 gulp.task('js', function () {
   gulp.src(basePaths.src+'js/core.js')
   .pipe(resolveDependencies({

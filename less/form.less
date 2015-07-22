@@ -142,6 +142,8 @@
 		  text-align: center;
 		}
 
+		
+
 	}
 
 	.form-type-date,
@@ -150,7 +152,7 @@
 		width: 60%;
 	}
 
-	.form-type-checkbox {
+	.form-type-checkbox { border: none;
 		label {
 			color: @texte;
 			font-size: 1em;
@@ -363,14 +365,21 @@
 
 // effet sur les labels
 
-.bloc-formulaire form .input--filled label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding-left: 0;
-	font-size: 0.8em;
-	font-weight: bold;
-	-webkit-transform: translate3d(0, -20px, 0);
-	transform: translate3d(0, -20px, 0);
+.bloc-formulaire form .input--filled { background-color: @vert-lighter; border: 1px solid @vertTexte;
+
+	input {
+	 background-color: @vert-lighter; 
+	}
+
+	label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-left: 0;
+		font-size: 0.8em;
+		font-weight: bold;
+		-webkit-transform: translate3d(0, -20px, 0);
+		transform: translate3d(0, -20px, 0);
+	}
 
 }

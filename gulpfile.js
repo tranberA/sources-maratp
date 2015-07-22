@@ -15,10 +15,11 @@ var basePaths = {
 }
 
 
-gulp.task('default', ['less','js','fileinclude'], function() {
+gulp.task('default', ['less','js','fileinclude','font'], function() {
   gulp.watch(basePaths.src+'less/**/*.less', ['less']);
   gulp.watch(basePaths.src+'js/**/*.js', ['js']);
   gulp.watch(basePaths.src+'html/**/*.html',['fileinclude']);
+  gulp.watch(basePaths.src+'font/**/*.*',['font']);
   //gulp.watch(basePaths.src+'images/**/*', ['images']);
 });
 
@@ -42,10 +43,15 @@ gulp.task('fileinclude', function() {
 
 gulp.task('drupal', function() {
   gulp.src(basePaths.src+'drupal/**/*.*')
-    
+
     .pipe(gulp.dest(basePaths.dest));
 });
 
+gulp.task('font', function() {
+  gulp.src(basePaths.src+'font/**/*.*')
+
+    .pipe(gulp.dest(basePaths.dest));
+});
 
 gulp.task('js', function () {
   gulp.src(basePaths.src+'js/core.js')

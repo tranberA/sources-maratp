@@ -217,6 +217,43 @@ abbr {
 	margin: 0 auto;
 }
 
+.rich-display
+{
+	font-family: 'Berthold Akzidenz Grotesk BE Medium Condensed';
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+
+	h2&
+	{
+		font-size: 2em;
+
+		b
+		{
+			color: @vertAplat;
+		}
+	}
+
+	&:before
+	{
+		content: '\A0';
+		position: absolute;
+		border-top: 1px solid #ccc;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin-top: -1px;
+		z-index: 0;
+	}
+
+	span
+	{
+		position: relative;
+		z-index: 1;
+		padding: 0 0.4em;
+	}
+}
+
 body
 {
 	& > footer { padding: 32px 0 0 0; font-family: "Parisine",Arial,Helvetica,sans-serif;

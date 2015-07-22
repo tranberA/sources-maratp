@@ -54,11 +54,11 @@ gulp.task('font', function() {
 });
 
 gulp.task('js', function () {
-  gulp.src(basePaths.src+'js/maratp.js')
-  .pipe(resolveDependencies({
+  gulp.src(basePaths.src+'js/**/*.js')
+  /*.pipe(resolveDependencies({
       pattern: /\* @requires [\s-]*(.*?\.js)/g
     }))
-    //.pipe(uglify())
+    .pipe(uglify())*/
     .pipe(gulp.dest(basePaths.dest+'js'));
 });
 

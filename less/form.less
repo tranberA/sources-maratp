@@ -142,8 +142,9 @@
 		width: 60%;
 	}
 
-	.form-type-checkbox { width: 50%; border: none;
+	.form-type-checkbox { border: none;
 		label {
+
 			color: @texte;
 			font-size: 1em;
 			// font-family: @primary-font-bold;
@@ -151,6 +152,23 @@
 
 		a { font-family: @primary-font-bold; }
 	}
+
+
+	.form-type-checkbox, 
+	.form-type-radio {
+		input {
+
+		}
+		label {
+			pointer-events: auto;
+			position: static;
+			font-size: 1em; 
+			font-weight: normal;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
 
 	select {
 		cursor: pointer;
@@ -229,7 +247,8 @@
 		padding-left: 2px;
 	}
 
-	input[type="checkbox"] + label::after {
+	input[type="checkbox"] + label::after,
+	input[type="checkbox"]:focus + label::after {
 		/* custom image for checkbox */
 		content: "✔";
 		font-size: 0.9em;

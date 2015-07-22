@@ -152,12 +152,14 @@
 		width: 60%;
 	}
 
-	.form-type-checkbox { border: none;
+	.form-type-checkbox { width: 50%; border: none;
 		label {
 			color: @texte;
 			font-size: 1em;
-			font-family: @primary-font-bold;
+			// font-family: @primary-font-bold;
 		}
+
+		a { font-family: @primary-font-bold; }
 	}
 
 	select {
@@ -232,7 +234,6 @@
 
 	input[type="radio"] + label::after {
 		/* custom image for radio button */
-		/* background-image: url('../img/cd-icon-radio.svg'); */
 		content: "●";
 		font-size: 0.9em;
 		padding-left: 2px;
@@ -240,10 +241,17 @@
 
 	input[type="checkbox"] + label::after {
 		/* custom image for checkbox */
-		/* background-image: url('../img/cd-icon-check.svg'); */
 		content: "✔";
 		font-size: 0.9em;
 		padding-left: 2px;
+	}
+
+	input[type="radio"]:focus + label::before,
+	input[type="checkbox"]:focus + label::before {
+  	/* add focus effect for radio and check buttons */
+  	outline: none;
+		background: @vert-lighter;
+		border-color: @vertTexte;
 	}
 
 	input[type="radio"]:checked + label::after,
@@ -380,6 +388,18 @@
 		font-weight: bold;
 		-webkit-transform: translate3d(0, -20px, 0);
 		transform: translate3d(0, -20px, 0);
+	}
+
+	//annuler l'effet quand c'est des boutons radio et checkbox
+	&.form-type-checkbox, 
+	&.form-type-radio { background: transparent; border: none;
+		label {
+			position: static;
+			font-size: 1em; 
+			font-weight: normal;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
 	}
 
 }

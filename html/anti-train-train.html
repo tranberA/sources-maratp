@@ -10,9 +10,10 @@
 
 				@@include('./inc/parts/mini-header.html',{"pageTitle": "L'anti Train-Train"})
 
-				<main role="main" id="main" tabindex="-1">
+				<main role="main" id="main" tabindex="-1" class="stretch-content">
         <header><h2>Encore <b>21 jours</b> pour en profiter</h2></header>
 
+        <div class="block-row row-full">
         @@include('./inc/blocks/bloc-contenu-2cols.html',{
           "rubrique": "Exposition",
           "titre": "Dalí fait<br /> le mur",
@@ -34,6 +35,36 @@
           "lieu": "Centre Pompidou, Place Georges-Pompidou, 75004 Paris",
           "metro": "<span class=\"metro ligne-2\">2</span> Anvers <span class=\"metro ligne-12\">12</span> Abesses"
         })
+        </div>
+
+
+        <div class="block-row block-multicols row-2-columns">
+        @@include('./inc/blocks/bloc-voirfaire-1col.html',{
+          "quoi": "La meilleure table 2015",
+          "qui": "à 2 ou entre amis.",
+          "plus": "La déco intage.",
+          "class": "restaurant",
+          "rubrique": "Restaurant",
+          "titre": "Porte 12",
+          "visuel": "porte-12.jpg",
+          "adresse": "12, Rue des Messageries, 75010 Paris",
+          "tel": "01 42 46 22 64",
+          "metro": "<span class=\"metro ligne-7\">7</span> Poissonnière"
+        })
+
+        @@include('./inc/blocks/bloc-voirfaire-1col.html',{
+          "quoi": "Oeuvre d'art délirante",
+          "qui": "En famille",
+          "plus": "Photos réussies à coup sûr",
+          "class": "sortie",
+          "rubrique": "Restaurant",
+          "titre": "Fontaine<br /> Stravinsky",
+          "visuel": "fontaine-stravinsky.jpg",
+          "adresse": "Rue Brisemiche, 75004 Paris",
+          "tel": "",
+          "metro": "<span class=\"metro ligne-1\">1</span> <span class=\"metro ligne-11\">11</span> Poissonnière"
+        })
+        </div>
 
         </main>
       </section>

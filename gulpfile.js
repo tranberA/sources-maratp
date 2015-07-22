@@ -50,16 +50,15 @@ gulp.task('drupal', function() {
 gulp.task('font', function() {
   gulp.src(basePaths.src+'font/**/*.*')
 
-    .pipe(gulp.dest(basePaths.dest));
+    .pipe(gulp.dest(basePaths.dest+'font'));
 });
 
 gulp.task('js', function () {
-  gulp.src(basePaths.src+'js/core.js')
+  gulp.src(basePaths.src+'js/maratp.js')
   .pipe(resolveDependencies({
       pattern: /\* @requires [\s-]*(.*?\.js)/g
     }))
-    //.pipe(concat('core.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest(basePaths.dest+'js'));
 });
 

@@ -5,14 +5,14 @@
   border-top-width: 4px;
   border-top-color: @vertAplat;
 
-  & + .block-article
-  {
-    margin-top: 2em;
-  }
-
   p
   {
     margin: 0;
+  }
+
+  img
+  {
+    max-width: 100%;
   }
 
   header
@@ -61,6 +61,11 @@
   {
     padding: 1em;
 
+    h3
+    {
+      margin: 0;
+    }
+
     h4
     {
       text-transform: uppercase;
@@ -71,6 +76,11 @@
     p
     {
       margin: 0 0 0.4em;
+
+      &.rubrique
+      {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -80,19 +90,47 @@
     padding: 0 1em 1em;
   }
 
+  .group-action
+  {
+    margin-top: 2em !important;
+  }
+
   .block-action
   {
     display: inline-block;
-    background-color: @vertAplat;
-    color: #fff;
-    padding: 0.8em 5em;
+    padding: 0.8em 10%;
     text-transform: uppercase;
     font-size: 0.8em;
+
+    &.go
+    {
+      background-color: #fdcf00;
+      color: @texte;
+    }
+
+    &.share
+    {
+      background-color: #ebebeb;
+      color: @texte;
+    }
+
+    & + .block-action
+    {
+      margin-left: 8%;
+    }
   }
 
   .action
   {
     float: left;
+
+    .block-action
+    {
+      background-color: @vertAplat;
+      color: #fff;
+      padding-left: 5em;
+      padding-right: 5em;
+    }
   }
 
   .lieu
@@ -116,9 +154,30 @@
     font-weight: bold;
     margin-left: 0.5em;
 
+    &:first-child
+    {
+      margin-left: 0;
+    }
+
+    &.ligne-1
+    {
+      background-color: #fdcf00;
+    }
+
     &.ligne-2
     {
       background-color: #0461b0;
+      color: #fff;
+    }
+
+    &.ligne-7
+    {
+      background-color: #fb9eb3;
+    }
+
+    &.ligne-11
+    {
+      background-color: #976130;
       color: #fff;
     }
 
@@ -126,6 +185,76 @@
     {
       background-color: #0a793d;
       color: #fff;
+    }
+  }
+
+  &.block-voirfaire
+  {
+    border-top-color: #fdcf00;
+  }
+
+  dl
+  {
+    overflow: hidden;
+
+    dt
+    {
+      float: left;
+      clear: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-right: 0.4em;
+    }
+  }
+}
+
+.block-row
+{
+  overflow: hidden;
+
+  .block-column
+  {
+    float: left;
+
+    dl.block-content
+    {
+      min-height: 8em;
+    }
+
+    div.main-info
+    {
+      min-height: 8em;
+    }
+  }
+
+  & + .block-row
+  {
+    margin: 2em 0 0;
+  }
+
+  &.row-full
+  {
+    .block-article + .block-article
+    {
+      margin: 2em 0 0;
+    }
+
+    .block-column
+    {
+      float: none;
+    }
+  }
+
+  &.row-2-columns
+  {
+    .block-1-column
+    {
+      width: 48%;
+
+      & + .block-1-column
+      {
+        margin-left: 4%;
+      }
     }
   }
 }

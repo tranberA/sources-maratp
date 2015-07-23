@@ -5,7 +5,14 @@
   border-top-width: 4px;
   border-top-color: @vertAplat;
 
-  p
+  ul
+  {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  p,h3,h4
   {
     margin: 0;
   }
@@ -17,44 +24,55 @@
 
   header
   {
-    background-color: #eaeaea;
-    overflow: hidden;
+    p.rubrique
+    {
+      font-size: 0.7em;
+      text-transform: uppercase;
+    }
 
     h3
     {
       margin: 0.2em 0 0.4em;
       font-size: 1.2em;
-    }
-
-    p
-    {
-      &.rubrique
-      {
-        font-size: 0.8em;
-      }
-
-      &.date
-      {
-        font-size: 0.8em;
-      }
-    }
-
-    .meta
-    {
-      float: left;
       text-transform: uppercase;
-      padding: 1em 1em 0;
     }
 
-    figure
+    &.focus
     {
-      float: right;
+      background-color: #eaeaea;
+      overflow: hidden;
 
-      img
+
+      p
       {
-        display: block;
+        &.date
+        {
+          font-size: 0.8em;
+        }
+      }
+
+      .meta
+      {
+        float: left;
+        text-transform: uppercase;
+        padding: 1em 1em 0;
+      }
+
+      figure
+      {
+        float: right;
+
+        img
+        {
+          display: block;
+        }
       }
     }
+  }
+
+  .chapo
+  {
+    font-weight: bold;
   }
 
   .block-content
@@ -70,9 +88,9 @@
 
     h4
     {
-      text-transform: uppercase;
+
       margin: 0 0 0.6em;
-      font-size: 1.1em;
+
     }
 
     p
@@ -118,6 +136,11 @@
         bottom: 1em;
         margin: 0;
       }
+
+      h4
+      {
+        margin: 1em 0;
+      }
     }
 
     .meta
@@ -129,6 +152,13 @@
 
       h3
       {
+        margin: 0 0 1em;
+        font-size: 1.1em;
+      }
+
+      .rubrique
+      {
+        font-size: 0.7em;
         margin: 0 0 0.2em;
       }
     }
@@ -137,6 +167,13 @@
     {
       float: right;
       width: @rightSpace;
+      font-size: 0.9em;
+
+      .logo
+      {
+        text-align: center;
+        padding-top: 1em;
+      }
     }
   }
 
@@ -149,6 +186,13 @@
   .group-action
   {
     margin-top: 2em !important;
+
+    .block-action
+    {
+      display: block;
+      margin: 0 !important;
+      text-align: center;
+    }
   }
 
   .block-action
@@ -205,15 +249,44 @@
 
   dl
   {
-    overflow: hidden;
+    //overflow: hidden;
+    dt,dd
+    {
+      display: inline;
+      margin: 0;
+    }
 
     dt
     {
-      float: left;
-      clear: left;
       font-weight: bold;
       text-transform: uppercase;
-      margin-right: 0.4em;
+      margin-right: 0.2em;
+    }
+
+    dd
+    {
+      &:after
+      {
+        display: block;
+        content: '\A0';
+        font-size: 0;
+      }
+    }
+  }
+
+  ul
+  {
+    &.links,&.metro
+    {
+      margin: 1em 0;
+    }
+
+    &.metro
+    {
+      li
+      {
+        line-height: 1.6;
+      }
     }
   }
 }
@@ -224,7 +297,9 @@
 
   .block-column
   {
-    float: left;
+    //float: left;
+    display: inline-block;
+    vertical-align: top;
 
     dl.block-content
     {
@@ -251,7 +326,7 @@
 
     .block-column
     {
-      float: none;
+      display: block;
     }
   }
 
@@ -267,6 +342,25 @@
       }
     }
   }
+
+  &.row-3-columns
+  {
+    .block-1-column
+    {
+      width: 32%;
+
+      & + .block-1-column
+      {
+        margin-left: 1.5%;
+      }
+
+      // IE 8
+      &:nth-child(3n+1)
+      {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .inner-content
@@ -274,7 +368,7 @@
   padding: 0.4em 1em;
 }
 
-.metro
+.ligne
 {
   display: inline-block;
   line-height: 1.4;
@@ -282,7 +376,7 @@
   text-align: center;
   .border-radius(50%);
   font-weight: bold;
-  margin-left: 0.5em;
+  margin-left: 0.2em;
 
   &:first-child
   {
@@ -296,13 +390,34 @@
 
   &.ligne-2
   {
-    background-color: #0461b0;
+    background-color: #0065ae;
     color: #fff;
+  }
+
+  &.ligne-3
+  {
+    background-color: #a0981a;
+    color: #fff;
+  }
+
+  &.ligne-5
+  {
+    background-color: #f79544;
   }
 
   &.ligne-7
   {
     background-color: #fb9eb3;
+  }
+
+  &.ligne-8
+  {
+    background-color: #cdaccf;
+  }
+
+  &.ligne-9
+  {
+    background-color: #d4c800;
   }
 
   &.ligne-11

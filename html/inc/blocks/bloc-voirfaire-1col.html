@@ -1,26 +1,42 @@
 <div class="block-article block-voirfaire block-column block-1-column">
 
+  <header class="inner-content">
+  <p class="rubrique">@@rubrique</p>
+  <h3>@@titre</h3>
+</header>
+
+  <figure><img src="img/@@visuel" alt="" /></figure>
+
   <dl class="block-content">
   <dt>Quoi :</dt>
   <dd>@@quoi</dd>
   <dt>Avec qui :</dt>
   <dd>@@qui</dd>
+  <dt>Quand :</dt>
+  <dd>@@quand</dd>
   <dt>Le + :</dt>
   <dd>@@plus</dd>
   </dl>
 
-  <figure><img src="img/@@visuel" alt="" /></figure>
-  <div class="block-content">
-    <div class="main-info">
-    <p class="rubrique">@@rubrique</p>
-    <h3>@@titre</h3>
-    <p>@@adresse</p>
-    <p>@@tel</p>
-    </div>
-  <p>@@metro</p>
-  <p class="group-action">
-  <a href="" class="block-action go">Y aller</a>
-  <a href="" class="block-action share">Partager</a>
-  </p>
+  <div class="inner-content">
+  <p>@@adresse</p>
+  @@if (tel !== '')
+  {
+    <p class="tel">@@tel</p>
+  }
+  @@if (metro !== '')
+  {
+    @@metro
+  }
+  @@if (rer !== '')
+  {
+    @@rer
+  }
+
   </div>
+
+  <p class="group-action">
+  <a href="" class="block-action go">J’y vais</a>
+  <a href="" class="block-action share">Je partage</a>
+  </p>
 </div>

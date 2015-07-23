@@ -149,10 +149,12 @@ abbr {
 		}
 
 		// mini Header
-		header[role="banner"].mini-header { .clearfix; background-color: @vertAplat;
-			.logo { float: left; width: 15%; }
-			h1 { position: static; float: left; width: 75%; font-family: @primary-font-bold; font-weight: normal; color: #FFF; text-align: center; text-transform: uppercase;}
-			> div:last-child { float: right; width: 10%; background: none;}
+		header[role="banner"].mini-header { .clearfix; background-color: @vertAplat; padding: 0 1em;
+			.logo {display: inline-block; vertical-align: middle; width: 15%; }
+			h1 { position: static; display: inline-block; vertical-align: middle; width: 60%; font-family: @primary-font-bold; font-weight: normal; color: #FFF; text-align: center; text-transform: uppercase;}
+			.closePage { display: inline-block; width: 4%; background: none; text-align: center; vertical-align: middle;
+				a { .ico-circle-left; .text-hidden; color: #FFF; }
+			}
 		}
 
 	/* @end Header */

@@ -8,14 +8,26 @@
   <figure><img src="img/@@visuel" alt="" /></figure>
 
   <dl class="block-content">
-  <dt>Quoi :</dt>
-  <dd>@@quoi</dd>
-  <dt>Avec qui :</dt>
-  <dd>@@qui</dd>
-  <dt>Quand :</dt>
-  <dd>@@quand</dd>
-  <dt>Le + :</dt>
-  <dd>@@plus</dd>
+  @@if (quoi !== '')
+  {
+    <dt>Quoi :</dt>
+    <dd>@@quoi</dd>
+  }
+  @@if (qui !== '')
+  {
+    <dt>Avec qui :</dt>
+    <dd>@@qui</dd>
+  }
+  @@if (quand !== '')
+  {
+    <dt>Quand :</dt>
+    <dd>@@quand</dd>
+  }
+  @@if (plus !== '')
+  {
+    <dt>Le + :</dt>
+    <dd>@@plus</dd>
+  }
   </dl>
 
   <div class="inner-content">

@@ -12,6 +12,11 @@
     list-style-type: none;
   }
 
+  h3,p.rubrique
+  {
+    font-family: 'brandon_grotesquebold';
+  }
+
   p,h3,h4
   {
     margin: 0;
@@ -259,6 +264,8 @@
     dt
     {
       font-weight: bold;
+      font-family: 'Open Sans';
+      font-size: 0.9em;
       text-transform: uppercase;
       margin-right: 0.2em;
     }
@@ -348,6 +355,7 @@
     .block-1-column
     {
       width: 32%;
+      margin-bottom: 2em;
 
       & + .block-1-column
       {
@@ -368,6 +376,15 @@
   padding: 0.4em 1em;
 }
 
+.metro,.rer
+{
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
 .ligne
 {
   display: inline-block;
@@ -375,7 +392,7 @@
   width: 1.4em;
   text-align: center;
   .border-radius(50%);
-  font-weight: bold;
+
   margin-left: 0.2em;
 
   &:first-child
@@ -430,5 +447,20 @@
   {
     background-color: #0a793d;
     color: #fff;
+  }
+
+  &.ligne-13
+  {
+    background-color: #99d6e0;
+  }
+}
+
+.rer
+{
+  .ligne
+  {
+    border: 2px solid #e4b800;
+    color: #e4b800;
+    .box-sizing(content-box);
   }
 }

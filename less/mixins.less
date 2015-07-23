@@ -85,3 +85,17 @@
   -ms-transition:     @transition;
   -o-transition:      @transition;
 }
+
+// DÉGRADÉS
+#gradient {
+  .rainbow(@color1: #1e5799, @color2: #ff0000, @color3: #e9ff00, @color4: #0fff00) {
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(left, @color1 0%, @color2 0%, @color3 50%, @color4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,@color1), color-stop(0%,@color2), color-stop(50%,@color3), color-stop(100%,@color4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, @color1 0%,@color2 0%,@color3 50%,@color4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, @color1 0%,@color2 0%,@color3 50%,@color4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, @color1 0%,@color2 0%,@color3 50%,@color4 100%); /* IE10+ */
+    background: linear-gradient(to right, @color1 0%,@color2 0%,@color3 50%,@color4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color4',GradientType=1 ); /* IE6-9 */
+  }
+}

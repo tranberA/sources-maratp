@@ -10,25 +10,16 @@
 
 				<main role="main" id="main" tabindex="-1">
 					<section>
-						<h1 class="page-title">Mot de passe oublié</h1>
+						<h1 class="page-title">Vos avez oublié votre mot de passe ?</h1>
+						<p class="chapo">Merci de saisir un mot de passe composé de 8 caractères minimum :</p>
 
 						<div class="bloc-formulaire">
 							<form accept-charset="UTF-8" method="" action="">
 
-							  <div class="form-item">
-							    <label for="password">Mot de passe<span class="form-required" title="Ce champ est requis.">*</span></label>
-							    <input type="password" class="form-control" id="password" placeholder="(8 caractères min.)">
-							    <div class="messages error">Veuillez saisir le champs</div>
-							  </div>
-
-							  <div class="form-item">
-							    <label for="confirmMail" class="visually-hidden">Confirmation nouveau mot de passe</label>
-							    <input type="password" class="form-control" id="confirmMail" placeholder="Confirmation nouveau mot de passe">
-							    <div class="messages error">Veuillez saisir le champs</div>
-							  </div>
+							  @@include('./inc/parts/password.html')
 
 								<div class="form-actions">
-									<button aria-label="Je valide mon nouveau mot de passe" type="submit" class="btn">Envoyer</button>
+									<button aria-label="Je valide mon nouveau mot de passe" type="submit" class="btn">J'envoie</button>
 								</div>
 
 							</form>

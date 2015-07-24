@@ -10,20 +10,21 @@
 
 				<main role="main" id="main" tabindex="-1">
 					<section>
-						<h1 class="page-title">Mot de passe oublié</h1>
-						<p class="chapo">Pour retrouver votre mot de passe, merci de saisir votre adresse e-mail :</p>
+						<h1 class="page-title">Vous avez oublié votre mot de passe ?</h1>
+						<p class="chapo">Pour le retrouver, merci de saisir votre adresse e-mail :</p>
 
 						<div class="bloc-formulaire">
 							<form accept-charset="UTF-8" method="" action="">
 
 							  <div class="form-item">
-							    <label for="mail">E-mail<span class="form-required" title="Ce champ est requis.">*</span></label>
-							    <input type="email" class="form-control" id="mail" placeholder="(ex: mail@domaine.com)">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <label for="mail">E-mail<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span></label>
+							    <input type="email" class="form-control" id="mail" aria-required="true" placeholder="(ex: mail@domaine.com)">
+							    <div class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
+							    <div class="messages error">Cette adresse e-mail ne correspond pas à un compte existant <!-- (si erreur dans l'adresse) --></div>
 							  </div>
 
 								<div class="form-actions">
-									<button aria-label="Je valide mon mot de passe" type="submit" class="btn">Je valide</button>
+									<button aria-label="Je valide la récupération de mon mot de passe" type="submit" class="btn">J'envoie</button>
 								</div>
 
 							</form>

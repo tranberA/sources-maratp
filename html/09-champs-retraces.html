@@ -16,7 +16,7 @@
 
 						<div class="menu-dashboard">
 							<ul class="menu">
-								<li class="first"><a class="active" href="#">Mon profil</a></li>
+								<li class="first"><a class="active" href="#">Mon profil <span class="visually-hidden">(Rubrique active)</span></a></li>
 								<li><a href="#">Mes alertes</a></li>
 								<li><a href="#">Mes horaires</a></li>
 								<li class="last"><a href="#">Mes itinéraires</a></li>
@@ -29,9 +29,9 @@
 
 						<article class="bloc-profil">
 							<div class="profil-header actif">
-								<span class="check">Modifications enregistrées</span>
 								<h2>Mes informations personnelles</h2>
-								<div class="btn-edit"><a href="">Modifier</a></div>
+								<span class="check">Modifications enregistrées</span>
+								<div class="btn-edit"><a href="">Modifier</a></div> <!-- si lien ok, si bouton il faudra un aria-label -->
 							</div>
 							<div class="profil-body">
 
@@ -39,50 +39,57 @@
 									<form accept-charset="UTF-8" method="" action="">
 
 										<div class="form-item form-type-select">
-											<label for="civilite">Civilité* :</label>
-										  <select aria-describedby="error17" class="form-control" id="civilite">
-											  <option selected>Monsieur</option>
+											<label for="civilite">Civilité<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+										  <select aria-describedby="error17" aria-required="true" class="form-control" id="civilite">
+											  <option>Monsieur</option>
 											  <option>Madame</option>
+											  <option>Mademoiselle</option>
 											</select>
 										</div>
-										<div id="error17" class="messages error">Veuillez saisir le champs</div>
+										<div id="error17" class="messages error">Merci de renseigner ce champ.  <!-- (si vide) --></div>
 
 									  <div class="form-item">
-									    <label for="prenom">Prénom* :</label>
-									    <input aria-describedby="error18" type="text" class="form-control" id="prenom" placeholder="Patrick">
+									    <label for="prenom">Prénom<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+									    <input aria-describedby="error18" type="text" class="form-control" id="prenom" maxlength="25" aria-required="true" placeholder="Patrick">
 									  </div>
-									  <div id="error18" class="messages error">Veuillez saisir le champs</div>
+							    	<div id="error18" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 
 									  <div class="form-item">
-									    <label for="nom">Nom* : </label>
-									    <input aria-describedby="error191" type="text" class="form-control" id="nom" placeholder="Dupont">
+									    <label for="nom">Nom<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> : </label>
+									    <input aria-describedby="error191" type="text" class="form-control" id="nom" maxlength="25" aria-required="true" placeholder="Dupont">
 									  </div>
-									  <div id="error19" class="messages error">Veuillez saisir le champs</div>
+									  <div id="error19" class="messages error">Merci de renseigner ce champ.</div>
 
 									  <div class="form-item form-type-date">
-									    <label for="dateNaissance">Date de naissance* :</label>
-									    <input aria-describedby="error20" type="text" class="form-control" id="dateNaissance" placeholder="12/05/1975">
+									    <label for="dateNaissance">Date de naissance<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+									    <input type="date" class="form-control" id="dateNaissance" aria-required="true" placeholder="12/05/1975">
 									  </div>
-									  <div id="error20" class="messages error">Veuillez saisir le champs</div>
+									  <div class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+									  <div class="messages error">Pour vous inscrire à maRATP, vous devez avoir + de 16 ans. <!-- (si date de naissance correcte = âge suffisant) --></div>
 
 										<div class="form-item form-type-number">
 									    <label for="mobile" class="visually-hidden">Mobile</label>
-									    <input aria-describedby="error111"  type="number" class="form-control" id="mobile" placeholder="Mobile (06XXXXXX)">
-									    <div id="error11" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error11"  type="tel" class="form-control" id="mobile" maxlength="10" placeholder="Mobile (06XXXXXX)">
 									  </div>
+									  <div id="error11" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+									  <div id="error11" class="messages error">Merci de renseigner un numéro valide. <!-- (si erreur dans le numéro) --></div>
 
 									  <div class="form-item">
-									    <label for="mail">Adresse e-mail* :</label>
-									    <input aria-describedby="error12"  type="email" class="form-control" id="mail" placeholder="patrick.dupont@aol.com">
-									    <div  id="error12"class="messages error">Veuillez saisir le champs</div>
+									    <label for="mail">Adresse e-mail<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+									    <input aria-describedby="error11" type="email" class="form-control" id="mail" maxlength="50" aria-required="true" placeholder="patrick.dupont@aol.com">
 									  </div>
+									  <div id="error12" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+									  <div id="error12" class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
+									  <div id="error12" class="messages error">Vous êtes déjà inscrit à maRATP. <!-- (si e-mail dejà existant) --></div>
 
 
 									  <div class="form-item">
 									    <label for="mailAlert">Adresse e-mail alertes</label>
 									    <input aria-describedby="error13"  type="email" class="form-control" id="mailAlert" placeholder="(ex: mail@domaine.com)">
-									    <div id="error13" class="messages error">Veuillez saisir le champs</div>
 									  </div>
+									  <div id="error13" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+									  <div id="error13" class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
+
 
 
 										<div class="form-actions">
@@ -97,9 +104,9 @@
 
 						<article class="bloc-profil">
 							<div class="profil-header">
-								<span class="check">Modifications enregistrées</span>
 								<h2>Mon mot de passe</h2>
-								<div class="btn-edit"><a href="">Modifier</a></div>
+								<span class="check">Modifications enregistrées</span>
+								<div class="btn-edit"><a href="">Modifier</a></div> <!-- si lien ok, si bouton il faudra un aria-label -->
 							</div>
 							<div class="profil-body">
 
@@ -108,20 +115,20 @@
 
 									  <div class="form-item">
 									    <label for="oldPassword" class="visually-hidden">Ancien mot de passe</label>
-									    <input aria-describedby="error14" type="password" class="form-control" id="oldPassword" placeholder="Ancien mot de passe">
-									    <div id="error14" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error14" type="password" class="form-control" id="oldPassword" maxlength="25" placeholder="Ancien mot de passe">
+									    <div id="error14" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 									  <div class="form-item">
 									    <label for="newPassword" class="visually-hidden">Nouveau mot de passe</label>
-									    <input aria-describedby="error15"  type="password" class="form-control" id="newPassword" placeholder="Nouveau mot de passe (8 caractères min.)">
-									    <div id="error15" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error15"  type="password" class="form-control" id="newPassword" maxlength="25" placeholder="Nouveau mot de passe (8 caractères min.)">
+									    <div id="error15" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 									  <div class="form-item">
 									    <label for="confirmPassword" class="visually-hidden">Confirmation nouveau mot de passe</label>
-									    <input aria-describedby="error16"  type="password" class="form-control" id="confirmPassword" placeholder="Confirmation nouveau mot de passe">
-									    <div id="error16" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error16"  type="password" class="form-control" id="confirmPassword" maxlength="25" placeholder="Confirmation nouveau mot de passe">
+									    <div id="error16" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 										<div class="form-actions">
@@ -136,9 +143,9 @@
 
 						<article class="bloc-profil">
 							<div class="profil-header">
-								<span class="check">Modifications enregistrées</span>
 								<h2>Mon adresse</h2>
-								<div class="btn-edit"><a href="">Modifier</a></div>
+								<span class="check">Modifications enregistrées</span>
+								<div class="btn-edit"><a href="">Modifier</a></div> <!-- si lien ok, si bouton il faudra un aria-label -->
 							</div>
 							<div class="profil-body">
 
@@ -147,26 +154,27 @@
 
 									  <div class="form-item">
 									    <label for="adresse">Adresse</label>
-									    <input aria-describedby="error7"  type="text" class="form-control" id="adresse">
-									    <div id="error7" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error7"  type="text" class="form-control" id="adresse" maxlength="50">
+									    <div id="error7" class="messages error">Merci de renseigner ce champ.</div>
 									  </div>
 
 									  <div class="form-item">
 									    <label for="complementAdresse">Complément d'adresse</label>
-									    <input aria-describedby="error8"  type="text" class="form-control" id="complementAdresse">
-									    <div id="error8" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error8"  type="text" class="form-control" id="complementAdresse" maxlength="50">
+									    <div id="error8" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 									  <div class="form-item form-type-code-postal">
 									    <label for="codePostal">Code Postal</label>
-									    <input aria-describedby="error9"  type="text" class="form-control" id="codePostal">
-									    <div id="error9" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error9"  type="text" class="form-control" id="codePostal" maxlength="5">
+									    <div id="error9" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+									    <div id="error9" class="messages error">Merci de saisir un code postal valide. <!-- (si erreur) --></div>
 									  </div>
 
 									  <div class="form-item">
 									    <label for="ville">Ville :</label>
-									    <input aria-describedby="error10"  type="text" class="form-control" id="ville" placeholder="PARIS">
-									    <div id="error10" class="messages error">Veuillez saisir le champs</div>
+									    <input aria-describedby="error10"  type="text" class="form-control" id="ville" maxlength="50" placeholder="PARIS">
+									    <div id="error10" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 										<div class="form-actions">
@@ -181,9 +189,9 @@
 
 						<article class="bloc-profil">
 							<div class="profil-header">
-								<span class="check">Modifications enregistrées</span>
 								<h2>Mon titre de transport</h2>
-								<div class="btn-edit"><a href="">Modifier</a></div>
+								<span class="check">Modifications enregistrées</span>
+								<div class="btn-edit"><a href="">Modifier</a></div> <!-- si lien ok, si bouton il faudra un aria-label -->
 							</div>
 							<div class="profil-body">
 
@@ -193,17 +201,17 @@
 										<div class="form-item form-type-select">
 											<label for="titreTransport" class="visually-hidden">Titre de transport</label>
 										  <select aria-describedby="error4" class="form-control" id="titreTransport">
-											  <option selected>Imagine R</option>
+											  <option>Imagine R</option>
 											  <option>Choix 1</option>
 											  <option>Choix 2</option>
 											</select>
-											<div id="error4" class="messages error">Veuillez saisir le champs</div>
+											<div id="error4" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 										</div>
 
 										<div class="form-item form-type-number">
 									    <label for="numeroAbonnement" class="visually-hidden">Numéro de pass Navigo</label>
 									    <input aria-describedby="error5" type="number" class="form-control" id="numeroAbonnement" placeholder="Numéro de pass Navigo">
-									    <div id="error5" class="messages error">Veuillez saisir le champs</div>
+									    <div id="error5" class="messages error">Merci de saisir un numéro de pass Navigo valide. <!-- (si vide - message qui s'adapte en fonction du titre de transport) --></div>
 									  </div>
 
 									  <p>Fréquence de déplacements en Ile-de-France :</p>
@@ -215,7 +223,7 @@
 											  <option>Choix 1</option>
 											  <option>Choix 2</option>
 											</select>
-											<div id="error6" class="messages error">Veuillez saisir le champs</div>
+											<div id="error6" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 										</div>
 
 										<div class="form-actions">
@@ -230,9 +238,9 @@
 
 						<article class="bloc-profil">
 							<div class="profil-header">
-								<span class="check">Modifications enregistrées</span>
 								<h2>Informations supplémentaires</h2>
-								<div class="btn-edit"><a href="">Modifier</a></div>
+								<span class="check">Modifications enregistrées</span>
+								<div class="btn-edit"><a href="">Modifier</a></div> <!-- si lien ok, si bouton il faudra un aria-label -->
 							</div>
 							<div class="profil-body">
 
@@ -242,7 +250,7 @@
 										<div class="form-item form-type-number">
 									    <label for="nombreEnfant" class="visually-hidden">Nombre d'enfants</label>
 									    <input aria-describedby="error2"  type="number" class="form-control" id="nombreEnfant" placeholder="Nombre d'enfants">
-									    <div id="error2" class="messages error">Veuillez saisir le champs</div>
+									    <div id="error2" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 										<p>Mode de transport utilisé :</p>
@@ -254,7 +262,7 @@
 											  <option>Choix 1</option>
 											  <option>Choix 2</option>
 											</select>
-											<div id="error1" class="messages error">Veuillez saisir le champs</div>
+											<div id="error1" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 										</div>
 
 										<div class="form-actions">

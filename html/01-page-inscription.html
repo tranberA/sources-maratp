@@ -20,35 +20,39 @@
 
 								<div class="form-item form-type-select">
 									<label for="civilite">Civilité* :</label>
-								  <select class="form-control" id="civilite">
-									  <option selected>Monsieur</option>
+								  <select class="form-control" aria-describedby="error17" aria-required="true" id="civilite">
+									  <option>Monsieur</option>
 									  <option>Madame</option>
+									  <option>Mademoiselle</option>
 									</select>
-									<div class="messages error">Veuillez saisir le champs</div>
+									<div id="error17" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 								</div>
 
 							  <div class="form-item">
-							    <label for="prenom">Prénom<span class="form-required" title="Ce champ est requis.">*</span> :</label>
-							    <input type="text" class="form-control" id="prenom" placeholder="Patrick">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <label for="prenom">Prénom<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+							    <input type="text" class="form-control" aria-describedby="error18" id="prenom" maxlength="25" aria-required="true" placeholder="Patrick">
+							    <div id="error18" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 							  </div>
 
 							  <div class="form-item">
-							    <label for="nom">Nom<span class="form-required" title="Ce champ est requis.">*</span> :</label>
-							    <input type="text" class="form-control" id="nom" placeholder="Dupont">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <label for="nom">Nom<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> : </label>
+							    <input aria-describedby="error191" type="text" class="form-control" id="nom" maxlength="25" aria-required="true" placeholder="Dupont">
+							  	<div id="error19" class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
 							  <div class="form-item form-type-date">
-							    <label for="dateNaissance">Date de naissance<span class="form-required" title="Ce champ est requis.">*</span> :</label>
-							    <input type="text" class="form-control" id="dateNaissance" placeholder="12/05/1975">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <label for="dateNaissance">Date de naissance<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+							    <input type="date" class="form-control" id="dateNaissance" aria-required="true" placeholder="12/05/1975">
+							    <div class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+							    <div class="messages error">Pour vous inscrire à maRATP, vous devez avoir + de 16 ans. <!-- (si date de naissance correcte = âge suffisant) --></div>
 							  </div>
 
 							  <div class="form-item">
-							    <label for="mail">Adresse e-mail<span class="form-required" title="Ce champ est requis.">*</span> :</label>
-							    <input type="email" class="form-control" id="mail" placeholder="patrick.dupont@aol.com">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <label for="mail">Adresse e-mail<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
+							    <input type="email" class="form-control" id="mail" maxlength="50" aria-required="true" placeholder="patrick.dupont@aol.com">
+							    <div class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
+							    <div class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
+							    <div class="messages error">Vous êtes déjà inscrit à maRATP. <!-- (si e-mail dejà existant) --></div>
 							  </div>
 							  
 
@@ -56,12 +60,12 @@
 
 
 							  <div class="form-item form-type-checkbox">
-							  	<input id="cgu" type="checkbox" value="">
-								  <label for="cgu"> J'accepte et je reconnais avoir pris connaissance des <a href="">Conditions Générales d'accès à maRATP</a> </label>
+							  	<input id="cgu" aria-required="true" type="checkbox" value="">
+								  <label for="cgu" class="error"> J'accepte et je reconnais avoir pris connaissance des <a title="Conditions Générales d'accès à maRATP (nouvelle fenêtre)" href="https://maratp.ratp.fr/ma-ratp/sign-up/conditions" target="_blank">Conditions Générales d'accès à maRATP</a><span class="visually-hidden"> Merci d'accepter ces conditions</span></label>
 								</div>
 
-								<div class="details">
-									<p>* Champ obligatoire</p>
+								<div class="details" aria-hidden="true">
+									<p>* Champs obligatoires</p>
 								</div>
 
 								<div class="form-actions">

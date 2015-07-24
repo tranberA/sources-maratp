@@ -4,9 +4,9 @@
   {
       .chapo
       {
-        font-family: 'Open Sans';
         font-weight: bold;
-        font-size: 0.9em;
+        font-size: 1.2em;
+        font-family: inherit !important;
         text-align: inherit;
       }
   }
@@ -14,6 +14,10 @@
 
 .block-article
 {
+  font-family: 'Open Sans';
+  font-size: 0.8em;
+  line-height: 1.5;
+
   border: 1px solid #ececec;
 
   border-top-width: 4px;
@@ -36,6 +40,11 @@
     margin: 0;
   }
 
+  .tel
+  {
+    margin-top: 0.5em;
+  }
+
   img
   {
     max-width: 100%;
@@ -45,14 +54,15 @@
   {
     p.rubrique
     {
-      font-size: 0.7em;
+      font-size: 0.9em;
       text-transform: uppercase;
     }
 
     h3
     {
       margin: 0.2em 0 0.4em;
-      font-size: 1.2em;
+      font-size: 2em;
+      line-height: 1;
       text-transform: uppercase;
     }
 
@@ -60,7 +70,6 @@
     {
       background-color: #eaeaea;
       overflow: hidden;
-
 
       p
       {
@@ -87,11 +96,17 @@
         }
       }
     }
+
+    &.inner-content
+    {
+      padding-top: 1.6em;
+      padding-bottom: 1.6em;
+    }
   }
 
   .block-content
   {
-    padding: 1em;
+    padding: 1em 1.4em;
     position: relative;
 
     h3
@@ -154,6 +169,8 @@
       h4
       {
         margin: 1em 0;
+        font-weight: normal;
+        font-size: 1.5em;
       }
     }
 
@@ -167,13 +184,19 @@
       h3
       {
         margin: 0 0 1em;
-        font-size: 1.4em;
+        font-size: 1.9em;
+        line-height: 1.4;
       }
 
       .rubrique
       {
-        font-size: 0.7em;
+        font-size: 0.9em;
         margin: 1em 0 0.2em;
+      }
+
+      .date
+      {
+        font-size: 1.3em;
       }
     }
 
@@ -186,7 +209,7 @@
       .logo
       {
         text-align: center;
-        padding-top: 1em;
+        margin: 2em 0 2.4em;
       }
     }
   }
@@ -206,6 +229,7 @@
       display: block;
       margin: 0 !important;
       text-align: center;
+      font-size: 1.1em;
     }
   }
 
@@ -215,6 +239,7 @@
     padding: 0.8em 10%;
     text-transform: uppercase;
     font-size: 0.8em;
+    font-family: 'brandon_grotesquebold';
 
     &.go
     {
@@ -236,6 +261,9 @@
 
   .action
   {
+    font-size: 1.4em;
+    //font-family: 'brandon_grotesquebold';
+
     .block-action
     {
       background-color: @vertAplat;
@@ -274,7 +302,7 @@
     {
       font-weight: bold;
       font-family: 'Open Sans';
-      font-size: 0.9em;
+      //font-size: 0.9em;
       text-transform: uppercase;
       margin-right: 0.2em;
     }
@@ -297,11 +325,19 @@
       margin: 1em 0;
     }
 
+    &.links
+    {
+      li
+      {
+        margin: 0 0 0.6em;
+      }
+    }
+
     &.metro
     {
       li
       {
-        line-height: 1.6;
+        //line-height: 1.6;
       }
     }
   }
@@ -382,15 +418,15 @@
 
 .inner-content
 {
-  padding: 0.4em 1em;
+  padding: 0.4em 1.4em;
 }
 
 .metro,.rer
 {
   font-family: 'Open Sans';
   font-weight: bold;
-  font-size: 0.9em;
-  text-transform: uppercase;
+  //font-size: 0.9em;
+
   line-height: 2;
   position: relative;
 
@@ -410,6 +446,9 @@
 
   p&
   {
+    text-transform: uppercase;
+    font-size: 1.1em;
+
     &:before
     {
       //line-height: @pictoRadius;
@@ -531,6 +570,13 @@ p.rer
 
 p.metro
 {
+  margin-top: 1.5em;
+
+  & + p.metro
+  {
+    margin-top: 0;
+  }
+
   &:before
   {
     background-image: url('@{imageDir}metro.png');

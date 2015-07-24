@@ -17,15 +17,19 @@
 						<div class="bloc-formulaire">
 							<form accept-charset="UTF-8" method="" action="">
 
+								<div class="messages error" id="erreur1">
+									<p>Les identifiants que vous avez saisis sont incorrects.</p>
+								</div>
+
 							  <div class="form-item">
-							    <label for="mail">Email<span class="form-required" title="Ce champ est requis.">*</span></label>
-							    <input type="email" class="form-control" id="mail" placeholder="(ex: mail@domaine.com)">
+							    <label for="mail">Email<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span></label>
+							    <input type="email" class="form-control" id="mail" aria-required="true" maxlength="50" placeholder="(ex: mail@domaine.com)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
 							  <div class="form-item">
-							    <label for="password">Mot de passe<span class="form-required" title="Ce champ est requis.">*</span></label>
-							    <input type="password" class="form-control" id="password" placeholder="(8 caractères min.)">
+							    <label for="password">Mot de passe<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span></label>
+							    <input type="password" class="form-control" id="password" aria-required="true" maxlength="25" placeholder="(8 caractères min.)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
@@ -38,13 +42,13 @@
 									</div>
 								</div>
 
-								<div class="details">
-									<p>* Champ obligatoire</p>
+								<div class="details" aria-hidden="true">
+									<p>* Champs obligatoires</p>
 								</div>
 
 								<div class="form-actions">
 									<button type="submit" class="btn">Me connecter</button>
-									<p>Pas encore inscrit ? <a href="">je m'inscris</a></p>
+									<p>Pas encore inscrit ? <a href="">Je m'inscris</a></p>
 								</div>
 
 							</form>

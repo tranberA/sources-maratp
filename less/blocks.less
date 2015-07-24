@@ -1,3 +1,17 @@
+#maratp
+{
+  .block-article
+  {
+      .chapo
+      {
+        font-family: 'Open Sans';
+        font-weight: bold;
+        font-size: 0.9em;
+        text-align: inherit;
+      }
+  }
+}
+
 .block-article
 {
   border: 1px solid #ececec;
@@ -75,11 +89,6 @@
     }
   }
 
-  .chapo
-  {
-    font-weight: bold;
-  }
-
   .block-content
   {
     padding: 1em;
@@ -123,17 +132,17 @@
   {
     overflow: hidden;
 
-    @leftSpace: 27%;
-    @rightSpace: 16%;
+    @leftSpace: 32%;
+    @rightSpace: 20%;
 
     .block-content
     {
       margin: 0 @rightSpace 0 @leftSpace;
       border-left: 1px solid #ededed;
       border-right: 1px solid #ededed;
-      min-height: 300px;
+      min-height: 25em;
       position: relative;
-      padding: 1em 1.5em;
+      padding: 1em 1.5em 10em;
 
       .action
       {
@@ -153,18 +162,18 @@
       float: left;
       width: @leftSpace;
       text-transform: uppercase;
-      font-size: 0.9em;
+      //font-size: 0.9em;
 
       h3
       {
         margin: 0 0 1em;
-        font-size: 1.1em;
+        font-size: 1.4em;
       }
 
       .rubrique
       {
         font-size: 0.7em;
-        margin: 0 0 0.2em;
+        margin: 1em 0 0.2em;
       }
     }
 
@@ -382,14 +391,61 @@
   font-weight: bold;
   font-size: 0.9em;
   text-transform: uppercase;
-  line-height: 1.6;
-}
+  line-height: 2;
+  position: relative;
 
+  [class^="ico-"]
+  {
+    font-size: 1.3em;
+  }
+
+  @transportPictoRadius: 18px;//1.6em;
+
+  //padding-left: @transportPictoRadius + 6px;// + 0.4em;
+
+  img
+  {
+    vertical-align: middle;
+  }
+
+  p&
+  {
+    &:before
+    {
+      //line-height: @pictoRadius;
+      height: @transportPictoRadius;
+      width: @transportPictoRadius;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '\A0';
+
+      display: inline-block;
+      vertical-align: middle;
+
+      margin-right: 4px;
+
+      // position: absolute;
+      // left: 0;
+      // top: 50%;
+      // margin-top: -(@transportPictoRadius/2)
+
+      /*border: 2px solid #e4b800;
+      color: #e4b800;
+      .box-sizing(content-box);
+      font-size: 0.8em;
+      text-align: center;
+      .border-radius(50%);*/
+    }
+  }
+}
+/*
 .ligne
 {
+  @pictoRadius: 1.5em;
+
   display: inline-block;
-  line-height: 1.4;
-  width: 1.4em;
+  line-height: @pictoRadius;
+  width: @pictoRadius;
   text-align: center;
   .border-radius(50%);
 
@@ -454,13 +510,29 @@
     background-color: #99d6e0;
   }
 }
-
-.rer
+*/
+p.rer
 {
+  &:before
+  {
+    background-image: url('@{imageDir}rer-full.png');
+  }
+
   .ligne
   {
     border: 2px solid #e4b800;
     color: #e4b800;
     .box-sizing(content-box);
+    font-size: 0.95em;
+  }
+
+  //003f90 couleur icone metro,rer
+}
+
+p.metro
+{
+  &:before
+  {
+    background-image: url('@{imageDir}metro.png');
   }
 }

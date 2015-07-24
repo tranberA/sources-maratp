@@ -7,7 +7,7 @@ var resolveDependencies = require('gulp-resolve-dependencies');
 
 var fileinclude = require('gulp-file-include');
 
-//var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 
 var basePaths = {
   src: './',
@@ -15,12 +15,12 @@ var basePaths = {
 }
 
 
-gulp.task('default', ['less','js','fileinclude','font'], function() {
+gulp.task('default', ['less','js','fileinclude','font','images'], function() {
   gulp.watch(basePaths.src+'less/**/*.less', ['less']);
   gulp.watch(basePaths.src+'js/**/*.js', ['js']);
   gulp.watch(basePaths.src+'html/**/*.html',['fileinclude']);
   gulp.watch(basePaths.src+'font/**/*.*',['font']);
-  //gulp.watch(basePaths.src+'images/**/*', ['images']);
+  gulp.watch(basePaths.src+'images/**/*', ['images']);
 });
 
 gulp.task('less', function () {
@@ -62,8 +62,8 @@ gulp.task('js', function () {
     .pipe(gulp.dest(basePaths.dest+'js'));
 });
 
-// gulp.task('images', function () {
-//   gulp.src(basePaths.src+'images/**/*')
-//   .pipe(imagemin())
-//     .pipe(gulp.dest(basePaths.dest+'images'));
-// });
+gulp.task('images', function () {
+  gulp.src(basePaths.src+'images/**/*')
+  .pipe(imagemin())
+    .pipe(gulp.dest(basePaths.dest+'img'));
+});

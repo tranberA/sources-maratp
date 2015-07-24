@@ -1,0 +1,63 @@
+header[role="banner"] {
+			h1 { position: absolute; left: 210px; top: 54px; text-align: left; }
+			> div:first-child { background-color: #fff; overflow: hidden;
+				> ul { float: left; margin: 0; padding: 0; list-style-type: none;
+					li { float: left; }
+					img { position: relative; top: -2px; vertical-align: bottom; }
+
+					a { display: block; padding: 10px; font-size: 0.72em; font-weight: bold; color: @gray; text-decoration: none;
+						&:hover, &:focus { background-color: @gray-darker; color: #fff; }
+					}
+					strong { display: block;padding: 10px; background-color: @gray-darker; font-size: 0.75em; color: #fff; text-decoration: none; }
+
+					&:first-child {
+						a { font-family: @primary-font-bold; font-weight: normal; border-left: solid 1px @gray-lighter;
+							&:hover, &:focus { background: #FFF; color: @texte; }
+						}
+						strong { font-family: @primary-font-bold; font-weight: normal; border-left: solid 1px @gray-darker; }
+					}
+				}
+
+				> div { float: right; font-family: arial, sans-serif;
+					> * { float: left; }
+					p { font-size: 0.75em; margin: 0; vertical-align: bottom; }
+					> ul { list-style-type: none; margin: 0; overflow: hidden; padding: 0;
+						li { float: left;
+							&:last-child {
+								a { border-right: solid 1px @gray-lighter; background-image: url('../img/verrou@2x.png'); background-position: 10px 50%; background-repeat: no-repeat; background-size: 13px 17px; padding-left: 30px; padding: 8px 10px 8px 30px;
+									&:hover, &:focus { background-image: url('../img/verrou-survol@2x.png'); border-right-color: @gray-darker; }
+								}
+							}
+						}
+						a { border-left: solid 1px @gray-lighter; color: @gray-darker; display: block; font-size: 0.75em; padding: 10px; text-decoration: none;
+							&:hover, &:focus { background-color: @gray-darker; color: #fff;  }
+						}
+					}
+
+					> div { padding: 10px 10px 0 10px; font-weight: bold; color: @gray;
+						> * { float: left; }
+						ul { list-style-type: none; margin: 0 0 0 9px; overflow: hidden; padding: 0; }
+						li { float: left; margin-left: 1px; }
+						img { border: solid 1px transparent; }
+						a:hover img { border-color: #00aa91; }
+					}
+				}
+
+			}
+			> div:last-child { position: relative; padding: 5px 0; background: url('../img/bg_header.jpg'); }
+		}
+
+		// header sur Home
+		.front header[role="banner"] {
+			h1 { left: 420px; }
+			> div:last-child { position: relative; padding: 13px 0 38px 0; background: #00aa91; }
+		}
+
+		// mini Header
+		header[role="banner"].mini-header { .clearfix; background-color: @vertAplat; padding: 0 1em;
+			.logo {display: inline-block; vertical-align: middle; width: 15%; }
+			h1 { position: static; display: inline-block; vertical-align: middle; width: 60%; font-family: @primary-font-bold; font-weight: normal; color: #FFF; text-align: center; text-transform: uppercase;}
+			.closePage { display: inline-block; width: 4%; background: none; text-align: center; vertical-align: middle;
+				a { .ico-circle-left; .text-hidden; color: #FFF; }
+			}
+		}

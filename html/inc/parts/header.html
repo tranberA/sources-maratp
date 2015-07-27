@@ -1,37 +1,38 @@
 <header role="banner">
-  <div>
+  <div class="toolbar">
     <ul>
       <li><strong><abbr title="Français">FR</abbr></strong></li><!--<li><a href="#"><abbr title="Français" lang="fr">FR</abbr></a></li>-->
       <!--<li><strong><abbr title="English">EN</abbr></strong></li>--><li><a href="#"><abbr title="English" lang="en">EN</abbr></a></li>
     </ul>
     <div>
       <form role="search" id="search" tabindex="-1" action="#" method="get">
-        <p>
-          <label for="q" class="visually-hidden">Termes à rechercher sur le site RATP.fr</label>
-          <input type="search" id="q" name="q" placeholder="Rechercher" />
-          <input type="image" src="img/search@2x.png" alt="Lancer la recherche sur le site RATP.fr" title="Lancer la recherche sur le site RATP.fr" height="15" width="13" />
+        <p class="search">
+          <label for="q" class="visually-hidden">Termes à rechercher sur le site RATP.fr</label> 
+          <input type="search" id="q" name="q" placeholder="Rechercher" /> 
+          <input type="image" src="img/header/search.png" alt="Lancer la recherche sur le site RATP.fr" title="Lancer la recherche sur le site RATP.fr" height="15" width="13" />
         </p>
       </form>
-      <div>
-        <p lang="en">Tourist information</p>
-        <ul>
-          <li><a href="#"><img src="img/en@2x.png" alt="English" title="English" height="14" width="19" lang="en" /></a></li>
-          <li><a href="#"><img src="img/de@2x.png" alt="Deutsch" title="Deutsch" height="14" width="20" lang="de" /></a></li>
-          <li><a href="#"><img src="img/it@2x.png" alt="Italiano" title="Italiano" height="14" width="21" lang="it" /></a></li>
-          <li><a href="#"><img src="img/es@2x.png" alt="Español" title="Español" height="14" width="19" lang="es" /></a></li>
-          <li><a href="#"><img src="img/nl@2x.png" alt="Nederlands" title="Nederlands" height="14" width="21" lang="nl" /></a></li>
-          <li><a href="#"><img src="img/ja@2x.png" alt="日本語" title="日本語" height="14" width="20" lang="ja" /></a></li>
-        </ul>
+      <div id="lang">
+        <div>
+          <p lang="en">Tourist information</p>
+          <ul>
+            <li><a href="#" lang="en"><img src="img/header/en.png" alt="English" title="English" height="14" width="19" /></a></li>
+            <li><a href="#" lang="de"><img src="img/header/de.png" alt="Deutsch" title="Deutsch" height="14" width="20" /></a></li>
+            <li><a href="#" lang="it"><img src="img/header/it.png" alt="Italiano" title="Italiano" height="14" width="21" /></a></li>
+            <li><a href="#" lang="es"><img src="img/header/es.png" alt="Español" title="Español" height="14" width="19" /></a></li>
+            <li><a href="#" lang="nl"><img src="img/header/nl.png" alt="Nederlands" title="Nederlands" height="14" width="21" /></a></li>
+            <li><a href="#" lang="ja"><img src="img/header/ja.png" alt="日本語" title="日本語" height="14" width="20" /></a></li>
+          </ul>
+        </div>
       </div>
       <ul>
         <li><a href="#">Inscription</a></li>
-        <li><a href="#">Connexion <img src="img/maRATP-connexion@2x.png" alt="à maRATP" height="14" width="63" /></a></li>
+        <li><a href="#">Connexion <img src="img/header/maRATP-log.png" alt="à maRATP" height="14" width="63" /></a></li>
       </ul>
     </div>
   </div>
-  <div>
-    <p><a href="#" title="RATP, aimer la ville - Accueil"><img src="img/RATP@2x.png" alt="RATP, aimer la ville" height="111" width="189" /></a></p>
-    <h1><img src="img/maRATP@2x.png" alt="maRATP" height="43" width="213" /></h1>
+  <div class="banner">
+    <p><a href="#" title="RATP, aimer la ville - Accueil"><img src="img/header/RATP.png" alt="RATP, aimer la ville" height="111" width="189" /></a></p>
+    <h1><img src="img/header/maRATP.png" alt="maRATP" height="43" width="213" /></h1>
   </div>
 </header>
-

@@ -37,6 +37,11 @@
 
 /* ==> BASE */
 
+*[hidden], .hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
 html, body {
 	height: 100%;
 	margin: 0;
@@ -51,10 +56,17 @@ body {
 	color: @texte;
 }
 
-.image-text
-{
+.image-text {
 	font-size: 0;
 	color: transparent;
+}
+
+img {
+	border: none;
+}
+
+article, header, main, nav, section {
+	display: block;
 }
 
 /* ==> TYPO */

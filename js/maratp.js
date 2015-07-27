@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Skiplinks.
 
 	//jQuery.noConflict();
@@ -120,6 +121,9 @@
 
 
 	// focus sur les formulaires
+=======
+// focus sur les formulaires
+>>>>>>> b9638dbd8a79717cea609f2d1852ac04ecad5e2f
 	var survol = jQuery('.form-item input, .form-item select');
 
 	survol.focus(function(){
@@ -130,8 +134,8 @@
   	jQuery(this).parent('.form-item').removeClass('focus');
   });
 
-jQuery(document).click(function (event) {
 
+<<<<<<< HEAD
 	var target = jQuery(event.target);
 
 	if (target.is('div.form-item')) {
@@ -139,3 +143,14 @@ jQuery(document).click(function (event) {
 	}
 
 });
+=======
+  //focus sur les input sur toute la zone
+	jQuery(document).click(function (event) {
+
+		var target = jQuery(event.target);
+		if (target.is('div.form-item')) {
+			target.find('input, select').focus();
+		}
+
+	});
+>>>>>>> b9638dbd8a79717cea609f2d1852ac04ecad5e2f

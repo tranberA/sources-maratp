@@ -51,33 +51,33 @@
 
 									  <div class="form-item">
 									    <label for="prenom">Prénom<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
-									    <input aria-describedby="error18" type="text" class="form-control" id="prenom" maxlength="25" aria-required="true" placeholder="Patrick">
+									    <input aria-describedby="error18" type="text" class="form-control" id="prenom" maxlength="25" aria-required="true" placeholder="">
 									  </div>
 							    	<div id="error18" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 
 									  <div class="form-item">
 									    <label for="nom">Nom<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> : </label>
-									    <input aria-describedby="error191" type="text" class="form-control" id="nom" maxlength="25" aria-required="true" placeholder="Dupont">
+									    <input aria-describedby="error191" type="text" class="form-control" id="nom" maxlength="25" aria-required="true" placeholder="">
 									  </div>
 									  <div id="error19" class="messages error">Merci de renseigner ce champ.</div>
 
 									  <div class="form-item form-type-date">
 									    <label for="dateNaissance">Date de naissance<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
-									    <input type="date" class="form-control" id="dateNaissance" aria-required="true" placeholder="12/05/1975">
+									    <input type="date" class="form-control" id="dateNaissance" aria-required="true" placeholder="">
 									  </div>
 									  <div class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  <div class="messages error">Pour vous inscrire à maRATP, vous devez avoir + de 16 ans. <!-- (si date de naissance correcte = âge suffisant) --></div>
 
 										<div class="form-item form-type-number">
-									    <label for="mobile" class="visually-hidden">Mobile</label>
-									    <input aria-describedby="error11"  type="tel" class="form-control" id="mobile" maxlength="10" placeholder="Mobile (06XXXXXX)">
+									    <label for="mobile">Mobile</label>
+									    <input aria-describedby="error11"  type="tel" class="form-control" id="mobile" maxlength="10" placeholder="">
 									  </div>
 									  <div id="error11" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  <div id="error11" class="messages error">Merci de renseigner un numéro valide. <!-- (si erreur dans le numéro) --></div>
 
 									  <div class="form-item">
 									    <label for="mail">Adresse e-mail<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span> :</label>
-									    <input aria-describedby="error11" type="email" class="form-control" id="mail" maxlength="50" aria-required="true" placeholder="patrick.dupont@aol.com">
+									    <input aria-describedby="error11" type="email" class="form-control" id="mail" maxlength="50" aria-required="true" placeholder="">
 									  </div>
 									  <div id="error12" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  <div id="error12" class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
@@ -85,8 +85,8 @@
 
 
 									  <div class="form-item">
-									    <label for="mailAlert">Adresse e-mail alertes</label>
-									    <input aria-describedby="error13"  type="email" class="form-control" id="mailAlert" placeholder="(ex: mail@domaine.com)">
+									    <label for="mailAlert">Adresse e-mail alertes :</label>
+									    <input aria-describedby="error13"  type="email" class="form-control" id="mailAlert" placeholder="">
 									  </div>
 									  <div id="error13" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  <div id="error13" class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
@@ -174,7 +174,7 @@
 
 									  <div class="form-item">
 									    <label for="ville">Ville :</label>
-									    <input aria-describedby="error10"  type="text" class="form-control" id="ville" maxlength="50" placeholder="PARIS">
+									    <input aria-describedby="error10"  type="text" class="form-control" id="ville" maxlength="50" placeholder="">
 									    <div id="error10" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
@@ -283,6 +283,8 @@
 					</section>
 				</main>
 			</section>
+
+			@@include('./inc/parts/footer.html')
 
 
 	</div>

@@ -1,59 +1,308 @@
-header[role="banner"] {
-			h1 { position: absolute; left: 210px; top: 54px; text-align: left; }
-			> div:first-child { background-color: #fff; overflow: hidden;
-				> ul { float: left; margin: 0; padding: 0; list-style-type: none;
-					li { float: left; }
-					img { position: relative; top: -2px; vertical-align: bottom; }
-
-					a { display: block; padding: 10px; font-size: 0.72em; font-weight: bold; color: @gray; text-decoration: none;
-						&:hover, &:focus { background-color: @gray-darker; color: #fff; }
-					}
-					strong { display: block;padding: 10px; background-color: @gray-darker; font-size: 0.75em; color: #fff; text-decoration: none; }
-
-					&:first-child {
-						a { font-family: @primary-font-bold; font-weight: normal; border-left: solid 1px @gray-lighter;
-							&:hover, &:focus { background: #FFF; color: @texte; }
-						}
-						strong { font-family: @primary-font-bold; font-weight: normal; border-left: solid 1px @gray-darker; }
-					}
-				}
-
-				> div { float: right; font-family: arial, sans-serif;
-					> * { float: left; }
-					p { font-size: 0.75em; margin: 0; vertical-align: bottom; }
-					> ul { list-style-type: none; margin: 0; overflow: hidden; padding: 0;
-						li { float: left;
-							&:last-child {
-								a { border-right: solid 1px @gray-lighter; background-image: url('../img/verrou@2x.png'); background-position: 10px 50%; background-repeat: no-repeat; background-size: 13px 17px; padding-left: 30px; padding: 8px 10px 8px 30px;
-									&:hover, &:focus { background-image: url('../img/verrou-survol@2x.png'); border-right-color: @gray-darker; }
-								}
-							}
-						}
-						a { border-left: solid 1px @gray-lighter; color: @gray-darker; display: block; font-size: 0.75em; padding: 10px; text-decoration: none;
-							&:hover, &:focus { background-color: @gray-darker; color: #fff;  }
-						}
-					}
-
-					> div { padding: 10px 10px 0 10px; font-weight: bold; color: @gray;
-						> * { float: left; }
-						ul { list-style-type: none; margin: 0 0 0 9px; overflow: hidden; padding: 0; }
-						li { float: left; margin-left: 1px; }
-						img { border: solid 1px transparent; }
-						a:hover img { border-color: #00aa91; }
-					}
-				}
-
-			}
-			> div:last-child { position: relative; padding: 5px 0; background: url('../img/bg_header.jpg'); }
+/* @group Header */
+	
+	.toolbar {
+		background-color: #fff;
+		overflow: hidden;
+	}
+	
+	.toolbar > ul {
+		float: left;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.toolbar > ul li {
+		float: left;
+	}
+	
+	.toolbar > ul a {
+		color: #787778;
+		display: block;
+		font-size: 0.72em;
+		font-weight: bold;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	.toolbar > ul li:first-child a {
+		border-left: solid 1px #e5e4e3;
+	}
+	
+	.toolbar > ul strong {
+		background-color: #303030;
+		color: #fff;
+		display: block;
+		font-size: 0.75em;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	.toolbar > ul li:first-child strong {
+		border-left: solid 1px #303030;
+	}
+	
+	.toolbar > div {
+		float: right;
+	}
+	
+	.toolbar > div > * {
+		float: left;
+	}
+	
+	.search, #lang div p {
+		font-size: 0.75em;
+		margin: 0;
+		position: relative;
+		vertical-align: bottom;
+	}
+	
+	.search input[type="search"] {
+		-webkit-appearance: none;
+		background-color: #fff;
+		border: none;
+		border-left: solid 1px #e5e4e3;
+		border-right: solid 1px #e5e4e3;
+		color: #787778;
+		font-size: 1em;
+		font-weight: bold;
+		margin: 0;
+		padding: 9px 25px 10px 10px;
+		vertical-align: bottom;
+	}
+	
+	.search input[type="image"] {
+		margin-top: -8px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+	}
+	
+	#langbutton + div div {
+		display: none;
+	}
+	
+	#lang {
+		color: #787778;
+		font-weight: bold;
+		padding: 10px 10px 0 10px;
+	}
+	
+	#lang ul {
+		list-style-type: none;
+		margin: 0 0 0 9px;
+		overflow: hidden;
+		padding: 0;
+	}
+	
+	#lang li {
+		float: left;
+		margin-left: 1px;
+	}
+	
+	#lang img {
+		border: solid 1px transparent;
+	}
+	
+	#lang a:hover img {
+		border-color: #00aa91;
+	}
+	
+	#lang > div > * {
+		float: left;
+	}
+	
+	#lang + ul {
+		list-style-type: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+	
+	#lang + ul li {
+		float: left;
+	}
+	
+	#lang + ul a {
+		border-left: solid 1px #e5e4e3;
+		color: #303030;
+		display: block;
+		font-size: 0.75em;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	#lang + ul a:hover, #lang + ul a:focus { 
+		background-color: #303030;
+		color: #fff;
+		text-decoration: underline;
+	}
+	
+	#lang + ul li + li a {
+		border-right: solid 1px #e5e4e3;
+		background-image: url('../img/header/lock.png');
+		background-position: 10px 50%;
+		background-repeat: no-repeat;
+		padding-left: 30px;
+	}
+	
+	#lang + ul li + li a:hover, #lang + ul li + li a:focus {
+		background-image: url('../img/header/lock-hover.png');
+		border-right-color: #303030;
+	}
+	
+	#lang + ul img {
+		position: relative;
+		top: -2px;
+		vertical-align: bottom;
+	}
+	
+	.banner {
+		background-color: #00aa91;
+		padding: 13px 0 38px 0;
+		position: relative;
+	}
+	
+	.banner h1 {
+		left: 420px;
+		position: absolute;
+		top: 54px;
+	}
+	
+	@media only screen and (max-width: 800px) {
+	
+		header[role="banner"] h1 {
+			position: static;
 		}
-
-		// header sur Home
-		.front header[role="banner"] {
-			h1 { left: 420px; }
-			> div:last-child { position: relative; padding: 13px 0 38px 0; background: #00aa91; }
+		
+		header p[role="heading"] {
+			margin: 0;
 		}
+		
+		header p[role="heading"] img {
+			vertical-align: bottom;
+		}
+		
+		.toolbar {
+			overflow: visible;
+			position: relative;
+		}
+		
+		.toolbar *, .banner * {
+			float: none !important;
+		}
+	
+		.toolbar > ul {
+			display: none;
+		}
+		
+		#lang {
+			padding: 0;
+		}
+		
+		#langbutton span, #searchbutton span, #navigationbutton span {
+			display: inline-block;
+		}
+		
+		#searchbutton {
+			margin: 0;
+			right: 150px;
+			position: absolute;
+			top: 35px;
+		}
+		
+		#searchbutton + p {
+			background-color: #fff;
+			border-bottom: solid 1px #e5e4e3;
+			border-top: solid 1px #e5e4e3;
+			left: 0;
+			padding-left: 10px;
+			padding-right: 25px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			z-index: 2;
+		}
+		
+		#searchbutton + p input[type="search"] {
+			border: none;
+			display: block;
+			padding: 9px 0 10px 0;
+			width: 100%;
+		}
+		
+		#langbutton {
+			margin: 0;
+			right: 80px;
+			position: absolute;
+			top: 35px;
+		}
+		
+		#langbutton + div {
+			background-color: #fff;
+			left: 50%;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			z-index: 2;
+		}
+		
+		#langbutton + div p {
+			color: #000;
+			font-family: "Parisine", Arial, Helvetica, sans-serif;
+			font-size: 1em;
+			font-weight: normal;
+			padding-bottom: 6px;
+		}
+		
+		#langbutton + div {
+			font-family: Helvetica, Arial, sans-serif;
+			padding: 0 10px 0 20px;
+		}
+		
+		#langbutton + div ul {
+			margin: 0;
+			padding: 0 0 15px 0;
+		}
+		
+		#langbutton + div li {
+			padding-bottom: 5px;
+		}
+		
+		#langbutton + div a, #langbutton + div strong {
+			color: #000;
+			display: block;
+			font-size: 0.7em;
+			padding: 3px 31px 3px 0;
+			position: relative;
+			text-decoration: none;
+		}
+		
+		#langbutton + div img {
+			margin-top: -7px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+		
+		#langbutton + div div {
+			display: block;
+		}
+		
+		#lang + ul {
+			display: none;
+		}
+		
+		.banner {
+			display: none;
+		}
+		
+	}
+	
+/* @end */
 
-		// mini Header
+
+// mini Header
 		header[role="banner"].mini-header { .clearfix; background-color: @vertAplat; padding: 0 1em;
 			.logo {display: inline-block; vertical-align: middle; width: 15%; }
 			h1 { position: static; display: inline-block; vertical-align: middle; width: 60%; font-family: @primary-font-bold; font-weight: normal; color: #FFF; text-align: center; text-transform: uppercase;}

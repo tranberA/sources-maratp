@@ -1,0 +1,146 @@
+/* @group Navigation */
+
+	#navigation > ul {
+		background-color: #00aa91;
+		display: inline-block;
+		font-family: 'Parisine', Arial, Helvetica, sans-serif;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		vertical-align: bottom;
+		width: 100%;
+	}
+	
+	#navigation > ul[hidden] {
+		display: none;
+	}
+	
+	#navigation > ul > li {
+		float: left;
+		width: 20%;
+	}
+	
+	#navigation > ul > li > a, #navigation > ul > li > span.button {
+		background-image: url('../img/navigation/navigation.png');
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: auto 6px;
+		border-left: solid 1px #80c1b8;
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		font-size: 1.35em;
+		padding: 10px 0;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	#navigation > ul > li:first-child > a, #navigation > ul > li:first-child > span.button {
+		border-left: none;
+	}
+	
+	#navigation > ul > li > a:hover, #navigation > ul > li > a:focus, #navigation > ul > li > span.button:hover, #navigation > ul > li > span.button:focus, #navigation > ul > li > span.button.expanded {
+		background-color: #007c6a;
+	}
+	
+	#navigation > ul > li > a span, #navigation > ul > li > span.button span {
+		border-bottom: solid 4px transparent;
+		display: inline-block;
+	}
+	
+	#navigation > ul > li > a:hover span, #navigation > ul > li > a:focus span, #navigation > ul > li > span.button:hover span, #navigation > ul > li > span.button:focus span, #navigation > ul > li > span.button.expanded span {
+		border-bottom-color: #fff;
+	}
+	
+	#navigation > ul > li > div {
+		background-color: #007c6a;
+		font-size: 0.75em;
+		left: 0;
+		padding: 20px 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		z-index: 2;
+	}
+	
+	#navigation > ul > li > div strong {
+		display: block;
+		font-size: 1.2em;
+		margin-bottom: 5px;
+		padding-top: 2px;
+		text-transform: uppercase;
+	}
+	
+	#navigation > ul > li > div a {
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	#navigation > ul > li > div a:hover, #navigation > ul > li > div a:focus {
+		text-decoration: underline;
+	}
+	
+	#navigation > ul > li > div > ul {
+		list-style-type: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+	
+	#navigation > ul > li > div > ul > li {
+		float: left;
+		margin-left: 10px;
+		padding-left: 10px;
+		width: 170px;
+	}
+	
+	#navigation > ul > li > div > ul ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	@media only screen and (max-width: 800px) {
+		
+		#navigationbutton {
+			margin: 0;
+			right: 10px;
+			position: absolute;
+			top: 35px;
+		}
+		
+		#navigation > ul {
+			display: block;
+			left: 0;
+			right: 0;
+			position: absolute;
+			width: auto;
+			z-index: 2;
+		}
+		
+		#navigation > ul > li {
+			float: none;
+			width: auto;
+		}
+		
+		#navigation > ul > li > a, #navigation > ul > li > span.button {
+			background-image: none;
+			background-position: top center;
+			background-repeat: no-repeat;
+			border: none;
+			border-bottom: solid 1px #007f68;
+			padding: 10px;
+			text-align: left;
+		}
+		
+		#navigation > ul > li > a:hover, #navigation > ul > li > a:focus, #navigation > ul > li > span.button:hover, #navigation > ul > li > span.button:focus, #navigation > ul > li > span.button.expanded {
+			background-image: url('../img/navigation/navigation.png');
+		}
+		
+		#navigation > ul > li > div {
+			position: static;
+		}
+	}
+	
+/* @end */

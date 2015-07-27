@@ -99,42 +99,7 @@ abbr {
 
 	/* @group Navigation */
 
-		nav[role="navigation"] {
-			> ul  {position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; background-color: @vertAplat; font-family: 'Parisine', Arial, Helvetica, sans-serif; list-style-type: none;vertical-align: bottom;
-
-				> li { float: left; width: 20%;
-
-					&:first-child {
-						> a,
-						> span.button { border-left: none; }
-					}
-
-					> a,
-					> span.button { display: block; padding: 10px 0;
-						background-image: url('../img/navigation@2x.png'); background-position: top center; background-repeat: no-repeat; background-size: auto 6px; font-size: 1.35em; color: #fff; text-align: center; text-decoration: none; border-left: solid 1px @vert-light; cursor: pointer;
-
-						&:hover, &:focus, &.expanded { background-color: @vertTexte;
-							span { border-bottom-color: #fff; }
-						}
-
-						span { display: inline-block; border-bottom: solid 4px transparent; }
-					}
-
-					> div { position: absolute; left: 0; right: 0; top: 100%; padding: 20px 0; background-color: @vertTexte; font-size: 0.75em; z-index: 2;
-						a { color: #fff; text-decoration: none;
-							&:focus { text-decoration: underline; }
-						}
-
-						strong { display: block; margin-bottom: 5px; padding-top: 2px; font-size: 1.2em; text-transform: uppercase; }
-						> ul { margin: 0; padding: 0; list-style-type: none; overflow: hidden;
-							> li { float: left; width: 170px; margin-left: 10px; padding-left: 10px; }
-						}
-
-						ul { margin: 0; padding: 0; list-style-type: none; }
-					}
-				}
-			}
-		}
+		@import 'navigation'; 
 
 	/* @end Navigation */
 

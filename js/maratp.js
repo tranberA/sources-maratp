@@ -147,7 +147,6 @@
 
 
 	// focus sur les formulaires
-	
 	var survol = jQuery('.form-item input, .form-item select');
 
 	survol.focus(function(){
@@ -157,3 +156,12 @@
   survol.blur(function(){
   	jQuery(this).parent('.form-item').removeClass('focus');
   });
+
+jQuery(document).click(function (event) {
+
+	var target = jQuery(event.target);
+	if (target.is('div.form-item')) {
+		target.find('input, select').focus();
+	}
+
+});

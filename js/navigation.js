@@ -28,14 +28,18 @@
 		// Sous-menus masqués par défaut.
 		jQuery(this).next().attr('hidden', 'hidden');
 	});
-	
+
 	jQuery(document).click(function (event) {
 		// Clic extérieur à la navigation : fermeture du sous-menu affiché.
-		if (!(jQuery.contains(document.getElementById('navigation'), event.target))) {
-			jQuery('#navigation span[role="button"] + div').not('div[hidden]').prev().click();			
+		if(document.getElementById('navigation') !== null)
+		{
+			if (!(jQuery.contains(document.getElementById('navigation'), event.target))) {
+				jQuery('#navigation span[role="button"] + div').not('div[hidden]').prev().click();
+			}
 		}
+
 	});
-	
+
 // Navigation (Responsive).
 
 	jQuery('<p id="navigationbutton"><span role="button" tabindex="0"><img src="img/navigation/mobile/burger.png" alt="Afficher le menu principal ci-après" /></span></p>').prependTo('#navigation');
@@ -54,11 +58,11 @@
 			event.preventDefault();
 		}
 	});
-	
+
 	// A déporter dans un fichier commun pour gérer le responsive en contexte script.
 	var navviewportwidth = 800;
 	var navoldviewportwidth = false;
-	
+
 	function manageResponsiveNavigation() {
 		if (jQuery(window).width() != navoldviewportwidth) {
 			if (jQuery(window).width() <= navviewportwidth) {
@@ -69,7 +73,7 @@
 			else {
 				jQuery('#navigationbutton').attr('hidden', 'hidden');
 				jQuery('#navigation ul').first().removeAttr('hidden');
-			}	
+			}
 		}
 		navoldviewportwidth = jQuery(window).width();
 	}

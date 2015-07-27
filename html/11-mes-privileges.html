@@ -1,0 +1,53 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs rétractés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				@@include('./inc/parts/mini-header.html',{"pageTitle": "Mes privilèges"})
+
+				<main role="main" id="main" tabindex="-1">
+					<div class="stretch-content">
+	          <section>
+	          <header><h2 class="rich-display">Mes offres exclusives</h2></header>
+
+	          <div class="block-row row-full">
+	          @@include('./inc/blocks/bloc-contenu-full.html',{
+	            "rubrique": "Loisirs",
+	            "titre": "Une Polabox de 30&#160;photos à gagner",
+	            "date": "Du 5 au 15 mars",
+	            "visuel": "visuel-cheerz.jpg",
+	            "chapo": "En quelques clics, sélectionnez vos photos préférées, imprimez-les au format de votre choix, et réunissez-les dans un joli coffret. Tentez de gagner 1 Polabox de 30 photos ou 1 Polabox ID incluant 5 bandelettes de 4 photos.",
+	            "sousTitre": "Cheerz",
+	            "texte": "C’est avant tout une histoire de photo, celle des petits moments ou de grands souvenirs… La photo prise sur le vif, instantanée, impulsive, qu’on a envie de partager avec ses amis ! Polabox c’est le plaisir d’offrir les photos qui touchent, le plaisir de tenir entre ses mains les meilleurs souvenirs des dernières années. C’est le plaisir de suspendre le temps en matérialisant les événements de sa vie.",
+	            "lieu": "",
+	            "metro": "",
+
+	            "logo": "logo-cheerz.png",
+	            "links": "<ul class=\"links\"><li><a href=\"\">Cheerz.com</a></li><li><a href=\"\">polabox</a></li><li><a href=\"\">polabox ID</a></li></ul>"
+	          })
+						</div>
+					</section>
+
+					<section>
+					<header><h2 class="rich-display">Mes offres du moment</h2></header>
+
+					<div class="block-row block-multicols row-3-columns">
+						
+					</div>
+					</section>
+
+				</div>
+				</main>
+			</section>
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

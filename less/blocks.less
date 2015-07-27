@@ -145,7 +145,8 @@
 
   &.block-full
   {
-    overflow: hidden;
+    //overflow: hidden;
+    position: relative;
 
     @leftSpace: 32%;
     @rightSpace: 20%;
@@ -174,9 +175,16 @@
       }
     }
 
+    .meta,aside
+    {
+      position: absolute;
+      top: 0;
+    }
+
     .meta
     {
-      float: left;
+      //float: left;
+      left: 0;
       width: @leftSpace;
       text-transform: uppercase;
       //font-size: 0.9em;
@@ -202,7 +210,8 @@
 
     aside
     {
-      float: right;
+      //float: right;
+      right: 0;
       width: @rightSpace;
       font-size: 0.9em;
 

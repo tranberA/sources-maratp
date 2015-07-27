@@ -68,7 +68,7 @@
 
 	label {
 		font-size: 1em;
-		color: @vertTexte;
+		color: @texte;
 		display: inline-block;
 		padding-left: 0.5em;
 		pointer-events: none;
@@ -384,10 +384,20 @@
 
 // effet sur les labels
 
-.bloc-formulaire form .input--filled { background-color: @vert-lighter; border: 1px solid @vertTexte;
 
-	input {
+.bloc-formulaire form .input--filled {
+
+	label {
+		color: @vertTexte;
+	}
+
+}
+
+.bloc-formulaire form .focus { background-color: @vert-lighter; border: 1px solid @vertTexte;
+
+	input, select {
 	 background-color: @vert-lighter; 
+	 width: 100%;
 	}
 
 	label {
@@ -396,6 +406,7 @@
 		left: 0;
 		padding-left: 0;
 		font-size: 0.8em;
+		color: @vertTexte;
 		font-weight: bold;
 		-webkit-transform: translate3d(0, -20px, 0);
 		transform: translate3d(0, -20px, 0);
@@ -414,6 +425,7 @@
 	}
 
 }
+
 
 // confirmation mot de passe
 

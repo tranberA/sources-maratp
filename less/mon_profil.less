@@ -16,7 +16,7 @@
 					.check { position: absolute; top: 0; left: 0; .text-hidden; .ico-check;
 						&:before { position: absolute; top: 0; left: 0; font-size: 3em; line-height: 0.5; color: @vertTexte; }
 					}
-					h2 { margin-top: 2em; padding: 0 3.5em; font-family: 'brandon_grotesqueblack'; font-size: 1.15em; font-weight: normal; text-align: center; text-transform: uppercase; }
+					h2 { margin-top: 2em; padding: 0 5em; font-family: 'brandon_grotesqueblack'; font-size: 1.15em; font-weight: normal; text-align: center; text-transform: uppercase; }
 					.btn-edit { position: absolute; top: 0; right: 0;
 						button {  .ico-pencil; background: none; color: @texte; border: none; cursor: pointer;
 							&:after { margin-left: 5px; }
@@ -33,3 +33,41 @@
 
 
 	/* @end Mon profil */
+
+
+		@media only screen and (max-width: 705px) {
+
+			header.mini-header[role="banner"] .closePage { width: 30%; }
+			
+		}
+
+		@media only screen and (max-width: 480px) {
+
+			header.mini-header[role="banner"] { padding: 0;
+				.closePage { width: 100%; padding: 1em; text-align: center; border-bottom: 1px solid @vert-light; }
+				h1 { width: 100%; padding: 1em; margin: 0; cursor: pointer;
+					span.button { .ico-menu; display: block; 
+						&:before { margin-right: 5px; }
+					}
+				}
+			}
+
+			.menu-dashboard { margin: -10px -4% 0 -4%; border: none;
+				.menu {
+					li { float: none; width: 100%; border-bottom: 1px solid @texte; }
+				}
+			}
+
+			.bloc-profil {
+				 .profil-header {
+				 		h2 { padding-left: 0; padding-right: 6em; font-size: 1em; text-align: left; }
+				 	 .check { display: none; }
+				 	 .btn-edit { bottom: 15px; top: auto; }
+				 	}
+			}
+
+			.bloc-formulaire form .btn, 
+			.bloc-formulaire form button[type="submit"], 
+			.bloc-formulaire form input[type="submit"], 
+			.btn { width: 100%; }
+		}

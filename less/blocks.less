@@ -400,7 +400,7 @@
     .bandeau-message
     {
       position: absolute;
-      top: 100%;
+      top: 103%;
       left: 0;
       right: 0;
 
@@ -412,6 +412,21 @@
       background-color: @vertTexte;
       color: #fff;
       padding: 2em;
+
+      .social-action
+      {
+        display: inline-block;
+
+        li,a
+        {
+          display: inline-block;
+        }
+
+        li
+        {
+          background-color: #fff;
+        }
+      }
     }
   }
 
@@ -806,12 +821,4 @@ p.metro
   {
     background-image: url('@{imageDir}metro.png');
   }
-}
-
-
-/* ==> états */
-
-.ui-state-active
-{
-	display: block;
 }

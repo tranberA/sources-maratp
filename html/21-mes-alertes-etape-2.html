@@ -1,0 +1,45 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs rétractés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				@@include('./inc/parts/mini-header.html',{"pageTitle": "Mon dashboard"})
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container">
+
+						@@include('./inc/parts/menu-dashboard-alertes.html')
+
+
+						<div class="chapo-profil">
+							<p><a href="">Retour</a></p>
+							<p>Pour paraméter votre alerte, choisissez votre ligne :</p>
+						</div>
+
+						<h3>Réseau</h3>
+
+							<ul class="transports">
+								<li><a class="active" href="#"><img src="img/metro.png" alt="Métro"></a></li>
+								<li><a href="#"><img src="img/rer-full.png" alt="RER"></a></li>
+								<li><a href="#"><img src="img/metro.png" alt="Tramway"></a></li>
+								<li><a href="#"><img src="img/metro.png" alt="Bus"></a></li>
+								<li><a href="#"><img src="img/metro.png" alt="Noctilien"></a></li>
+							</ul>
+
+						
+
+					</section>
+				</main>
+			</section>
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

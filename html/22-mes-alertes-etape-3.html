@@ -1,0 +1,97 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs rétractés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				<header class="mini-header" role="banner">
+					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
+				  <h1><span class="button">Mon dashboard</span></h1>
+				</header>
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container alertes-3">
+
+						@@include('./inc/parts/menu-dashboard-alertes.html')
+
+
+						<div class="chapo-profil">
+							<p class="btn-retour"><a href=""><span class="ico-circle-prev"></span> Retour</a></p>
+							<p>Pour paraméter votre alerte, <br> choisissez le créneau horaire de votre ligne :</p>
+						</div>
+
+						<div class="choix-ligne">
+							<div>
+								<img src="img/alertes/m2.png" alt="Ligne2">	
+							</div>
+							<div>
+								<span>Porte Dauphine / Nation</span>	
+							</div>
+							 
+						</div>
+
+						<h3>Horaire / Jour</h3>
+
+						<div class="jours clearfix">
+							<ul>
+								<li><a href="#">L</a></li>
+								<li><a href="#">M</a></li>
+								<li><a href="#">Me</a></li>
+								<li><a href="#">J</a></li>
+								<li><a href="#">V</a></li>
+								<li class="weekend"><a href="#">S</a></li>
+								<li class="weekend"><a href="#">D</a></li>
+							</ul>
+						</div>
+
+						<div class="all-creneaux">
+
+							<div class="creneau">
+								<div class="date">
+									<p>De <input type="time" name=""></p>
+									<p>à <input type="time" name=""></p>
+								</div>
+								<div>
+									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+								</div>	
+							</div>
+
+							<div class="creneau">
+								<div class="date">
+									<p>De <input type="time" name=""></p>
+									<p>à <input type="time" name=""></p>
+								</div>
+								<div>
+									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+								</div>	
+							</div>
+
+							<div class="creneau add">
+								<p><span class="ico-plus"></span> J'ajoute un nouveau créneau</p>
+							</div>
+
+							<div class="validate">
+								<button class="btn-valide">Je valide mon alerte</button>
+							</div>
+
+						</div>
+
+
+					</section>
+				</main>
+			</section>
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

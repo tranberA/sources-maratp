@@ -1,0 +1,57 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs dévoilés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				<header class="mini-header" role="banner">
+					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
+				  <h1><span class="button">Mon dashboard</span></h1>
+				</header>
+				
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container">
+
+						<div class="menu-dashboard">
+							<ul class="menu">
+								<li class="first"><a href="#">Mon profil <span class="visually-hidden">(Rubrique active)</span></a></li>
+								<li><a href="#">Mes alertes</a></li>
+								<li><a href="#">Mes horaires</a></li>
+								<li class="last"><a class="active" href="#">Mes itinéraires</a></li>
+							</ul>
+						</div>
+
+
+						<article class="bloc-itineraires">
+							<div class="profil-header">
+								<div class="btn-back"><a href="">Retour</a></div>
+								<h2 class="title">Créez et ajouter un favori :</h2>
+							</div>
+
+							<div class="bloc-formulaire">
+
+
+
+								<div class="form-actions">
+									<button type="submit" class="btn">Je valide</button>
+								</div>
+
+							</div>
+						</article>
+
+					</section>
+				</main>
+			</section>
+
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

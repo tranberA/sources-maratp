@@ -304,17 +304,11 @@
 
 // mini Header
 		header[role="banner"].mini-header { .clearfix; background-color: @vertAplat; padding: 0 1em;
-			.logo {display: inline-block; vertical-align: middle; width: 15%; }
+			//.logo {display: inline-block; vertical-align: middle; width: 15%; }
 			h1 { position: static; display: inline-block; vertical-align: middle; width: 60%; font-family: @primary-font-bold; font-weight: normal; font-size: 1.2em;color: #FFF; text-align: center; text-transform: uppercase;}
-			.closePage
-			{
-				display: inline-block;
-				width: 4%; background: none; text-align: center; vertical-align: middle;
+			.closePage { display: inline-block; width: 19%; background: none; text-align: left; vertical-align: middle;
 				a { .ico-circle-prev; .text-hidden; color: #FFF;
-					&:before
-					{
-						font-size: 1.6em;
-					}
+					&:before { font-size: 1.6em;  margin-right: 10px;}
 				}
 			}
 		}

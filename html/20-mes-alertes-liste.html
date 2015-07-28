@@ -9,7 +9,10 @@
 
 			<section>
 
-				@@include('./inc/parts/mini-header.html',{"pageTitle": "Mon dashboard"})
+				<header class="mini-header" role="banner">
+					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
+				  <h1><span class="button">Mon dashboard</span></h1>
+				</header>
 
 				<main role="main" id="main" tabindex="-1">
 					<section class="container">
@@ -45,6 +48,8 @@ Vous pouvez les classer selon vos préférences pour un dashboard qui vous resse
 								<div class="modifier-supprimer">
 									<p>Modifier <span class="ico-pencil"></span></p>
 									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
 								</div>
 							</div>
 
@@ -96,8 +101,10 @@ Vous pouvez les classer selon vos préférences pour un dashboard qui vous resse
 								</div>
 							</div>
 
+							<hr class="separation">
+
 							<div class="bloc empty">
-								<p>+ J'ajoute une alerte</p>
+								<p><span class="ico-plus"></span> J'ajoute une alerte</p>
 							</div>
 							
 						</div>

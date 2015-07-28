@@ -20,6 +20,7 @@
 
 @primary-font: 'brandon_grotesquelight', sans-serif;
 @primary-font-bold: 'brandon_grotesquebold', sans-serif;
+@primary-font-black: 'brandon_grotesqueblack', sans-serif;
 
 // icones
 
@@ -50,13 +51,17 @@
 
 .ico-circle-next     { &:before { .icone;content: "\e607";} }
 .ico-circle-prev     { &:before { .icone;content: "\e608";} }
-.ico-close           { &:before { .icone;content: "\e606";} }
+.ico-close           { &:before { .icone;content: "\e609";} }
+.ico-plus            { &:before { .icone;content: "\e60d";} }
+.ico-cancel           { &:after { .icone;content: "\e609";} }
 
 .ico-caret-down      { &:before { .icone; content: "\f0d7"; } }
 .ico-caret-up        { &:before { .icone; content: "\f0d8"; } }
 .ico-trash           { &:before { .icone; content: "\e606"; } }
 .ico-bell-slash      { &:before { .icone; content: "\f1f6"; } }
 .ico-bell-slash-0    { &:before { .icone; content: "\f1f7"; } }
+
+.ico-menu            { &:before { .icone; content: "\e60e"; } }
 
 // fleches
 .ico-fleche-bottom   {  &:after { .icone; content: "\e60a"; } }

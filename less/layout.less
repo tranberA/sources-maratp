@@ -72,7 +72,10 @@
 		.bloc-formulaire form {
 
 			.form-type-select,
-			.form-type-date { width: 100%; }
+			.form-type-date,
+      .form-type-number,
+      .form-type-code-postal
+       { width: 100%; }
 		}
 
     .block-row
@@ -133,7 +136,13 @@
 
 		  // FORM
 		  .bloc-formulaire form {
-		  	input[type="date"] { width: 40%;}
+		  	input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="date"]
+         { width: 40%;}
 		  }
 
 }

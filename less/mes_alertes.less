@@ -16,7 +16,7 @@
 				display: inline-block;
 				img { margin-top: -7px;}
 			}
-			.nom-ligne { margin-left: 22px;}
+			.nom-ligne { margin-left: 22px; display: inline-block;}
 		}
 		.horaires {
 			background-color: #f6f6f6; padding-left: 28px; border: 1px solid @border; border-top: none;
@@ -32,3 +32,46 @@
 		}
 	}
 }
+
+
+ @media only screen and (max-width: 661px) {
+
+ 	.all-alertes {
+		.bloc {
+			.metro {
+				.nom-ligne { font-size: 0.9em;}
+			}
+			.horaires {
+				p { font-size: 0.9em;}
+				.creneau-1 { margin-left: 15px; margin-right: 10px; }
+
+			}
+		}
+ 	}
+ }
+
+ @media only screen and (max-width: 580px) {
+	
+	.all-alertes {
+		.bloc {
+			.metro {
+				padding-left: 12px;
+				.numero-ligne { display: block; float: left;}
+				.nom-ligne { 
+					font-size: 1em; display: block; margin-left: 65px; padding-bottom: 25px; line-height: 1.4;
+					p { 
+						display: block; margin-top: 0px; margin-bottom: 0px;
+						&:first-child {padding-top: 15px;}
+					}
+				}
+			}
+			.horaires {
+				p { font-size: 1em; display: block;}
+				.jours { margin-top: 0px; padding-top: 15px;}
+				.creneau-1 { margin-left: 0px; margin-right: 0px; }
+
+			}
+		}
+ 	}
+
+ }

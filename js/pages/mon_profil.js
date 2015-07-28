@@ -6,7 +6,7 @@
 								
 							</div>
 							<div class="profil-body">*/
-jQuery('.profil-header').each(function () {
+jQuery('.bloc-profil .profil-header').each(function () {
 
 	jQuery('<div class="btn-edit"><button type="button" aria-label="' + (jQuery(this).find('h2').text() + ', afficher le formulaire de modifications ci-après') + '">Modifier</button></div>').appendTo(jQuery(this));
 	jQuery(this).next().attr('hidden', 'hidden');

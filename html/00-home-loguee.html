@@ -1,0 +1,275 @@
+
+	@@include('./inc/parts/head.html',{"pageTitle": "ratp.fr - maRATP"})
+	<body class="front">
+		
+		
+		<div id="maratp">
+			
+			
+			
+			<!-- Main -->
+				<!-- Breadcrumb & Logout -->
+				<div class="breadcrumbnlogout">
+					<p><a href="#">Accueil</a> > <strong>maRATP</strong></p>
+					<p><a href="#">Se déconnecter</a></p>
+				</div>
+				<!-- Dashboard 1 -->
+				<article class="dashboard">
+					<div>
+						<h1><span>Bonjour </span><span class="button">Patrick</span> <img src="img/attention.png" alt="(attention)" /></h1>
+						<div>
+							<p><strong><img src="img/attention.png" alt="Attention :" height="30" width="30" /> profil complet <span class="percent">50%</span></strong></p>
+							<p><a href="#">Gérer mon compte</a></p>
+						</div>
+					</div>
+					<div class="alertes">
+						<h2><span class="button">Mes alertes</span></h2>
+						<div><!-- Ajout -->
+							<div>
+								<p class="empty"><strong>&Ecirc;tre informé de l'état du trafic</strong> sur mes lignes et horaires préférés</p>
+							</div>
+							<p><a href="#" aria-label="Ajouter une alerte">+ Ajouter une alerte</a></p>
+						</div>
+					</div>
+					<div class="horaires">
+						<h2><span class="button">Mes horaires</span></h2>
+						<div>
+							<div>
+								<div>
+									<p class="empty"><strong>Enregistrer mes horaires</strong> sur mes lignes préférées</p>
+								</div>
+							</div>
+							<p><a href="#" aria-label="Ajouter un horaire">+ Ajouter un horaire</a></p>
+						</div>
+					</div>
+					<div class="itineraires">
+						<h2><span class="button">Itinéraires</span></h2>
+						<div>
+							<form action="#" method="get">
+								<div class="donnees">
+									<p class="depart"><label for="depart">Départ :</label> <input type="text" id="depart" name="depart" placeholder="Station, lieu ou adresse" /></p>
+									<p class="arrivee"><label for="arrivee">Arrivée :</label> <input type="text" id="arrivee" name="arrivee" placeholder="Station, lieu ou adresse" /></p>
+								</div>
+								<div class="actions">
+									<p><input type="submit" aria-label="Calculer l'itinéraire" value="Calculer" /></p>
+									<p><a href="#" aria-label="Gérer mes adresses">+ Gérer mes adresses</a></p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</article>
+				<!-- Dashboard 2 -->
+				<article class="dashboard">
+					<div>
+						<h1><span>Bonjour </span><span class="button">Patrick</span> <img src="img/attention.png" alt="(attention)" /></h1>
+						<div>
+							<p><strong><img src="img/attention.png" alt="Attention :" height="30" width="30" /> votre pass Navigo expire dans <span>3 jours</span></strong></p>
+							<p><a href="#">Gérer mon compte</a></p>
+						</div>
+					</div>
+					<div class="alertes">
+						<h2><span class="button">Mes alertes</span> <span class="type perturbe">(trafic perturbé)</span></h2>
+						<div>
+							<div>
+								<ul>
+									<li class="fluide"><img src="img/m.png" alt="Métro" /> <img src="img/m13.png" alt="ligne 13 :" /> Trafic fluide</li>
+									<li class="perturbe"><img src="img/m.png" alt="Métro" /> <img src="img/m7.png" alt="ligne 7 :" /> Trafic perturbé</li>
+									<li class="fluide"><img src="img/t.png" alt="Tramway" /> <img src="img/t3b.png" alt="ligne 3b :" /> Trafic fluide</li>
+								</ul>
+							</div>
+							<p><a href="#" aria-label="Ajouter une alerte">+ Ajouter une alerte</a></p>
+						</div>
+					</div>
+					<div class="horaires indisponible"><!-- Indisponible -->
+						<h2 class="visually-hidden"><span class="button">Mes horaires</span></h2>
+						<div>
+							<div>
+								<div>
+									<p>Suite à une perturbation<br /> sur le réseau,<br /> vous ne pouvez pas<br /> accéder à vos services<br /> pour le moment.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="itineraires">
+						<h2><span class="button">Itinéraires</span></h2>
+						<div>
+							<div class="donnees">
+								<p class="depart"><a href="#"><span>Départ :</span> <span>13 rue Carpeaux,<br />75018 Paris</span></a></p>
+								<p class="arrivee"><a href="#"><span>Arrivée :</span> <span>12 avenue du Capitaine Glarner, 93400 Saint-Ouen</span></a></p>
+							</div>
+							<div class="actions">
+								<p><a href="#">Calculer</a></p>
+								<p><a href="#" aria-label="Gérer mes adresses">+ Gérer mes adresses</a></p>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- Dashboard 3 -->
+				<article class="dashboard">
+					<div>
+						<h1><span>Bonjour </span><span class="button">Patrick</span> <img src="img/attention.png" alt="(attention)" /></h1>
+						<div>
+							<p><strong><img src="img/attention.png" alt="Attention :" height="30" width="30" /> votre pass Navigo expire dans <span>3 jours</span></strong></p>
+							<p><a href="#">Gérer mon compte</a></p>
+						</div>
+					</div>
+					<div class="services indisponible">
+						<h2 class="visually-hidden">Mes services</h2>
+						<div>
+							<p>Suite à une perturbation sur le réseau,<br /> vous ne pouvez pas accéder à vos services pour le moment.</p>
+						</div>
+					</div>
+				</article>
+				<!-- Dashboard 4 -->
+				<article class="dashboard">
+					<div>
+						<h1><span>Bonjour </span><span class="button">Patrick</span> <img src="img/attention.png" alt="(attention)" /></h1>
+						<div>
+							<p><strong><img src="img/attention.png" alt="Attention :" height="30" width="30" /> votre pass Navigo expire dans <span>3 jours</span></strong></p>
+							<p><a href="#">Gérer mon compte</a></p>
+						</div>
+					</div>
+					<div class="alertes">
+						<h2><span class="button">Mes alertes</span> <span class="type perturbe">(trafic perturbé)</span></h2>
+						<div>
+							<div>
+								<ul>
+									<li class="fluide"><img src="img/m.png" alt="Métro" /> <img src="img/m13.png" alt="ligne 13 :" /> Trafic fluide</li>
+									<li class="perturbe"><img src="img/m.png" alt="Métro" /> <img src="img/m7.png" alt="ligne 7 :" /> Trafic perturbé</li>
+									<li class="fluide"><img src="img/t.png" alt="Tramway" /> <img src="img/t3b.png" alt="ligne 3b :" /> Trafic fluide</li>
+								</ul>
+							</div>
+							<p><a href="#" aria-label="Ajouter une alerte">+ Ajouter une alerte</a></p>
+						</div>
+					</div>
+					<div class="horaires">
+						<h2><span class="button">Mes horaires</span></h2>
+						<div>
+							<div>
+								<div>
+									<h3><img src="img/bus.png" alt="Bus" height="20" width="20" /> <img src="img/bus60.png" alt="60" height="20" width="21" /></h3>
+									<p><span class="visually-hidden">De</span> <span class="de">Place des Fêtes</span> <span class="visually-hidden">à</span> Porte de Montmartre</p>
+									<ul>
+										<li><strong><span class="visually-hidden">Prochain passage : </span>7 mn</strong></li>
+										<li><span class="visually-hidden">Passage suivant : </span>13 mn</li>
+									</ul>
+								</div>
+							</div>
+							<p><a href="#" aria-label="Ajouter un horaire">+ Ajouter un horaire</a></p>
+						</div>
+					</div>
+					<div class="itineraires">
+						<h2><span class="button">Itinéraires</span></h2>
+						<div>
+							<div class="donnees">
+								<p class="depart"><a href="#"><span>Départ :</span> <span>13 rue Carpeaux,<br />75018 Paris</span></a></p>
+								<p class="arrivee"><a href="#"><span>Arrivée :</span> <span>12 avenue du Capitaine Glarner, 93400 Saint-Ouen</span></a></p>
+							</div>
+							<div class="actions">
+								<p><a href="#">Calculer</a></p>
+								<p><a href="#" aria-label="Gérer mes adresses">+ Gérer mes adresses</a></p>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- Anti train-train -->
+				<article class="antitraintrain">
+					<div class="title">
+						<h1><span><span>L’anti</span> train-train <span class="number"><span>#2</span></span></span></h1>
+						<p><span>maRATP</span> vous fait sa sélection pour mars.</p>
+					</div>
+					<div class="content">
+						<h2>31 jours de douce folie<br /> à voir, à goûter,<br /> à découvrir sans hésiter.</h2>
+						<p>Place à la folie de Dali et à la grandeur<br />de Jeff Koons, aller express pour le maquereau<br />à la flamme de la Porte 12, petite halte à la fontaine<br />pour revenir à la source avec Niki de Saint Phalle...<br />Vraiment beau, vraiment dingo !</p>
+						<p><a href="#">Voir ma sélection</a></p>
+					</div>
+				</article>
+				<section>
+					<h1 class="visually-hidden">Autres recommandations</h1>
+					<article class="inspirations">
+						<div>
+							<p><a href="#"><strong>Inspirations</strong> <span>Envie d’aller ici ou là ? Toutes nos bonnes adresses du moment : restos, balades...<br /><span lang="en">by</span> <img src="img/lebonbon.png" alt="Le Bonbon" height="24" width="86" /></span></a></p>
+						</div>
+						<div><img src="img/reco1.png" alt="" /></div>
+						<div>
+							<p>Restaurant</p>
+							<h2>Frenchie</h2>
+							<p>9 boulevard Réaumur Sébastopol<br />75010 Paris</p>
+							<p><img src="img/m.png" alt="Métro" /> <img src="img/m3.png" alt="ligne 3" /> <strong>Sentier</strong></p>
+							<p><a href="#">Je découvre</a></p>
+						</div>
+					</article>
+					<article class="nth3np2 coupsdecoeur">
+						<div>
+							<p><a href="#"><strong>Coups de coeur</strong> <span>Aller de découverte en découverte ? Toute notre sélection d'artistes, de rencontres à suivre, tout ce qu'on aime partager avec vous...</span></a></p>
+						</div>
+						<div><img src="img/reco2.png" alt="" /></div>
+						<div>
+							<p>Musique</p>
+							<h2>Taraf Haidouks</h2>
+							<p>Taraf de Haïdouks est un ensemble musical de Roms de Roumanie, originaire de Clejani, au sud de Bucarest.</p>
+							<p><a href="#">Je découvre</a></p>
+						</div>
+					</article>
+					<article class="privileges">
+						<div>
+							<p><a href="#"><strong>Privilèges</strong> <span>Vous faire plaisir un peu tout le temps ?<br />Des offres pour chacune de vos envies, et<br />des jeux qui vous donnent le sourire !</span></a></p>
+						</div>
+						<div><img src="img/reco3.png" alt="" /></div>
+						<div>
+							<p>Loisirs</p>
+							<h2>Cheerz</h2>
+							<p>Une Polabox de 30 photos à gagner</p>
+							<p><a href="#">J'en profite</a></p>
+						</div>
+					</article>
+					<article class="inspirations">
+						<div>
+							<p><a href="#"><strong>Inspirations</strong> <span>Envie d’aller ici ou là ? Toutes nos bonnes adresses du moment : restos, balades, boutiques...</span></a></p>
+						</div>
+						<div><img src="img/reco4.png" alt="" /></div>
+						<div>
+							<p>Balades</p>
+							<h2>Fontaine Stravinsky</h2>
+							<p>Rue Brisemiche, 75004 Paris</p>
+							<p><img src="img/m.png" alt="Métro" /> <img src="img/m1.png" alt="ligne 1" /> <span class="visually-hidden">ou </span><img src="img/m11.png" alt="ligne 11" /> <strong>Hôtel de ville</strong></p>
+							<p><a href="#">Je découvre</a></p>
+						</div>
+					</article>
+					<article class="nth3np2 services">
+						<div>
+							<p><a href="#"><strong>Services</strong> <span>Pressing en station, conciergerie du métro... pour vous faciliter la vie dans les transports, on a pensé à tout ce qui pouvait bien vous servir !</span></a></p>
+						</div>
+						<div><img src="img/reco5.png" alt="" /></div>
+						<div>
+							<p>Services</p>
+							<h2>Conciergerie</h2>
+							<!-- lang à virer --><p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim arcu ut lorem maximus, at dapibus lorem porttitor. Vivamus in semper.</p>
+							<p><a href="#">Je découvre</a></p>
+						</div>
+					</article>
+					<article class="services">
+						<div>
+							<p><a href="#"><strong>Services</strong> <span>Pressing en station, conciergerie du métro... pour vous faciliter la vie dans les transports, on a pensé à tout ce qui pouvait bien vous servir !</span></a></p>
+						</div>
+						<div><img src="img/reco6.png" alt="" /></div>
+						<div>
+							<p>Services</p>
+							<h2>Applis mobile</h2>
+							<p>Vous avez la RATP toujours en poche, vous êtes informé, à tout moment, où que vous soyez.</p>
+							<p><a href="#">Je découvre</a></p>
+						</div>
+					</article>
+				</section>
+			<!-- Main -->
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		@@include('./inc/parts/foot.html')
+	</body>
+</html>

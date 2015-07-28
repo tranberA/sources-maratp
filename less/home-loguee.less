@@ -1,0 +1,909 @@
+
+	
+	/* Fil d'ariane + déco */
+	#maratp > div:first-of-type {
+		overflow: hidden;
+		padding: 20px 1px;
+	}
+	#maratp > div:first-of-type p:first-child {
+		float: left;
+		font-family: Arial, sans-serif;
+		font-size: 0.75em;
+		margin: 5px 0 0 0;
+	}
+	#maratp > div:first-of-type p:first-child a {
+		color: #000;
+		text-decoration: none;
+	}
+	#maratp > div:first-of-type p:first-child a:hover, #maratp > div:first-of-type p:first-child a:focus {
+		text-decoration: underline;
+	}
+	#maratp > div:first-of-type p:last-child {
+		background: transparent url("../../../img/signout.png") no-repeat scroll center left;
+		background-size: 21px 18px;
+		float: right;
+		margin: 0;
+		padding: 0 0 0 31px;
+	}
+	#maratp > div:first-of-type p:last-child a {
+		color: #008672;
+		font-family: "brandon_grotesquelight";
+		font-size: 0.95em;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	#maratp > div:first-of-type p:last-child a:hover, #maratp > div:first-of-type p:last-child a:focus {
+		text-decoration: underline;
+	}
+	
+	
+	/* Dashboard */
+	
+	.dashboard {
+		overflow: hidden;	
+	}
+	
+	.dashboard > div {
+		background: transparent url("../../../img/dashboard.png") no-repeat scroll top center;
+		float: left;
+		width: 240px;
+	}
+	.dashboard > div + div {
+		border-left: solid 1px #e9e9e9;
+		width: 239px;
+	}
+	
+	.dashboard > div + div:nth-child(2),
+	.dashboard > div + div:nth-child(4) {
+		background-color: #f5f5f5;
+	}
+	
+	.dashboard > div:first-child {
+		background-color: #1d3667;
+		color: #fff;
+		font-family: "brandon_grotesquelight";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.dashboard h1 {
+		/*background: transparent url("../../../img/dashboard.png") no-repeat scroll top center;*/
+		font-size: 1.6em;
+		line-height: 1.2em;
+		margin: 0;
+		padding: 25px 0;
+		text-align: center;
+	}
+	.dashboard h1 img {
+		display: none;
+	}
+	.dashboard h1 span.button {
+		display: block;
+		font-family: "brandon_grotesquebold";
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	.dashboard h1 + div p:first-child {
+		background-color: #052152;
+		color: #fff;
+		font-size: 0.83em;
+		font-weight: bold;
+		margin: 0;
+		padding: 12px 20px;
+		text-transform: uppercase;
+	}
+	.dashboard h1 + div p:first-child strong {
+		display: block;
+		overflow: hidden;
+		padding-left: 42px;
+		position: relative;
+		
+		
+		min-height: 36px;
+		/*line-height: 36px;*/
+		vertical-align: middle;
+	}
+	.dashboard h1 + div p:first-child img {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -15px;
+	}
+	.dashboard h1 + div p:first-child span {
+		color: #ff5858;
+	}
+	
+	.dashboard h1 + div p + p {
+		margin: 0;
+		padding: 25px 0;
+		text-align: center;
+	}
+	
+	.dashboard h1 + div p + p a {
+		background: transparent url("../../../img/compte.png") no-repeat scroll center left;
+		color: #fff;
+		display: inline-block;
+		padding-left: 27px;
+	}
+	
+	
+	
+	
+	
+	
+	.dashboard h2 {
+		color: #545454;
+		font-family: "brandon_grotesquelight";
+		font-size: 1.2em;
+		font-weight: normal;
+		margin: 0;
+		padding: 20px 0 5px 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.dashboard h2 .type {
+		display: none;
+	}
+	
+	/*
+	.dashboard > div {
+		min-height: 255px;
+	}
+	
+	.dashboard > div h2 + div {
+		min-height: 155px;
+	}
+	*/
+	.dashboard {
+		display: table;
+		margin: 0 0 20px 0;
+	}
+	.dashboard > div {
+		display: table-cell;
+		float: none;
+		vertical-align: bottom;
+	}
+	.dashboard > div h2 + div > div {
+		min-height: 145px;
+	}
+	.dashboard > div:last-child h2 + div > div {
+		min-height: 0;
+	}
+	
+	
+	
+	.dashboard span[role="button"] {
+		background: transparent url("../../../img/open-white.png") no-repeat scroll 20px center;
+	}
+	.dashboard h2 span[role="button"] {
+		background: transparent url("../../../img/open-grey.png") no-repeat scroll 20px center;
+	}
+	
+	
+	
+	.dashboard > div:nth-child(2) ul {
+		font-family: "brandon_grotesquelight";
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.dashboard > div:nth-child(2) ul li {
+		color: #494949;
+		padding: 12px 20px;
+		position: relative;
+	}
+	
+	.dashboard > div:nth-child(2) ul li:after {
+		border-radius: 50%;
+		content: '';
+		height: 12px;
+		position: absolute;
+		right: 14px;
+		top: 50%;
+		margin-top: -6px;
+		width: 12px;
+	}
+	.dashboard > div:nth-child(2) ul li.fluide:after { background-color: #6cc714; }
+	.dashboard > div:nth-child(2) ul li.perturbe:after { background-color: #ff9c00; }
+	
+	.dashboard > div:nth-child(2) ul li + li {
+		border-top: solid 1px #d9d9d9;
+	}
+	
+	.dashboard > div:nth-child(2) ul li img {
+		position: relative;
+		top: -2px;
+		vertical-align: bottom;	
+	}
+	
+	.dashboard > div:nth-child(2) ul li img + img {
+		margin-right: 12px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	.dashboard > div:nth-child(2) > div:last-child p:last-child, 
+	.dashboard > div:nth-child(3) > div:last-child p:last-child, 
+	.dashboard > div:nth-child(4) > div:last-child p:last-child,
+	
+	
+	.actions p:last-child {
+		margin: 0;
+	}
+	
+	.dashboard > div:nth-child(2) > div:last-child p:last-child a,
+	.dashboard > div:nth-child(3) > div:last-child p:last-child a, 
+	.dashboard > div:nth-child(4) > div:last-child .actions p:last-child a, 
+	
+	.actions p:last-child a {
+		background-color: #052152;
+		border: solid 1px #052152;
+		color: #fff;
+		display: block;
+		font-family: "brandon_grotesquelight";
+		padding: 11px 0;
+		text-align: center;
+		text-decoration: none;
+		
+		vertical-align: bottom;
+	}
+	
+	.dashboard > div:nth-child(2) > div:last-child p:last-child a:hover, 
+	.dashboard > div:nth-child(2) > div:last-child p:last-child a:focus,
+	.dashboard > div:nth-child(3) > div:last-child p:last-child a:hover, 
+	.dashboard > div:nth-child(3) > div:last-child p:last-child a:focus,
+	.dashboard > div:nth-child(4) > div:last-child .actions p:last-child a:hover, 
+	.dashboard > div:nth-child(4) > div:last-child .actions p:last-child a:focus, 
+	
+	.actions p:last-child a:hover, .actions p:last-child a:focus {
+		background-color: #fff;
+		color: #052152;
+	}
+	
+	
+	/* Autres recos */
+	section {
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	section article {
+		background-color: #fff;
+		border-top-style: solid;
+		border-top-width: 7px;
+		color: #282828;
+		float: left;
+		font-family: "brandon_grotesquelight";
+		margin: 10px 0;
+		min-height: 400px;
+		width: 310px;
+	}
+	section article > div:first-child {
+		border-left: solid 1px #dbdbdb;
+		border-right: solid 1px #dbdbdb;
+		min-height: 110px;
+		padding: 20px 30px 0 30px;
+	}
+	section article h2 ~ p a {
+		border-style: solid;
+		border-width: 1px;
+		color: #fff;
+		display: inline-block;
+		font-family: "brandon_grotesquebold";
+		font-size: 0.85em;
+		/*font-weight: bold;*/
+		padding: 12px 0;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		min-width: 185px;
+	}
+	section article h2 ~ p a:hover, section article h2 ~ p a:focus {
+		background-color: #fff;
+	}
+	article.coupsdecoeur h2 ~ p a {
+		background-color: #d2388c;
+		border-color: #d2388c;
+	}
+	article.coupsdecoeur h2 ~ p a:hover, article.coupsdecoeur h2 ~ p a:focus {
+		color: #d2388c;
+	}
+	article.inspirations h2 ~ p a {
+		background-color: #ffcf00;
+		border-color: #ffcf00;
+		color: #282828;
+	}
+	article.privileges h2 ~ p a {
+		background-color: #008672;
+		border-color: #008672;
+	}
+	article.privileges h2 ~ p a:hover, article.privileges h2 ~ p a:focus {
+		color: #008672;
+	}
+	article.services h2 ~ p a {
+		background-color: #1d3667;
+		border-color: #1d3667;
+	}
+	article.services h2 ~ p a:hover, article.services h2 ~ p a:focus {
+		color: #1d3667;
+	}
+	section article > div:first-child img {
+		vertical-align: middle;
+	}
+	section article img {
+		height: auto;
+		max-width: 100%;
+		vertical-align: bottom;
+	}
+	section article > div:last-child {
+		border: solid 1px #dbdbdb;
+		border-top: none;
+		min-height: 190px;
+		overflow: auto;
+		padding: 25px 30px 3.5em 30px;
+		position: relative;
+	}
+	section article > div:last-child img + strong {
+		font-size: 0.85em;
+		padding-left: 5px;
+		text-transform: uppercase;
+	}
+	section article > div:last-child p:first-child {
+		font-size: 0.7em;
+		font-weight: bold;
+		margin: 0;
+		text-transform: uppercase;
+	}
+	section article > div:last-child p:last-child {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		margin: 0;
+	}
+	section article h2 {
+		font-family: "brandon_grotesquebold";
+		line-height: 1.1em;
+		margin: 3px 0 0 0;
+		position: relative;
+		text-transform: uppercase;
+		top: -6px;
+	}
+	section article > div:last-child h2 ~ p:not(:last-child) {
+		font-size: 0.98em;
+	}
+	section article h2 + p {
+		margin-top: 0;
+	}
+	section article p {
+		margin-bottom: 0;
+	}
+	article.nth3np2  {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	article.coupsdecoeur {
+		border-top-color: #d2388c;
+	}
+	/*
+	article.coupsdecoeur:hover div:first-child {
+		background-color: #d2388c;
+		border-left-color: #d2388c;
+		border-right-color: #d2388c;
+		color: #fff;
+	}
+	article.coupsdecoeur:hover div:first-child a {
+		background: transparent url("../../../img/go-survol.png") no-repeat scroll right center;
+		background-size: 17px 17px;
+		color: #fff;
+	}
+	*/
+	article.inspirations {
+		border-top-color: #ffcf00;
+	}
+	/*
+	article.inspirations:hover div:first-child {
+		background-color: #ffcf00;
+		border-left-color: #ffcf00;
+		border-right-color: #ffcf00;
+		color: #282828;	
+	}
+	*/
+	article.privileges {
+		border-top-color: #008672;
+	}
+	/*
+	article.privileges:hover div:first-child {
+		background-color: #008672;
+		border-left-color: #008672;
+		border-right-color: #008672;
+		color: #fff;
+	}
+	article.privileges:hover div:first-child a {
+		background: transparent url("../../../img/go-survol.png") no-repeat scroll right center;
+		background-size: 17px 17px;
+		color: #fff;
+	}
+	*/
+	article.services {
+		border-top-color: #1d3667;
+	}
+	/*
+	article.services:hover div:first-child {
+		background-color: #1d3667;
+		border-left-color: #1d3667;
+		border-right-color: #1d3667;
+		color: #fff;
+	}
+	article.services:hover div:first-child a {
+		background: transparent url("../../../img/go-survol.png") no-repeat scroll right center;
+		background-size: 17px 17px;
+		color: #fff;
+	}
+	*/
+
+	.itineraires .donnees {
+		min-height: 100px !important;
+	}
+	.itineraires .donnees p {
+		margin: 0;
+	}
+	.itineraires .donnees p + p {
+		margin-top: 2px !important;
+	}
+	.itineraires .donnees a {
+		background-color: #fafafa;
+		border: solid 1px #fafafa;
+		color: #5d5d5d;
+		display: block;
+		font-family: 'Open Sans';
+		overflow: hidden;
+		padding-left: 8px;
+	}
+	.itineraires form .donnees p {
+		background-color: #fafafa;
+		padding: 4px 0;
+	}
+	.itineraires form input[type="text"] {
+		width: 134px;
+	} 
+	.itineraires .donnees a:hover, .itineraires .donnees a:focus {
+		background-color: #ecfdfb;
+		border-color: #008672;
+	}
+	.itineraires .donnees a span:first-child, .itineraires .donnees label {
+		color: #595959; float: left; font-family: 'brandon_grotesquelight'; font-weight: bold;
+	}
+	.itineraires .donnees label {
+		min-width: 65px;
+		padding-left: 24px;
+	}
+	.itineraires .donnees a span:last-child {
+		float: left; font-size: 0.7em; max-width: 140px; padding: 2px 5px;
+	}
+	.itineraires .actions p:first-child {
+		margin: 0;
+	}
+	.itineraires .actions p:first-child a, .itineraires .actions p:first-child input {
+		background-color: #1d3667;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		font-family: 'brandon_grotesquebold';
+		font-size: 0.85em;
+		margin: 0;
+		padding: 12px 0;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	.horaires > div > div { font-family: 'brandon_grotesquelight'; min-height: 145px; }
+	.horaires h3 {
+		margin: 0;
+		text-align: center;
+	}
+	.horaires h3 img {
+		vertical-align: bottom;
+	}
+	.horaires h3 + p {line-height: 1.2em; text-align: center;}
+	.horaires p span.de {display: block; font-weight: bold;}
+	.horaires ul {line-height: 1em; list-style-type: none; margin: 0; padding: 0;}
+	
+	.horaires strong {color: #0f408f; font-family: 'brandon_grotesquebold'; display: block; font-size: 2em; font-weight: normal; margin-bottom: 6px; text-align: center; }
+	.horaires li + li { color: #747474; font-size: 1.1em; text-align: center; }
+	.depart span:first-child {
+		background: transparent url("../../../img/depart.png") no-repeat scroll left center;
+		padding-left: 15px;
+	}
+	.depart label {
+		background: transparent url("../../../img/depart.png") no-repeat scroll 8px center;
+	}
+	.arrivee span:first-child {
+		background: transparent url("../../../img/arrivee.png") no-repeat scroll left center;
+		padding-left: 15px;
+	}
+	.arrivee label {
+		background: transparent url("../../../img/arrivee.png") no-repeat scroll 8px center;
+	}
+
+
+	section article > div:first-child {
+		border: none;
+		min-height: auto;
+		padding: 0;
+	}
+	section article > div:first-child p {
+		/*font-size: 1em;*/
+		margin: 0;
+	}
+	/*
+	section article > div:first-child p:last-child {
+		font-family: "open_sanslight";
+		font-size: 0.75em;
+		margin: 0;
+	}
+	*/
+	section article > div:first-child a {
+		background-color: #fff;
+		border-left: 1px solid #dbdbdb;
+		border-right: 1px solid #dbdbdb;
+		display: block;
+		min-height: 110px;
+		padding: 20px 30px 0;
+		text-decoration: none;
+		text-transform: none;
+	}
+	section article.coupsdecoeur > div:first-child a:hover,
+	section article.coupsdecoeur > div:first-child a:focus {
+		background-color: #d2388c;
+		border-left-color: #d2388c;
+		border-right-color: #d2388c;
+	}
+	section article.inspirations > div:first-child a:hover,
+	section article.inspirations > div:first-child a:focus {
+		background-color: #ffcf00;
+		border-left-color: #ffcf00;
+		border-right-color: #ffcf00;
+	}
+	section article.privileges > div:first-child a:hover,
+	section article.privileges > div:first-child a:focus {
+		background-color: #008672;
+		border-left-color: #008672;
+		border-right-color: #008672;
+	}
+	section article.services > div:first-child a:hover,
+	section article.services > div:first-child a:focus {
+		background-color: #1d3667;
+		border-left-color: #1d3667;
+		border-right-color: #1d3667;
+	}
+	
+	
+	section article > div:first-child a strong {
+		background: transparent url("../../../img/go.png") no-repeat scroll right center / 17px 17px;
+		color: #282828;
+		display: inline-block;
+		font-weight: normal;
+		padding-right: 30px;
+		font-family: "brandon_grotesquebold";
+		font-size: 1.1em;
+		letter-spacing: 3px;
+		margin: 0 0 3px;
+		text-transform: uppercase;
+	}
+	section article > div:first-child a:hover strong, 
+	section article > div:first-child a:focus strong {
+		background-image: url("../../../img/go-survol.png");
+		color: #fff;
+	}
+	section article.inspirations > div:first-child a:hover strong, 
+	section article.inspirations > div:first-child a:focus strong {
+		background-image: url("../../../img/go.png");
+		color: #282828;
+	}
+	section article > div:first-child a > span {
+		color: #282828;
+		display: block;
+		font-family: "open_sanslight";
+		font-size: 0.75em;
+		margin: 0;
+		letter-spacing: normal;
+	}
+	section article > div:first-child a:hover > span, 
+	section article > div:first-child a:focus > span {
+		color: #fff;
+	}
+	section article.inspirations > div:first-child a:hover > span, 
+	section article.inspirations > div:first-child a:focus > span {
+		color: #282828;
+	}
+	
+	.dashboard .services {
+		width: 720px !important;
+	}
+	.dashboard .indisponible {
+		font-family: 'brandon_grotesquelight'; background-color: #f5f5f5; font-weight: bold; text-align: center; vertical-align: middle !important;
+	}
+	.dashboard .indisponible p {
+		background: transparent url('../../../img/attention.png') no-repeat center top; margin: 0; padding: 45px 0 0 0;
+	}
+	
+	.antitraintrain {
+		margin: 20px 0; overflow: hidden;
+	}
+	.antitraintrain .title {
+		background-color: #008672; color: #fff; float: left; min-height: 340px; width: 240px;
+		position: relative;
+	}
+	.antitraintrain .title::after {
+		background: transparent url("../../../img/fleche-droite.png") no-repeat scroll top left;
+		content: '';
+		height: 30px;
+		width: 26px;
+		top: 50%;
+		margin-top: -13px;
+		left: 100%;
+		position: absolute;
+	}
+	.antitraintrain h1 {
+		position: relative; font-family: 'Akzidenz'; font-size: 2.5em; font-weight: normal; margin: 0; padding: 65px 0 0 0; text-align: center; text-transform: uppercase;
+	}
+	.antitraintrain h1 > span {
+		border-bottom: solid 1px #fff; border-top: solid 1px #fff; display: inline-block;
+	}
+	.antitraintrain h1 > span > span:first-child {
+		display: block; font-size: 200%;
+	}
+	.antitraintrain h1 .number {
+		position: absolute; right: -12%; top: 65px;
+	}
+	.antitraintrain h1 .number span {
+		background-color: #fff; border-radius: 12px; color: #008672; font-family: 'brandon_grotesqueboldd'; padding: 0 9px;
+	}
+	.antitraintrain .title p {
+		font-family: 'brandon_grotesquelight'; margin: 0; padding: 20px 30px; text-align: center;
+	}
+	.antitraintrain .title p span {
+		display: block;
+	}
+	.antitraintrain .content {
+		background: #e5ece9 url('../../../img/anti-train-train.png') no-repeat scroll center left; margin-left: 240px; padding: 50px 70px 0 70px; min-height: 290px;
+	}
+	.antitraintrain h2 {
+		color: #404342; font-family: 'Akzidenz'; font-size: 1.8em; line-height: 1em; font-weight: normal; margin: 0; text-transform: uppercase;
+	}
+	.antitraintrain h2 + p {
+		font-size: 0.85em; font-family: 'open_sanslight';
+	}
+	.antitraintrain a {
+		background-color: #008672; color: #fff; display: inline-block; font-family: 'brandon_grotesquebold'; font-size: 0.85em; min-width: 195px; padding: 12px 0; text-align: center; text-decoration: none; text-transform: uppercase;
+	}
+	.antitraintrain a:hover, .antitraintrain a:focus {
+		background-color: #fff; color: #008672;
+	}
+	
+	
+	.empty {font-family: 'brandon_grotesquelight'; margin: 0; padding: 45px 0; text-align: center;}
+	.empty strong {color: #000; display: block; font-family: 'brandon_grotesquelight'; font-size: 1em; font-weight: bold; margin-bottom: 0;}
+	
+	
+	
+	@media only screen and (max-width: 800px) {
+		
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		#maratp {
+			width: 100%;
+		}
+		
+		.breadcrumbnlogout {
+			display: none;
+		}
+		
+		
+		
+		
+		
+		.dashboard {
+			display: block;
+		}
+		.alertes, .horaires, .itineraires {
+			background-color: #f5f5f5 !important;
+		}
+		.dashboard > div {
+			display: block;
+			width: auto;
+		}
+		.dashboard > div + div {
+			border-left: none;
+			width: auto;
+		}
+		
+		
+		.dashboard h1 {
+			font-weight: normal;
+			line-height: normal;
+			padding: 0;
+			position: relative;
+		}
+		.dashboard h1 img {
+			margin-top: -15px;
+			pointer-events: none;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+		}
+		
+		
+		.dashboard h1 > span:first-child {
+			display: none;
+		}
+		.dashboard h2 {
+			padding: 0;
+			position: relative;
+		}
+		.dashboard h1 span.button {
+			background-color: #052152;
+			display: block;
+			font-family: "brandon_grotesquelight";
+			font-size: 0.85em;
+			font-weight: bold;
+			padding: 12px;
+		}
+		.dashboard h2 {
+			background: #f5f5f5 url("../../../img/dashboard.png") no-repeat scroll center top;
+		}
+		.dashboard h2 span.button {
+			display: block;
+			padding: 12px;
+		}
+		.dashboard h1 + div p:first-child {
+			background-color: transparent;
+			font-family: "brandon_grotesquelight";
+			font-size: 1.3em;
+			padding: 25px 25px 0 25px;
+			text-align: center;
+		}
+		.dashboard h1 + div p:first-child strong {
+			font-weight: normal;
+			padding: 0;
+		}
+		.dashboard h1 + div p:first-child img {
+			display: none;
+		}
+		
+		.dashboard h1 + div p:first-child span {
+			font-weight: bold;
+		}
+		.percent {
+			display: block;
+		}
+		
+		
+		.dashboard .indisponible p {
+			background-image: none;
+			padding: 30px 0;
+		}
+		.dashboard .services {
+			width: auto !important;
+		}
+		
+		
+		.alertes ul li {
+			text-align: left;
+		}
+		
+		
+		
+		
+		
+		.antitraintrain .title {
+			float: none;
+			min-height: auto;
+			position: relative;
+			width: auto;
+		}
+		.antitraintrain h1 {
+			padding-top: 125px;
+		}
+		.antitraintrain h1 .number {
+			left: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 25px;
+		}
+		.antitraintrain {
+			text-align: center;
+		}
+		.antitraintrain .title p {
+			display: inline-block;
+			max-width: 130px;
+		}
+		.antitraintrain .content {
+			background-color: #dcdcdc;
+			background-image: none;
+			font-size: 1.15em;
+			margin: 0;
+			min-height: auto;
+			padding: 10px 20px;
+			text-align: left;
+		}
+		.antitraintrain .content h2 {
+			margin: 20px 0;
+		}
+		.antitraintrain .content h2 + p {
+			display: none;
+		}
+		.antitraintrain .content a {
+			display: block;
+		}
+		
+		
+		section article {
+			float: none !important;
+			margin: 11px 4px !important;
+			min-height: auto !important;
+			width: auto !important;
+		}
+		
+		article div:first-child + div {
+			background-color: #dbdbdb;
+			text-align: center;
+		}
+		
+		
+		
+		
+		.alertes h2 .type {
+			background-color: #000;
+			border-radius: 50%;
+			color: transparent;
+			display: inline;
+			overflow: hidden;
+			pointer-events: none;
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			right: 25px;
+			top: 50%;
+			margin-top: -10px;
+		}
+		.alertes h2 .fluide { background-color: #6cc714; }
+		.alertes h2 .perturbe { background-color: #ff9c00; }
+		
+		
+		.itineraires form input[type="text"] {
+			width: 215px;
+		}
+		.itineraires .donnees a {
+			margin-left: 20px;
+			margin-right: 20px;
+			padding-top: 9px;
+			padding-bottom: 9px;
+		}
+		.itineraires .donnees {
+			margin-bottom: 12px;
+		}
+		
+		.dashboard h1 img {
+			display: inline;
+		}
+	
+	}

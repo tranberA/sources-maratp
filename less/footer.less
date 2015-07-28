@@ -26,17 +26,26 @@
 	footer section {
 		overflow: hidden;
 	}
+
+	footer section article { background: transparent; border: none; }
+	footer section article > div:last-child { border: none; padding:0;font-family: 'Parisine'; }
+
+	footer .twitter h2 { color: #FFF; text-transform: none; }
+
 	
 	.ratp, .twitter, .others {
+		font-family: 'Parisine';
 		float: left;
 		padding: 0 30px;
 		width: 320px;
 	}
 	
-	.ratp h2 {
+	footer .ratp h2 {
+		font-family: 'Parisine';
+		color: #FFF;
 		font-size: 1em;
 		margin: 0 0 3px 0;
-		text-transform: uppercase;
+		text-transform: normal;
 	}
 	
 	.ratp h2::after {

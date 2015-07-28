@@ -1,0 +1,113 @@
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+#cboxOverlay
+{
+  background-color: #000;
+}
+
+#cboxWrapper
+{
+  background-color: #fff;
+
+  #cboxClose
+  {
+    position: absolute;
+    top: 0.5em;
+    right: 1.2em;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    overflow: hidden;
+    width: 2.6em;
+    height: 2em;
+
+    .ico-close;
+
+    &:before
+    {
+      color: #fff;
+      font-size: 1.8em;
+    }
+  }
+}
+
+
+.popin
+{
+  header
+  {
+    background-color: @vertAplat;
+    color: #fff;
+    padding: 0.4em 2em;
+
+    h1
+    {
+      margin: 0;
+      text-align: center;
+      font-size: 1.4em;
+      font-family: @primary-font-bold;
+      font-weight: normal;
+    }
+
+    b
+    {
+      font-weight: inherit;
+      text-transform: uppercase;
+    }
+  }
+
+  .form-item
+  {
+    &.large
+    {
+      label
+      {
+        vertical-align: top;
+        padding-top: 1em;
+      }
+    }
+  }
+
+  .bloc-formulaire
+  {
+    form
+    {
+      .form-item
+      {
+        margin-bottom: 0;
+      }
+
+      p
+      {
+        margin: 0;
+
+        &.note
+        {
+          font-size: 0.9em;
+          margin-top: 1.6em;
+        }
+      }
+
+      .form-actions
+      {
+        text-align: right;
+        margin-top: -2.4em;
+      }
+    }
+  }
+}

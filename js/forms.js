@@ -14,19 +14,31 @@ if(window.jQuery !== undefined)
 
   			if(targetPanel.length > 0)
   			{
-          var close = targetPanel.find('.panel-close');
+          var canClose = true;
 
-          if(close.length == 0)
+          var closeData = current.data('close');
+
+          if(closeData !== undefined)
           {
-            var closeBtn = jQuery('<button class="panel-close ico-close">Fermer</button>').on('click',function()
-              {
-                if(currentPanel !== null)
-        				{
-        					currentPanel.removeClass('panel-active');
-        				}
-              });
+            canClose = !!closeData;
+          }
 
-            targetPanel.append(closeBtn);
+          if(canClose)
+          {
+            var close = targetPanel.find('.panel-close');
+
+            if(close.length == 0)
+            {
+              var closeBtn = jQuery('<button class="panel-close ico-close">Fermer</button>').on('click',function()
+                {
+                  if(currentPanel !== null)
+          				{
+          					currentPanel.removeClass('panel-active');
+          				}
+                });
+
+              targetPanel.append(closeBtn);
+            }
           }
 
   				targetPanel.addClass('panel-active');
@@ -40,7 +52,7 @@ if(window.jQuery !== undefined)
   			}
   		}
   	});
-//
+/*
     jQuery('#last-step').on('click',function(ev)
     {
       if(currentPanel !== null)
@@ -50,6 +62,15 @@ if(window.jQuery !== undefined)
 
       jQuery('#merci').addClass('ui-state-active');
     });
+*/
+    if(jQuery.fn.colorbox !== undefined)
+    {
+      jQuery('.popin-action').colorbox({
+        'opacity': 0.4,
+        'width': '60%'
+      });
+    }
+
 
     jQuery('.styled-check > [type=checkbox]').on('click',function(ev)
   	{

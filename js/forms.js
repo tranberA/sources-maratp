@@ -7,17 +7,31 @@ if(window.jQuery !== undefined)
   	{
   		var current = jQuery(this);
   		var target = current.data('target');
-      //var prev = current.data('next');
 
   		if(target !== undefined)
   		{
-
-
   			var targetPanel = jQuery('#'+target);
+
   			if(targetPanel.length > 0)
   			{
+          var close = targetPanel.find('.panel-close');
+
+          if(close.length == 0)
+          {
+            var closeBtn = jQuery('<button class="panel-close">Close</button>').on('click',function()
+              {
+                if(currentPanel !== null)
+        				{
+        					currentPanel.removeClass('panel-active');
+        				}
+              });
+
+            targetPanel.append(closeBtn);
+          }
+
   				targetPanel.addClass('panel-active');
-  				if(currentPanel !== null)
+
+  				if(currentPanel !== null && !targetPanel.is(currentPanel) && currentPanel.hasClass('panel-active'))
   				{
   					currentPanel.removeClass('panel-active');
   				}

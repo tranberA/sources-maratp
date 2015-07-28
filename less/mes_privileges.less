@@ -8,17 +8,14 @@
 	.bx-loading {	position: absolute; top: 0; left: 0; height: 100%; min-height: 50px; width: 100%; background: url(../img/bx_loader.gif) center center no-repeat #fff; z-index: 2000; }
 
 	/* direction controls (next/prev) */
-	.bx-controls-direction a { position: absolute; top: 30%; width: 32px; height: 32px; margin-top: -16px; outline: 0; text-indent: -9999px; z-index: 9999; 
+	.bx-controls-direction a { position: absolute; top: 30%; width: 32px; height: 32px; margin-top: -16px; outline: 0; z-index: 9999; 
 		&.disabled { display: none; }
+		&:before { background: @vertAplat; display: block; height: 45px; width: 30px; line-height: 2.5; }
 	}
 
-	.bx-prev { left: 10px; background: url(../img/controls.png) no-repeat 0 -32px;
-		&:hover { background-position: 0 0; }
-	}
+	.bx-prev { left: 0; .ico-fleche-left; .text-hidden; color: #FFF; text-align: center; }
 
-	.bx-next { right: 10px; background: url(../img/controls.png) no-repeat -43px -32px;
-		&:hover { background-position: -43px 0; }
-	}
+	.bx-next { right: 0; .ico-fleche-right; .text-hidden; color: #FFF; text-align: center; }
 
 }
 

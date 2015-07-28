@@ -311,6 +311,13 @@
 
 
 	// mini Footer
-	.mini-footer { padding: 0.5em 0; background-color: #f2f2f2; font-family: 'open_sanslight'; color: @texte; text-align: center; 
+	.mini-footer { margin-top: 2em; padding: 0.5em 0; background-color: #f2f2f2; font-family: 'open_sanslight'; font-size: 0.9em; color: @texte; text-align: center; 
+
+		a { 
+			&:hover, &:focus { text-decoration: none; }
+		}
+		span[class^='ico-'] { margin: 0 5px; padding: 10px; background: @vertAplat; color: #FFF; 
+			&:before { font-size: 16px; }
+		}
 
 	}

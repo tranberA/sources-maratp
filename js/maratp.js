@@ -1,3 +1,4 @@
+jQuery(document).ready(function(){
 
 	var survol = jQuery('.form-item input, .form-item select');
 
@@ -19,3 +20,16 @@
 		}
 
 	});
+
+	// bxSlider : carrousel pour les articles priviléges
+	if (jQuery.isFunction(jQuery.fn.bxSlider)) {
+  	jQuery('.slide-privileges').bxSlider({
+		  mode: 'fade',
+		  captions: true,
+		  controls: true,
+		  auto: true,
+		  pager: false
+		});
+  }
+
+});

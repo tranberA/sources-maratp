@@ -1,0 +1,36 @@
+// BASE SLIDER 
+
+.bx-wrapper { position: relative; margin: 0 auto 60px; padding: 0; *zoom: 1;
+
+	img { display: block; max-width: 100%; }
+
+	/* loader */
+	.bx-loading {	position: absolute; top: 0; left: 0; height: 100%; min-height: 50px; width: 100%; background: url(../img/bx_loader.gif) center center no-repeat #fff; z-index: 2000; }
+
+	/* direction controls (next/prev) */
+	.bx-controls-direction a { position: absolute; top: 30%; width: 32px; height: 32px; margin-top: -16px; outline: 0; z-index: 9999; 
+		&.disabled { display: none; }
+		&:before { background: @vertAplat; display: block; height: 45px; width: 30px; line-height: 2.5; }
+	}
+
+	.bx-prev { left: 0; .ico-fleche-left; .text-hidden; color: #FFF; text-align: center; }
+
+	.bx-next { right: 0; .ico-fleche-right; .text-hidden; color: #FFF; text-align: center; }
+
+}
+
+// SLIDER PRIVILEGES
+
+#maratp  .container-privileges { width: 560px; }
+
+.slide-privileges { 
+
+	.visuel { text-align: center;}
+	.content { 
+		.title { margin: 1em 0; font-family: 'brandon_grotesqueblack'; font-weight: normal; text-transform: uppercase; }
+		.text { font-family: 'open_sanslight'; font-size: 0.9em; }
+	}
+	.btn-privileges { margin-top: 2em; text-align: center; }
+}
+
+

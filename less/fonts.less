@@ -98,6 +98,7 @@
 .text-hidden { font-family: 'AdobeBlank'; }
 
 
+/* OPEN SANS */
 
 @openSansDir: '../font/open-sans/';
 
@@ -122,5 +123,18 @@
          url('@{openSansDir}opensans-bold-webfont.ttf') format('truetype'),
          url('@{openSansDir}opensans-bold-webfont.svg#open_sansbold') format('svg');
     font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('@{openSansDir}opensans-light-webfont.eot');
+    src: url('@{openSansDir}opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{openSansDir}opensans-light-webfont.woff2') format('woff2'),
+         url('@{openSansDir}opensans-light-webfont.woff') format('woff'),
+         url('@{openSansDir}opensans-light-webfont.ttf') format('truetype'),
+         url('@{openSansDir}opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
     font-style: normal;
 }

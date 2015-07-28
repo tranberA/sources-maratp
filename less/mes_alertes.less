@@ -1,3 +1,4 @@
+// Alertes étape 1
 .all-alertes {
 	.bloc {
 		margin-top: 30px;
@@ -31,8 +32,28 @@
 			.supprimer {float: right;}
 		}
 	}
+	.empty {
+		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 123px; border: 1px dashed @border;
+		p {margin-top: 53px;}
+	}
 }
 
+
+// Alertes étape 2
+.chapo-profil { 
+	p { 
+		display: inline-block;
+		&:first-child {float: left;}
+	}
+}
+h3 { font-size: 1.125em; font-family: @primary-font-bold;text-transform: uppercase;}
+.transports {
+	list-style: none; display: inline-block; margin: 0px; padding: 0px; height: 41px; border-bottom: 1px solid @texte2;
+	li { 
+		float: left;
+		a.active, a:hover {border-bottom: 4px solid @vertTexte;}
+	}
+}
 
  @media only screen and (max-width: 661px) {
 

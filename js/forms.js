@@ -18,7 +18,7 @@ if(window.jQuery !== undefined)
 
           if(close.length == 0)
           {
-            var closeBtn = jQuery('<button class="panel-close">Close</button>').on('click',function()
+            var closeBtn = jQuery('<button class="panel-close ico-close">Fermer</button>').on('click',function()
               {
                 if(currentPanel !== null)
         				{

@@ -490,7 +490,7 @@
 
   font-family: 'brandon_grotesquelight';
 
-  .transition(left 4s);
+  .transition(left 1s);
 
   &.panel-active
   {
@@ -536,12 +536,28 @@
     margin-top: 4em !important;
   }
 
+  @panelIconeSize: 1.5em;
+  @closeIconeSize: 1.4em;
   .panel-close,.panel-next,.panel-prev
   {
     color: inherit;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    font-size: 1.6em;
+  }
+
+  .panel-next,.panel-prev
+  {
+    &::before
+    {
+      position: absolute;
+      top: 50%;
+      font-size: @panelIconeSize;
+      width: @panelIconeSize;
+      line-height: 1;
+      margin-top: -(@panelIconeSize/3);
+    }
   }
 
   .panel-close
@@ -549,6 +565,21 @@
     position: absolute;
     top: @panelSpacing;
     right: @panelSpacing;
+    padding-right: @closeIconeSize+0.8em;
+
+    &.ico-close
+    {
+      &:before
+      {
+        font-size: @closeIconeSize;
+        line-height: 1;
+        width: @closeIconeSize;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -(@closeIconeSize/3);
+      }
+    }
   }
 
   .btn-action
@@ -563,11 +594,31 @@
   .panel-next
   {
     float: right;
+    padding-right: @panelIconeSize+0.2em;
+    text-align: right;
+
+    &.ico-circle-next
+    {
+      &:before
+      {
+        right: 0;
+      }
+    }
   }
 
   .panel-prev
   {
     float: left;
+    padding-left: @panelIconeSize+0.2em;
+    text-align: left;
+
+    &.ico-circle-prev
+    {
+      &:before
+      {
+        left: 0;
+      }
+    }
   }
 }
 

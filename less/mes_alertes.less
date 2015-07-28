@@ -50,7 +50,7 @@
 		display: inline-block;
 	}
 	.btn-retour {
-		float: left; padding-left: 40px; font-family: @primary-font; font-weight: normal; font-size: 1.125em;
+		float: left; padding-left: 40px; margin-right: -76px; font-family: @primary-font; font-weight: normal; font-size: 1.125em;
 		span {margin-right: 5px;}
 	}
 }
@@ -77,6 +77,52 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 .bus {
 	margin-left: 40px; display: none;
 }
+
+
+// Alertes étape 3
+.choix-ligne {
+	text-align: center;
+	img { margin-right: 15px;}
+	div {
+		display: inline-block;
+		&:last-child {vertical-align: top; margin-top: 5px;}
+	}
+}
+.jours {
+	ul {
+		list-style: none;
+		li {
+			float: left; margin-right: 11px;
+			a { width: 38px; height: 38px; display: block; text-align: center; font-size: 1.250em; padding-top: 5px; margin-bottom: 9px; background-color: #1d3667; color: #fff; font-family: @primary-font; font-weight: normal; text-decoration: underline;}
+		}
+		.weekend a {background: none; color: @texte;border: 1px solid @border;}
+	}
+}
+.all-creneaux {
+	margin-top: 50px;
+	.creneau {
+		margin-bottom: 53px;	
+		.date {
+			text-align: center; border: 1px dashed @border;
+			p {display: inline-block; font-family: @primary-font; font-weight: normal; font-size: 1.250em; color: @texte2; }
+			input {margin: 0 15px; height: 40px;width: 175px; }
+		}
+		.supprimer {float: right; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer;}
+		.supp-alerte {
+			float: right; font-family: @primary-font; display: none;
+			span {font-family: @primary-font-bold; color: #3f4a48; cursor: pointer;}
+		}
+	}
+	.add {
+		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 85px; border: 1px dashed @border; margin-bottom: 42px;
+		p {margin-top: 30px;}
+	}
+	.validate {
+		text-align: center;
+		.btn-valide {padding: 20px 24px; font-family: @primary-font-bold; font-size: 0.875em; background-color: @vertTexte; color: #fff; text-transform: uppercase; border: none;}
+	}
+}
+
 
  @media only screen and (max-width: 661px) {
 
@@ -118,4 +164,24 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 		}
  	}
 
- }
+}
+
+@media only screen and (max-width: 480px) {
+
+	.alertes-3 {
+		.chapo-profil {
+			.btn-retour {float: none; text-align: left;}
+			p {display: block;}
+		}
+		h3 {
+			margin-top: 33px;margin-bottom: 0px;
+		}
+		.all-creneaux {
+			margin-top: 35px;
+			.date {
+				p:last-child {margin-top: 0px; margin-left: 16px;}
+			}
+		}
+	}
+
+}

@@ -361,6 +361,7 @@
 .block-row
 {
   overflow: hidden;
+  position: relative;
 
   .block-column
   {
@@ -394,6 +395,23 @@
     .block-column
     {
       display: block;
+    }
+
+    .bandeau-message
+    {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+
+      &.ui-state-active
+      {
+        top: 0;
+      }
+
+      background-color: @vertTexte;
+      color: #fff;
+      padding: 2em;
     }
   }
 
@@ -474,11 +492,13 @@
   }
 }
 
+// Form panels
+
 .form-panel
 {
   @panelSpacing: 2em;
 
-  background-color: #008672;
+  background-color: @vertTexte;
   color: #fff;
   padding: @panelSpacing;
   position: absolute;
@@ -513,6 +533,13 @@
     margin: 0 0 1em;
 
     font-family: 'brandon_grotesquebold';
+
+    &.raw
+    {
+      text-transform: none;
+      font-family: 'brandon_grotesquelight';
+      display: inline-block;
+    }
   }
 
   input[type=text]
@@ -534,6 +561,23 @@
   p.note
   {
     margin-top: 4em !important;
+  }
+
+  p.top-space
+  {
+    padding-top: 10em;
+  }
+
+  .panel-content
+  {
+    font-size: 1.4em;
+
+    a
+    {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 
   @panelIconeSize: 1.5em;
@@ -582,9 +626,61 @@
     }
   }
 
-  .btn-action
+  .main-action
+  {
+    text-align: center;
+    margin: 2em 0 !important;
+
+    .action-focus
+    {
+      background-color: #fff;
+      border: none;
+      color: @vertAplat;
+      padding: 0 2.5em;
+      line-height: 3;
+      text-transform: uppercase;
+      //font-weight: bold;
+      font-family: 'brandon_grotesquebold';
+      font-size: 1.2em;
+    }
+  }
+
+  .styled-check
   {
     overflow: hidden;
+    position: relative;
+    border: 1px solid #fff;
+    height: 1em;
+    width: 1em;
+    margin: 0 0.5em 0 0 !important;
+    display: inline-block;
+    vertical-align: top;
+
+    input[type=checkbox]
+    {
+      position: absolute;
+      right: 100%;
+      top: 0;
+      //opacity: 0;
+    }
+
+    &.ico-check
+    {
+      &:before
+      {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 1em;
+        width: 1em;
+        margin: -0.5em 0 0 -0.5em;
+      }
+    }
+  }
+
+  .btn-action
+  {
+    //overflow: hidden;
     position: absolute;
     left: @panelSpacing;
     right: @panelSpacing;
@@ -678,79 +774,7 @@
     }
   }
 }
-/*
-.ligne
-{
-  @pictoRadius: 1.5em;
 
-  display: inline-block;
-  line-height: @pictoRadius;
-  width: @pictoRadius;
-  text-align: center;
-  .border-radius(50%);
-
-  margin-left: 0.2em;
-
-  &:first-child
-  {
-    margin-left: 0;
-  }
-
-  &.ligne-1
-  {
-    background-color: #fdcf00;
-  }
-
-  &.ligne-2
-  {
-    background-color: #0065ae;
-    color: #fff;
-  }
-
-  &.ligne-3
-  {
-    background-color: #a0981a;
-    color: #fff;
-  }
-
-  &.ligne-5
-  {
-    background-color: #f79544;
-  }
-
-  &.ligne-7
-  {
-    background-color: #fb9eb3;
-  }
-
-  &.ligne-8
-  {
-    background-color: #cdaccf;
-  }
-
-  &.ligne-9
-  {
-    background-color: #d4c800;
-  }
-
-  &.ligne-11
-  {
-    background-color: #976130;
-    color: #fff;
-  }
-
-  &.ligne-12
-  {
-    background-color: #0a793d;
-    color: #fff;
-  }
-
-  &.ligne-13
-  {
-    background-color: #99d6e0;
-  }
-}
-*/
 p.rer
 {
   &:before
@@ -782,4 +806,12 @@ p.metro
   {
     background-image: url('@{imageDir}metro.png');
   }
+}
+
+
+/* ==> états */
+
+.ui-state-active
+{
+	display: block;
 }

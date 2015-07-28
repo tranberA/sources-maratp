@@ -40,5 +40,23 @@ if(window.jQuery !== undefined)
   			}
   		}
   	});
+//
+    jQuery('#last-step').on('click',function(ev)
+    {
+      if(currentPanel !== null)
+      {
+        currentPanel.removeClass('panel-active');
+      }
+
+      jQuery('#merci').addClass('ui-state-active');
+    });
+
+    jQuery('.styled-check > [type=checkbox]').on('click',function(ev)
+  	{
+      jQuery(this).parent().toggleClass('ico-check');
+      //ev.stopPropagation();
+    });
+
+    //
   });
 }

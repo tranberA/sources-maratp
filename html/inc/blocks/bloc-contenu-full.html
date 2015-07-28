@@ -32,7 +32,7 @@
       <p><label for="cp-field">Mon code postal* :</label>
       <input type="text" name="" id="cp-field" value="" /></p>
       <p class="note">*champ obligatoire</p>
-      <p class="btn-action"><button data-target="panel-1" name="" class="panel-action panel-prev ico-circle-prev">Précédent</button>
+      <p class="btn-action"><button data-target="panel-1" name="" class="panel-action panel-prev ico-circle-prev">Retour</button>
       <button data-target="panel-3" name="" class="panel-action panel-next ico-circle-next">Suivant</button></p>
       </div>
       <div class="form-panel" id="panel-3">
@@ -40,12 +40,19 @@
       <p><label for="city-field">Ma ville* :</label>
       <input type="text" name="" id="city-field" value="" /></p>
       <p class="note">*champ obligatoire</p>
-      <p class="btn-action"><button data-target="panel-2" name="" class="panel-action panel-prev ico-circle-prev">Précédent</button>
-      <!--button data-target="panel-3" name="" class="panel-action">Suivant</button--></p>
+      <p class="btn-action"><button data-target="panel-2" name="" class="panel-action panel-prev ico-circle-prev">Retour</button>
+      <button data-target="panel-4" name="" class="panel-action panel-next ico-circle-next">Suivant</button></p>
+      </div>
+      <div class="form-panel" id="panel-4">
+      <p class="top-space panel-content"><label class="styled-check"><input type="checkbox" name="" id="reglement-check" value="" /></label> J’ai lu et j’accepte le <a href="#">règlement du tirage au sort</a>.</p>
+      <p class="main-action"><input type="submit" name="" value="Je valide" id="last-step" class="action-focus" /></p>
+      <p class="btn-action"><button data-target="panel-3" name="" class="panel-action panel-prev ico-circle-prev">Retour</button>
+      <!--button data-target="panel-4" name="" class="panel-action panel-next ico-circle-next">Suivant</button--></p>
       </div>
       </form>
     }
-    </div>
+</div>
+
 
     <aside role="contentinfo">
       <div class="inner-content">
@@ -72,5 +79,14 @@
 
 
 
+
   </article>
+
+  @@if(message !== '' && message === 'true')
+  {
+    <div id="merci" class="bandeau-message">
+    Merci d’avoir participé !
+    Faites découvrir maRATP
+    </div>
+  }
 </div>

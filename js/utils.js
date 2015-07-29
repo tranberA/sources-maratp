@@ -17,6 +17,7 @@ if(window.jQuery !== undefined)
   	}
 
   	// Titres avec filets
+
   	jQuery('.rich-display').each(function()
   	{
   		var current = jQuery(this);

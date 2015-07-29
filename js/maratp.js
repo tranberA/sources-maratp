@@ -1,25 +1,35 @@
+(function()
+{
+	var _lib = {
+		configureItem: function (root)
+		{
+			var rootElement = jQuery(root);
+
+			rootElement.click(function (event) {
+				var target = jQuery(event.target);
+				if (target.is('div.form-item')) {
+					target.find('input, select').focus();
+				}
+			});
+
+			var survol = jQuery('.form-item input, .form-item select',rootElement);
+
+			survol.focus(function(){
+		    jQuery(this).parent('.form-item').addClass('focus');
+		  });
+
+		  survol.blur(function(){
+		  	jQuery(this).parent('.form-item').removeClass('focus');
+		  });
+		}
+	};
+
+	window.FormUtils = _lib;
+})();
+
 jQuery(document).ready(function(){
 
-	var survol = jQuery('.form-item input, .form-item select');
-
-	survol.focus(function(){
-    jQuery(this).parent('.form-item').addClass('focus');
-  });
-
-  survol.blur(function(){
-  	jQuery(this).parent('.form-item').removeClass('focus');
-  });
-
-
-
-	jQuery(document).click(function (event) {
-
-		var target = jQuery(event.target);
-		if (target.is('div.form-item')) {
-			target.find('input, select').focus();
-		}
-
-	});
+	FormUtils.configureItem(document);
 
 	// bxSlider : carrousel pour les articles priviléges
 	if (jQuery.isFunction(jQuery.fn.bxSlider)) {
@@ -35,11 +45,11 @@ jQuery(document).ready(function(){
 });
 
 // Mini header.
-  
+
    // A déporter dans un fichier commun pour gérer le responsive en contexte script.
 	var dashboardviewportwidth = 480;
 	var dashboardoldviewportwidth = false;
-	
+
 	function manageResponsiveDashboard() {
 		if (jQuery(window).width() != dashboardoldviewportwidth) {
 			if (jQuery(window).width() <= dashboardviewportwidth) {
@@ -71,7 +81,7 @@ jQuery(document).ready(function(){
 			  menu.removeClass('menu-dashboard-responsive');
 			  menu.removeAttr('hidden');
 			  burger.off();
-			}	
+			}
 		}
 		dashboardoldviewportwidth = jQuery(window).width();
 	}

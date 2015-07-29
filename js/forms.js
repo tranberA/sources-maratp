@@ -2,6 +2,8 @@ if(window.jQuery !== undefined)
 {
   jQuery(function()
   {
+    // Navigation entre panneaux de formulaire Mes privilèges
+
   	var currentPanel = null;
   	jQuery('.panel-action').on('click',function()
   	{
@@ -66,8 +68,9 @@ if(window.jQuery !== undefined)
     if(jQuery.fn.colorbox !== undefined)
     {
       jQuery('.popin-action').colorbox({
-        'opacity': 0.4,
-        'width': '60%'
+        'opacity': 1,
+        'width': '100%',
+        'height': '100%'
       });
     }
 

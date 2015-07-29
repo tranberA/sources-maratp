@@ -35,26 +35,18 @@
 	/* @end Mon profil */
 
 
-		@media only screen and (max-width: 705px) {
-
-			header.mini-header[role="banner"] .closePage { width: 30%; }
-			
-		}
 
 		@media only screen and (max-width: 480px) {
 
-			header.mini-header[role="banner"] { padding: 0;
-				.closePage { width: 100%; padding: 1em; text-align: center; border-bottom: 1px solid @vert-light; }
-				h1 { width: 100%; padding: 1em; margin: 0; cursor: pointer;
-					span.button { .ico-menu; display: block; 
-						&:before { margin-right: 5px; }
-					}
-				}
-			}
+		
 
-			.menu-dashboard { margin: -10px -4% 0 -4%; border: none;
+			.menu-dashboard { margin: -20px -5% 0 -5%; border: none;
 				.menu {
-					li { float: none; width: 100%; border-bottom: 1px solid @texte; }
+					li { float: none; width: 100%;
+						a {  padding: 5px 15%;  background: @vertAplat; font-family: 'brandon_grotesque_regularRg'; font-size: 1.2em; color: #FFF; text-align: left; border: none; 
+							&:hover, &:focus, &.active { border: none; text-decoration: underline;}
+					 }
+					}
 				}
 			}
 

@@ -74,7 +74,7 @@
 		padding-left: 0.5em;
 		pointer-events: none;
 		overflow: hidden;
-		.transition(transform 0.25s ease-in-out);
+		.transition(transform 0.15s ease-in-out);
 		z-index: 100;
 		vertical-align: middle;
 	}
@@ -343,7 +343,9 @@
 .bloc-formulaire form {
 	.user-links { float: right; margin: 0;
 		p { margin: 0; }
-		a { font-family: @primary-font-bold; color: @texte; }
+		a { font-family: @primary-font-bold; color: @texte;
+			&:hover, &:focus { color: @vertTexte; text-decoration: underline; }
+	  }
 	}
 
 }
@@ -430,14 +432,14 @@
 
 // confirmation mot de passe
 
-	.password-confirm,
-	.password-strength-title,
-	.password-strength { 
+	div.password-confirm,
+	div.password-strength-title,
+	div.password-strength { 
 		display: none;  //A EFFACER 
 	}
 
-	.bloc-formulaire form .input--filled .password-confirm,
-	.bloc-formulaire form .input--filled .password-strength { 
+	.bloc-formulaire form .input--filled div.password-confirm,
+	.bloc-formulaire form .input--filled div.password-strength { 
 		display: block;  //A EFFACER 
 	}
 
@@ -460,7 +462,7 @@
 	div.password-confirm {
 	  position: absolute;
 	  left: 0;
-	  top:-30px;
+	  top:-40px;
 	  right: 0;
 	  overflow:hidden;
 	}

@@ -1,5 +1,5 @@
 
-	@@include('./inc/parts/head.html',{"pageTitle": "03 - Connexion Compte"})
+	@@include('./inc/parts/head.html',{"pageTitle": "Connexion - maRATP"})
 <body>
 
 	<div id="maratp">
@@ -23,13 +23,13 @@
 								</div>
 
 							  <div class="form-item">
-							    <label for="mail">Email<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span></label>
+							    <label for="mail">Email<span class="form-required" title="Ce champ est requis.">*</span></label>
 							    <input type="email" class="form-control" id="mail" aria-required="true" maxlength="50" placeholder="(ex: mail@domaine.com)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
 
 							  <div class="form-item">
-							    <label for="password">Mot de passe<span class="form-required" title="Ce champ est requis." aria-hidden="true">*</span></label>
+							    <label for="password">Mot de passe<span class="visually-hidden"> (8 caractères min.) </span><span class="form-required" title="Ce champ est requis.">*</span></label>
 							    <input type="password" class="form-control" id="password" aria-required="true" maxlength="25" placeholder="(8 caractères min.)">
 							    <div class="messages error">Veuillez saisir le champs</div>
 							  </div>
@@ -43,7 +43,7 @@
 									</div>
 								</div>
 
-								<div class="details" aria-hidden="true">
+								<div class="details">
 									<p>* Champs obligatoires</p>
 								</div>
 

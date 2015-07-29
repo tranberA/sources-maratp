@@ -29,11 +29,11 @@
 	jQuery('<p id="searchbutton"><span role="button" tabindex="0"><img src="img/header/mobile/search.png" alt="Afficher le champ de recherche ci-après" /></span></p>').prependTo('#search');
 	jQuery('#searchbutton span').first().click(function () { 
 		if (jQuery(this).parent().next().attr('hidden') == 'hidden') {
-			jQuery(this).first().attr('alt', 'Masquer le champ de recherche');
+			jQuery(this).find('img').attr('alt', 'Masquer le champ de recherche');
 			jQuery(this).parent().next().removeAttr('hidden');
 		}
 		else {
-			jQuery(this).first().attr('alt', 'Afficher le champ de recherche ci-après');
+			jQuery(this).find('img').attr('alt', 'Afficher le champ de recherche ci-après');
 			jQuery(this).parent().next().attr('hidden', 'hidden');
 		}
 	}).keydown(function (event) {
@@ -47,11 +47,11 @@
 	jQuery('<p id="langbutton"><span role="button" lang="en" tabindex="0"><img src="img/header/mobile/lang.png" alt="Choose your language (display languages below)" /></span></p>').prependTo('#lang');
 	jQuery('#langbutton span').first().click(function () {
 		if (jQuery(this).parent().next().attr('hidden') == 'hidden') {
-			jQuery(this).first().attr('alt', 'Choose your language (hide)');
+			jQuery(this).find('img').attr('alt', 'Choose your language (hide)');
 			jQuery(this).parent().next().removeAttr('hidden');
 		}
 		else {
-			jQuery(this).first().attr('alt', 'Choose your language (display languages below)');
+			jQuery(this).find('img').attr('alt', 'Choose your language (display languages below)');
 			jQuery(this).parent().next().attr('hidden', 'hidden');
 		}
 	}).keydown(function (event) {
@@ -85,7 +85,7 @@
 				jQuery('#searchbutton img').first().attr('alt', 'Afficher le champ de recherche ci-après');
 				jQuery('#search .search').attr('hidden', 'hidden');
 				jQuery('#langbutton').removeAttr('hidden');
-				jQuery('#langbutton img').first().first().attr('alt', 'Choose your language (display languages below)');
+				jQuery('#langbutton img').first().attr('alt', 'Choose your language (display languages below)');
 				jQuery('#lang div').first().attr('hidden', 'hidden');
 				jQuery('#lang li img').each(function () {
 					jQuery(document.createTextNode(jQuery(this).attr('alt'))).insertBefore(jQuery(this));

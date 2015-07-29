@@ -63,13 +63,18 @@
 		border: none;
 		border-left: solid 1px #e5e4e3;
 		border-right: solid 1px #e5e4e3;
-		color: #787778;
+		color: #767676;
 		font-size: 1em;
 		font-weight: bold;
 		margin: 0;
 		padding: 9px 25px 10px 10px;
 		vertical-align: bottom;
 	}
+
+	::-webkit-input-placeholder { color: #767676; }
+	:-moz-placeholder { color: #767676; }
+	::-moz-placeholder { color: #767676; }
+	:-ms-input-placeholder { color: #767676; }
 
 	.search input[type="image"] {
 		margin-top: -8px;
@@ -206,7 +211,7 @@
 
 		#searchbutton {
 			margin: 0;
-			right: 150px;
+			right: 110px;
 			position: absolute;
 			top: 35px;
 		}
@@ -233,7 +238,7 @@
 
 		#langbutton {
 			margin: 0;
-			right: 80px;
+			right: 60px;
 			position: absolute;
 			top: 35px;
 		}
@@ -312,3 +317,27 @@
 				}
 			}
 		}
+
+
+// === RESPONSIVE
+
+@media only screen and (max-width: 705px) {
+
+	header.mini-header[role="banner"] .closePage { width: 30%; }
+	
+}
+
+
+@media only screen and (max-width: 480px) {
+
+	header.mini-header[role="banner"] { padding: 0;
+		.closePage { width: 100%; padding: 1em; text-align: center; border-bottom: 1px solid @vert-light; }
+		h1 { display: block; width: 100%; margin-top: 0; padding: 1em 15%; margin: 0; cursor: pointer; text-align: left;
+			span.button { .ico-menu; display: block; 
+				&:before { margin-right: 5px; }
+			}
+		}
+	}
+
+
+}

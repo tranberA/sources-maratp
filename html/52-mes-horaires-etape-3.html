@@ -1,0 +1,73 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs rétractés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				@@include('./inc/parts/mini-header.html',{"pageTitle": "Mon dashboard"})
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container">
+
+						@@include('./inc/parts/menu-dashboard-alertes.html')
+
+
+						<div class="chapo-profil">
+							<p class="btn-retour"><a href=""><span class="ico-circle-prev"></span> Retour</a></p>
+							<p>Sélectionnez l'arrêt/station de votre choix : </p>
+						</div>
+
+						<form action="" class="recherche-direction">
+
+							<h3>Ligne / Direction</h3>
+
+							<div class="ligne-direction">
+								<div class="numero-ligne">
+									<img src="img/alertes/m4.png" alt="Métro 4">
+								</div>
+								<div class="direction">
+									<input type="radio" name="direction" id="direction-1" value="">
+									<label for="direction-1"> Marie de Montrouge</label>
+									<input type="radio" name="direction" id="direction-2" value="">
+									<label  for="direction-2"> Porte de Clignancourt </label>
+								</div>
+							</div>
+
+							<h3 class="station">Station</h3>
+								
+							<div class="form-item">
+								<label for="search-horaire"><span class="ico-search"></span></label>
+								<input type="text" name="search-horaire">
+								<div class="error">Message d'erreur <!-- (si erreur)</div> -->
+							</div>
+							<div class="results">
+								<ul>
+									<li>Mouton-Duvernet</li>
+									<li>Alésia</li>
+									<li>Porte d'Orléans</li>
+									<li>Mairie de Montrouge</li>
+								</ul>
+							</div>
+
+							<div class="add">
+								<button class="ajout-horaire">J'ajoute l'horaire en favori</button>
+							</div>
+
+
+						</form>
+
+
+					</section>
+				</main>
+			</section>
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

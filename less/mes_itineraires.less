@@ -1,0 +1,34 @@
+.bloc-itineraires {
+	
+
+	.profil-header { padding: 1em 0; border-bottom: 1px dashed @texte; 
+
+		.btn-back { display: inline-block; width: 20%; vertical-align: top; 
+			a { position: relative; .ico-circle-prev; padding-left: 30px;
+				&:before { position: absolute; top: 2px; left: 0; margin-right: 5px; font-size: 20px; font-weight: bold; color: @vertTexte; }
+			}
+		}
+
+		.title { display: inline-block; width: 58%; padding: 0 3em; margin: 0; font-family: @primary-font-black; font-size: 1.15em; font-weight: normal; text-align: center; text-transform: uppercase; vertical-align: top;
+
+		}
+	}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+	.bloc-itineraires {
+		.profil-header {
+
+			.btn-back { width: 10%;
+				a { .text-hidden; }
+			}
+			.title { width: 89%; padding-left: 0; text-align: left; }
+
+		}
+	}
+
+
+}

@@ -19,7 +19,7 @@
 		text-decoration: underline;
 	}
 	#maratp > div:first-of-type p:last-child {
-		background: transparent url("../../../img/signout.png") no-repeat scroll center left;
+		background: transparent url("@{imageDir}signout.png") no-repeat scroll center left;
 		background-size: 21px 18px;
 		float: right;
 		margin: 0;
@@ -44,7 +44,7 @@
 	}
 	
 	.dashboard > div {
-		background: transparent url("../../../img/dashboard.png") no-repeat scroll top center;
+		background: transparent url("@{imageDir}dashboard.png") no-repeat scroll top center;
 		float: left;
 		width: 240px;
 	}
@@ -74,7 +74,7 @@
 	
 	
 	.dashboard h1 {
-		/*background: transparent url("../../../img/dashboard.png") no-repeat scroll top center;*/
+		/*background: transparent url("@{imageDir}dashboard.png") no-repeat scroll top center;*/
 		font-size: 1.6em;
 		line-height: 1.2em;
 		margin: 0;
@@ -127,7 +127,7 @@
 	}
 	
 	.dashboard h1 + div p + p a {
-		background: transparent url("../../../img/compte.png") no-repeat scroll center left;
+		background: transparent url("@{imageDir}compte.png") no-repeat scroll center left;
 		color: #fff;
 		display: inline-block;
 		padding-left: 27px;
@@ -180,10 +180,10 @@
 	
 	
 	.dashboard span[role="button"] {
-		background: transparent url("../../../img/open-white.png") no-repeat scroll 20px center;
+		background: transparent url("@{imageDir}open-white.png") no-repeat scroll 20px center;
 	}
 	.dashboard h2 span[role="button"] {
-		background: transparent url("../../../img/open-grey.png") no-repeat scroll 20px center;
+		background: transparent url("@{imageDir}open-grey.png") no-repeat scroll 20px center;
 	}
 	
 	
@@ -354,6 +354,7 @@
 		overflow: auto;
 		padding: 25px 30px 3.5em 30px;
 		position: relative;
+		.box-sizing(content-box);
 	}
 	section article > div:last-child img + strong {
 		font-size: 0.85em;
@@ -404,7 +405,7 @@
 		color: #fff;
 	}
 	article.coupsdecoeur:hover div:first-child a {
-		background: transparent url("../../../img/go-survol.png") no-repeat scroll right center;
+		background: transparent url("@{imageDir}go-survol.png") no-repeat scroll right center;
 		background-size: 17px 17px;
 		color: #fff;
 	}
@@ -431,7 +432,7 @@
 		color: #fff;
 	}
 	article.privileges:hover div:first-child a {
-		background: transparent url("../../../img/go-survol.png") no-repeat scroll right center;
+		background: transparent url("@{imageDir}go-survol.png") no-repeat scroll right center;
 		background-size: 17px 17px;
 		color: #fff;
 	}
@@ -447,7 +448,7 @@
 		color: #fff;
 	}
 	article.services:hover div:first-child a {
-		background: transparent url("../../../img/go-survol.png") no-repeat scroll right center;
+		background: transparent url("@{imageDir}go-survol.png") no-repeat scroll right center;
 		background-size: 17px 17px;
 		color: #fff;
 	}
@@ -525,18 +526,18 @@
 	.horaires strong {color: #0f408f; font-family: 'brandon_grotesquebold'; display: block; font-size: 2em; font-weight: normal; margin-bottom: 6px; text-align: center; }
 	.horaires li + li { color: #747474; font-size: 1.1em; text-align: center; }
 	.depart span:first-child {
-		background: transparent url("../../../img/depart.png") no-repeat scroll left center;
+		background: transparent url("@{imageDir}depart.png") no-repeat scroll left center;
 		padding-left: 15px;
 	}
 	.depart label {
-		background: transparent url("../../../img/depart.png") no-repeat scroll 8px center;
+		background: transparent url("@{imageDir}depart.png") no-repeat scroll 8px center;
 	}
 	.arrivee span:first-child {
-		background: transparent url("../../../img/arrivee.png") no-repeat scroll left center;
+		background: transparent url("@{imageDir}arrivee.png") no-repeat scroll left center;
 		padding-left: 15px;
 	}
 	.arrivee label {
-		background: transparent url("../../../img/arrivee.png") no-repeat scroll 8px center;
+		background: transparent url("@{imageDir}arrivee.png") no-repeat scroll 8px center;
 	}
 
 
@@ -593,7 +594,7 @@
 	
 	
 	section article > div:first-child a strong {
-		background: transparent url("../../../img/go.png") no-repeat scroll right center / 17px 17px;
+		background: transparent url("@{imageDir}go.png") no-repeat scroll right center / 17px 17px;
 		color: #282828;
 		display: inline-block;
 		font-weight: normal;
@@ -606,12 +607,12 @@
 	}
 	section article > div:first-child a:hover strong, 
 	section article > div:first-child a:focus strong {
-		background-image: url("../../../img/go-survol.png");
+		background-image: url("@{imageDir}go-survol.png");
 		color: #fff;
 	}
 	section article.inspirations > div:first-child a:hover strong, 
 	section article.inspirations > div:first-child a:focus strong {
-		background-image: url("../../../img/go.png");
+		background-image: url("@{imageDir}go.png");
 		color: #282828;
 	}
 	section article > div:first-child a > span {
@@ -638,18 +639,19 @@
 		font-family: 'brandon_grotesquelight'; background-color: #f5f5f5; font-weight: bold; text-align: center; vertical-align: middle !important;
 	}
 	.dashboard .indisponible p {
-		background: transparent url('../../../img/attention.png') no-repeat center top; margin: 0; padding: 45px 0 0 0;
+		background: transparent url('@{imageDir}attention.png') no-repeat center top; margin: 0; padding: 45px 0 0 0;
 	}
 	
 	.antitraintrain {
 		margin: 20px 0; overflow: hidden;
+
 	}
 	.antitraintrain .title {
 		background-color: #008672; color: #fff; float: left; min-height: 340px; width: 240px;
 		position: relative;
 	}
 	.antitraintrain .title::after {
-		background: transparent url("../../../img/fleche-droite.png") no-repeat scroll top left;
+		background: transparent url("@{imageDir}fleche-droite.png") no-repeat scroll top left;
 		content: '';
 		height: 30px;
 		width: 26px;
@@ -671,7 +673,7 @@
 		position: absolute; right: -12%; top: 65px;
 	}
 	.antitraintrain h1 .number span {
-		background-color: #fff; border-radius: 12px; color: #008672; font-family: 'brandon_grotesqueboldd'; padding: 0 9px;
+		background-color: #fff; border-radius: 12px; color: #008672; font-family: 'brandon_grotesquebold'; padding: 0 9px;
 	}
 	.antitraintrain .title p {
 		font-family: 'brandon_grotesquelight'; margin: 0; padding: 20px 30px; text-align: center;
@@ -679,8 +681,8 @@
 	.antitraintrain .title p span {
 		display: block;
 	}
-	.antitraintrain .content {
-		background: #e5ece9 url('../../../img/anti-train-train.png') no-repeat scroll center left; margin-left: 240px; padding: 50px 70px 0 70px; min-height: 290px;
+	.antitraintrain .content { .box-sizing(content-box);
+		background: #e5ece9 url('@{imageDir}anti-train-train.png') no-repeat scroll center left; margin-left: 240px; padding: 50px 70px 0 70px; min-height: 290px;
 	}
 	.antitraintrain h2 {
 		color: #404342; font-family: 'Akzidenz'; font-size: 1.8em; line-height: 1em; font-weight: normal; margin: 0; text-transform: uppercase;
@@ -767,7 +769,7 @@
 			padding: 12px;
 		}
 		.dashboard h2 {
-			background: #f5f5f5 url("../../../img/dashboard.png") no-repeat scroll center top;
+			background: #f5f5f5 url("@{imageDir}dashboard.png") no-repeat scroll center top;
 		}
 		.dashboard h2 span.button {
 			display: block;

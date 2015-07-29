@@ -1,7 +1,7 @@
 (function()
 {
 	var _lib = {
-		configureItem: function (root)
+		configureItem: function(root)
 		{
 			var rootElement = jQuery(root);
 
@@ -41,7 +41,6 @@ jQuery(document).ready(function(){
 		  pager: false
 		});
   }
-
 });
 
 // Mini header.

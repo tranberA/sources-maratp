@@ -6,7 +6,8 @@ if(window.jQuery !== undefined)
   	function getAncestorBackgroundColor(node)
   	{
   		var bgc = node.css('background-color');
-  		if(bgc === 'transparent')
+      var transparentPattern = /transparent|rgba\(0\,\s0\,\s0\,\s0\)/;
+  		if(bgc.search(transparentPattern) !== -1)
   		{
   			return getAncestorBackgroundColor(node.parent());
   		}

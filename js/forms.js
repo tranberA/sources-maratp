@@ -5,7 +5,7 @@ if(window.jQuery !== undefined)
     // Navigation entre panneaux de formulaire Mes privilèges
 
   	var currentPanel = null;
-  	jQuery('.panel-action').on('click',function()
+  	jQuery('.panel-action').on('click keyup',function(event)
   	{
   		var current = jQuery(this);
   		var target = current.data('target');
@@ -45,6 +45,9 @@ if(window.jQuery !== undefined)
 
   				targetPanel.addClass('panel-active');
 
+// focus sur le lien panneau suivant ???
+          //targetPanel.find('.panel-next').focus();
+
   				if(currentPanel !== null && !targetPanel.is(currentPanel) && currentPanel.hasClass('panel-active'))
   				{
   					currentPanel.removeClass('panel-active');
@@ -53,6 +56,8 @@ if(window.jQuery !== undefined)
   				currentPanel = targetPanel;
   			}
   		}
+
+      event.preventDefault();
   	});
 /*
     jQuery('#last-step').on('click',function(ev)
@@ -73,7 +78,6 @@ if(window.jQuery !== undefined)
         'height': '100%'
       });
     }
-
 
     jQuery('.styled-check > [type=checkbox]').on('click',function(ev)
   	{

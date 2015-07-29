@@ -1,0 +1,105 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs rétractés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				@@include('./inc/parts/mini-header.html',{"pageTitle": "Mon dashboard"})
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container">
+
+						@@include('./inc/parts/menu-dashboard-alertes.html')
+
+
+						<div class="chapo-profil">
+							<p class="btn-retour"><a href=""><span class="ico-circle-prev"></span> Retour</a></p>
+							<p>Pour paraméter votre horaire, choisissez votre ligne :</p>
+						</div>
+
+							
+						<form action="" class="recherche-horaire">
+							<div class="form-item">
+								<label for="search-horaire"><span class="ico-close"></span></label>
+								<input type="text" name="search-horaire">
+								<!-- <div class="error">Message d'erreur <!-- (si erreur)</div> -->
+							</div>
+						</form>
+
+						<div class="results">
+							<div class="rer">
+								<p>Rer</p>
+								<div class="bloc-ligne">
+									<div class="numero-ligne">
+										<img src="img/rer.png" alt="RER">
+										<img src="img/rera.png" alt="RER A">
+									</div>
+									<div class="directions">
+										<p class="direction-1">Mairie de Montrouge</p>
+										<p class="direction-2">Porte de Clignancourt</p>
+									</div>
+								</div>
+							</div>
+							<div class="metro">
+								<p>Métro</p>
+								<div class="bloc-ligne">
+									<div class="numero-ligne">
+										<img src="img/m.png" alt="Métro">
+										<img src="img/m4.png" alt="Ligne 4">
+									</div>
+									<div class="directions">
+										<p class="direction-1">Mairie de Montrouge</p>
+										<p class="direction-2">Porte de Clignancourt</p>
+									</div>
+								</div>
+								<div class="bloc-ligne">
+									<div class="numero-ligne">
+										<img src="img/m.png" alt="Métro">
+										<img src="img/m7.png" alt="Ligne 7">
+									</div>
+									<div class="directions">
+										<p class="direction-1">Mairie d'Ivry / Villejuif-Louis Aragon</p>
+										<p class="direction-2">La Courneuve-8-Mai-1945</p>
+									</div>
+								</div>
+							</div>
+							<div class="bus-ratp">
+								<p>Bus ratp</p>
+								<div class="bloc-ligne">
+									<div class="numero-ligne">
+										<img src="img/bus.png" alt="Bus RATP">
+										<img src="img/bus60.png" alt="Ligne 60">
+									</div>
+									<div class="directions">
+										<p class="direction-1">Mairie de Montrouge</p>
+										<p class="direction-2">Porte de Clignancourt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h3>Réseau</h3>
+
+						<ul class="transports">
+							<li><a class="active" href="#"><img src="img/alertes/metro.png" alt="Métro"></a></li>
+							<li><a href="#"><img src="img/alertes/rer.png" alt="RER"></a></li>
+							<li><a href="#"><img src="img/alertes/tram.png" alt="Tramway"></a></li>
+							<li><a href="#"><img src="img/alertes/bus.png" alt="Bus"></a></li>
+							<li><a href="#"><img src="img/alertes/noctilien.png" alt="Noctilien"></a></li>
+							<li><a href="#"><img src="img/transilien.png" alt="Transilien"></a></li>
+						</ul>
+
+					</section>
+				</main>
+			</section>
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

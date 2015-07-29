@@ -1,0 +1,138 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mon profil - Champs rétractés"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				<header class="mini-header" role="banner">
+					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
+				  <h1><span class="button">Mon dashboard</span></h1>
+				</header>
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container">
+
+						@@include('./inc/parts/menu-dashboard-alertes.html')
+
+
+						<div class="chapo-profil">
+							<p>Pour recevoir les horaires des prochaines passages, choisissez vos lignes et arrêts.<br />
+Vous pouvez classer vos favoris selon vos préférences et ils apparaîtront dans votre dashboad.</p>
+						</div>
+
+						<div class="all-horaires">
+
+							<div class="bloc">
+								<div class="entete">
+									<p class="number">1</p>
+									<p class="classer">Classer <span class="ico-caret-up"></span><span class="ico-caret-down"></span> </p>
+								</div>
+								<div class="metro">
+									<p class="numero-ligne">
+										<img src="img/m.png" alt="Métro">
+										<img src="img/m13.png" alt="Ligne 13">
+									</p>
+									<div class="nom-ligne">
+										<p class="station">Station : <span>Garibaldi</span></p>
+										<p class="direction">Direction :  <span>Chatillon-Montrouge</span></p>
+									</div>
+								</div>
+								<div class="modifier-supprimer">
+									<p>Modifier <span class="ico-pencil"></span></p>
+									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+								</div>
+							</div>
+
+							<div class="bloc">
+								<div class="entete">
+									<p class="number">2</p>
+									<p class="classer">Classer <span class="ico-caret-up"></span><span class="ico-caret-down"></span> </p>
+								</div>
+								<div class="metro">
+									<p class="numero-ligne">
+										<img src="img/m.png" alt="Métro">
+										<img src="img/m1.png" alt="Ligne 1">
+									</p>
+									<div class="nom-ligne">
+										<p class="station">Station : <span>Hôtel de Ville</span></p>
+										<p class="direction">Direction :  <span>La Défense</span></p>
+									</div>
+								</div>
+								<div class="modifier-supprimer">
+									<p>Modifier <span class="ico-pencil"></span></p>
+									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+								</div>
+							</div>
+
+							<div class="bloc">
+								<div class="entete">
+									<p class="number">3</p>
+									<p class="classer">Classer <span class="ico-caret-up"></span><span class="ico-caret-down"></span> </p>
+								</div>
+								<div class="metro">
+									<p class="numero-ligne">
+										<img src="img/bus.png" alt="Bus">
+										<img src="img/bus60.png" alt="Ligne 60">
+									</p>
+									<div class="nom-ligne">
+										<p class="station">Station : <span>Place des fêtes</span></p>
+										<p class="direction">Direction :  <span>Porte Montmarte</span></p>
+									</div>
+								</div>
+								<div class="modifier-supprimer">
+									<p>Modifier <span class="ico-pencil"></span></p>
+									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+								</div>
+							</div>
+
+							<div class="bloc">
+								<div class="entete">
+									<p class="number">4</p>
+									<p class="classer">Classer <span class="ico-caret-up"></span><span class="ico-caret-down"></span> </p>
+								</div>
+								<div class="metro">
+									<p class="numero-ligne">
+										<img src="img/m.png" alt="Métro">
+										<img src="img/m4.png" alt="Ligne 4">
+									</p>
+									<div class="nom-ligne">
+										<p class="station">Station : <span>Chateau Rouge</span></p>
+										<p class="direction">Direction :  <span>Porte de Clignancourt</span></p>
+									</div>
+								</div>
+								<div class="modifier-supprimer">
+									<p>Modifier <span class="ico-pencil"></span></p>
+									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+								</div>
+							</div>
+
+							<hr class="separation">
+
+							<div class="bloc add">
+								<p><span class="ico-plus"></span> J'ajoute une alerte</p>
+							</div>
+							
+						</div>
+
+					</section>
+				</main>
+			</section>
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

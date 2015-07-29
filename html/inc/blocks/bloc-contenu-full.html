@@ -18,45 +18,45 @@
     <p>@@texte</p>
     @@if(participe !== '' && participe === 'true')
     {
-      <p class="action"><a href="#" class="block-action panel-action" data-target="panel-1">Je participe</a></p>
+      <p class="action"><a href="#" id="start-form" class="block-action panel-action" data-target="panel-1">Je participe</a></p>
     }
 
     @@if(form !== '' && form === 'true')
     {
       <form>
-      <div class="form-panel" id="panel-1">
+      <div class="form-panel" id="panel-1" tabindex="-1">
       <h3>1/3</h3>
       <p><label for="address-field">Mon adresse* :</label>
-      <input type="text" name="" id="address-field" value="" /></p>
+      <input type="text" name="" id="address-field" value="" tabindex="-1" /></p>
       <p class="note">*champ obligatoire</p>
       <p class="btn-action"><button data-target="panel-2" name="" tabindex="1" class="panel-action panel-next ico-circle-next">Suivant</button></p>
       </div>
-      <div class="form-panel" id="panel-2">
+      <div class="form-panel" id="panel-2" tabindex="-1">
       <h3>2/3</h3>
       <p><label for="cp-field">Mon code postal* :</label>
-      <input type="text" name="" id="cp-field" value="" /></p>
+      <input type="text" name="" id="cp-field" value="" tabindex="-1" /></p>
       <p class="note">*champ obligatoire</p>
-      <p class="btn-action"><button data-target="panel-1" name="" class="panel-action panel-prev ico-circle-prev">Retour</button>
-      <button data-target="panel-3" name="" class="panel-action panel-next ico-circle-next">Suivant</button></p>
+      <p class="btn-action"><button data-target="panel-1" name="" tabindex="-1" class="panel-action panel-prev ico-circle-prev">Retour</button>
+      <button data-target="panel-3" name="" tabindex="-1" class="panel-action panel-next ico-circle-next">Suivant</button></p>
       </div>
-      <div class="form-panel" id="panel-3">
+      <div class="form-panel" id="panel-3" tabindex="-1">
       <h3>3/3</h3>
       <p><label for="city-field">Ma ville* :</label>
-      <input type="text" name="" id="city-field" value="" /></p>
+      <input type="text" name="" id="city-field" value="" tabindex="-1" /></p>
       <p class="note">*champ obligatoire</p>
-      <p class="btn-action"><button data-target="panel-2" name="" class="panel-action panel-prev ico-circle-prev">Retour</button>
-      <button data-target="panel-4" name="" class="panel-action panel-next ico-circle-next">Suivant</button></p>
+      <p class="btn-action"><button data-target="panel-2" name="" tabindex="-1" class="panel-action panel-prev ico-circle-prev">Retour</button>
+      <button data-target="panel-4" name="" tabindex="-1" class="panel-action panel-next ico-circle-next">Suivant</button></p>
       </div>
-      <div class="form-panel" id="panel-4">
-      <p class="top-space panel-content"><label class="styled-check"><input type="checkbox" name="" id="reglement-check" value="" /></label> J’ai lu et j’accepte le <a href="#">règlement du tirage au sort</a>.</p>
-      <p class="main-action"><input type="submit" name="" value="Je valide" id="last-step" data-close="false" data-target="panel-5" class="action-focus panel-action" /></p>
-      <p class="btn-action"><button data-target="panel-3" name="" class="panel-action panel-prev ico-circle-prev">Retour</button>
+      <div class="form-panel" id="panel-4" tabindex="-1">
+      <p class="top-space panel-content"><label class="styled-check"><input type="checkbox" name="" tabindex="-1" id="reglement-check" value="" /></label> J’ai lu et j’accepte le <a href="#">règlement du tirage au sort</a>.</p>
+      <p class="main-action"><input type="submit" name="" tabindex="-1" value="Je valide" id="last-step" data-close="false" data-target="panel-5" class="action-focus panel-action" /></p>
+      <p class="btn-action"><button data-target="panel-3" name="" tabindex="-1" class="panel-action panel-prev ico-circle-prev">Retour</button>
       <!--button data-target="panel-4" name="" class="panel-action panel-next ico-circle-next">Suivant</button--></p>
       </div>
 
-      <div class="form-panel message-panel" id="panel-5">
+      <div class="form-panel message-panel" id="panel-5" tabindex="-1">
       <p>Merci d’avoir participé !</p>
-      <p><a href="14-decouvrir-maratp.html" class="action-focus panel-action popin-action ico-mail"><b>Faites découvrir</b> <i>ma</i>RATP</a></p>
+      <p><a href="14-decouvrir-maratp.html" tabindex="-1" class="action-focus panel-action popin-action ico-mail"><b>Faites découvrir</b> <i>ma</i>RATP</a></p>
 
       </div>
       </form>

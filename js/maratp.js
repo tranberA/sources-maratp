@@ -21,6 +21,22 @@
 		  survol.blur(function(){
 		  	jQuery(this).parent('.form-item').removeClass('focus');
 		  });
+		},
+
+		configureSlider: function(root)
+		{
+			var rootElement = jQuery(root);
+
+			// bxSlider : carrousel pour les articles priviléges
+			if (jQuery.isFunction(jQuery.fn.bxSlider)) {
+		  	jQuery('.slide-privileges',rootElement).bxSlider({
+				  mode: 'fade',
+				  captions: true,
+				  controls: true,
+				  auto: true,
+				  pager: false
+				});
+		  }
 		}
 	};
 
@@ -31,16 +47,7 @@ jQuery(document).ready(function(){
 
 	FormUtils.configureItem(document);
 
-	// bxSlider : carrousel pour les articles priviléges
-	if (jQuery.isFunction(jQuery.fn.bxSlider)) {
-  	jQuery('.slide-privileges').bxSlider({
-		  mode: 'fade',
-		  captions: true,
-		  controls: true,
-		  auto: true,
-		  pager: false
-		});
-  }
+	FormUtils.configureSlider(document);
 });
 
 // Mini header.

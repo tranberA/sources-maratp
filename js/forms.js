@@ -2,7 +2,9 @@ if(window.jQuery !== undefined)
 {
   jQuery(function()
   {
-    // Navigation entre panneaux de formulaire Mes privilèges
+    // Navigation entre panneaux de formulaire Mes privilèges keyup
+
+    jQuery('#start-form').focus();
 
   	var currentPanel = null;
   	jQuery('.panel-action').on('click keyup',function(event)
@@ -31,18 +33,21 @@ if(window.jQuery !== undefined)
 
             if(close.length == 0)
             {
-              var closeBtn = jQuery('<button class="panel-close ico-close">Fermer</button>').on('click',function()
+              var closeBtn = jQuery('<button class="panel-close ico-close">Fermer</button>').on('click keyup',function(event)
                 {
                   if(currentPanel !== null)
           				{
           					currentPanel.removeClass('panel-active');
           				}
+
+                  event.preventDefault();
                 });
 
               targetPanel.append(closeBtn);
             }
           }
 
+          //targetPanel.focus();
   				targetPanel.addClass('panel-active');
 
 // focus sur le lien panneau suivant ???

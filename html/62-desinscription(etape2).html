@@ -1,0 +1,74 @@
+
+	@@include('./inc/parts/head.html',{"pageTitle": "Désinscription - Etape 2 - maRATP"})
+<body>
+
+	<div id="maratp">
+		@@include('./inc/parts/skip-links.html')
+
+			<section>
+				@@include('./inc/parts/header.html')
+				@@include('./inc/parts/navigation.html')
+				
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container spacing">
+
+						<article class="bloc-desinscription">
+							<div class="profil-header">
+								<div class="btn-back"><a href="">Retour</a></div>
+								<div class="bloc-content">
+									<p class="title">Nous avons bien pris en compte<br>votre demande de désinscription à <i>ma</i>RATP</p>
+									<p class="content">Afin d'améliorer les services proposés par <i>ma</i>RATP,<br>merci de nous indiquer la/les raison(s) de votre désinscription.</p>
+								</div>
+							</div>
+
+							<div class="bloc-formulaire">
+
+								<form accept-charset="UTF-8" method="" action="">
+
+
+								  <div class="form-item form-type-checkbox">
+								  	<input id="01" aria-required="true" type="checkbox" value="">
+									  <label for="01">Le service des alertes ne me convient pas</label>
+									</div>
+									
+								  <div class="form-item form-type-checkbox">
+								  	<input id="02" aria-required="true" type="checkbox" value="">
+									  <label for="02">Les offres exclusives ne me correspondent pas</label>
+									</div>
+
+								  <div class="form-item form-type-checkbox">
+								  	<input id="03" aria-required="true" type="checkbox" value="">
+									  <label for="03">je reçois trop d'e-mails de <i>ma</i>RATP</label>
+									</div>
+
+								  <div class="form-item form-type-checkbox">
+								  	<input id="04" aria-required="true" type="checkbox" value="">
+									  <label for="04">Les offres du moment ne m'intéressent pas</label>
+									</div>
+
+								  <div class="form-item form-type-checkbox">
+								  	<input id="05" aria-required="true" type="checkbox" value="">
+									  <label for="05">Autre (à compléter)</label>
+									</div>
+
+									
+
+									<div class="form-actions">
+										<button aria-label="Je me confirme les raisons de ma désinscription" type="submit" class="btn">Je valide</button>
+									</div>
+
+								</form>
+
+							</div>
+						</article>
+
+					</section>
+				</main>
+			</section>
+
+			@@include('./inc/parts/footer.html')
+
+	</div>
+	@@include('./inc/parts/foot.html')
+</body>

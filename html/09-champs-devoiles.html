@@ -64,8 +64,8 @@
 									  <div id="error19" class="messages error">Merci de renseigner ce champ.</div>
 
 									  <div class="form-item form-type-date">
-									    <label for="dateNaissance">Date de naissance<span class="form-required" title="Ce champ est requis.">*</span> :</label>
-									    <input type="date" class="form-control" id="dateNaissance" aria-required="true" placeholder="">
+									    <label for="dateNaissance">Date de naissance<span class="visually-hidden"> (ex: 12/05/1979) </span><span class="form-required" title="Ce champ est requis.">*</span> :</label>
+									    <input type="date" class="form-control" id="dateNaissance" aria-required="true"  placeholder="12/05/1979">
 									  </div>
 									  <div class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  <div class="messages error">Pour vous inscrire à maRATP, vous devez avoir + de 16 ans. <!-- (si date de naissance correcte = âge suffisant) --></div>
@@ -78,8 +78,8 @@
 									  <div id="error11" class="messages error">Merci de renseigner un numéro valide. <!-- (si erreur dans le numéro) --></div>
 
 									  <div class="form-item">
-									    <label for="mail">Adresse e-mail<span class="form-required" title="Ce champ est requis.">*</span> :</label>
-									    <input aria-describedby="error11" type="email" class="form-control" id="mail" maxlength="50" aria-required="true" placeholder="">
+									    <label for="mail">Adresse e-mail<span class="visually-hidden"> (ex: mail@domaine.com) </span><span class="form-required" title="Ce champ est requis.">*</span> :</label>
+									    <input aria-describedby="error11" type="email" class="form-control" id="mail" maxlength="50" aria-required="true" placeholder="(ex: mail@domaine.com)">
 									  </div>
 									  <div id="error12" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  <div id="error12" class="messages error">Merci de saisir une adresse e-mail valide. <!-- (si erreur dans l'adresse) --></div>
@@ -116,20 +116,20 @@
 									<form accept-charset="UTF-8" method="" action=""> 
 
 									  <div class="form-item">
-									    <label for="oldPassword" class="visually-hidden">Ancien mot de passe</label>
-									    <input aria-describedby="error14" type="password" class="form-control" id="oldPassword" maxlength="25" placeholder="Ancien mot de passe">
+									    <label for="oldPassword">Ancien mot de passe</label>
+									    <input aria-describedby="error14" type="password" class="form-control" id="oldPassword" maxlength="25" placeholder="">
 									    <div id="error14" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 									  <div class="form-item">
-									    <label for="newPassword" class="visually-hidden">Nouveau mot de passe</label>
-									    <input aria-describedby="error15"  type="password" class="form-control" id="newPassword" maxlength="25" placeholder="Nouveau mot de passe (8 caractères min.)">
+									    <label for="newPassword">Nouveau mot de passe<span class="visually-hidden"> (8 caractères min.)</span></label>
+									    <input aria-describedby="error15"  type="password" class="form-control" id="newPassword" maxlength="25" placeholder="(8 caractères min.)">
 									    <div id="error15" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 
 									  <div class="form-item">
-									    <label for="confirmPassword" class="visually-hidden">Confirmation nouveau mot de passe</label>
-									    <input aria-describedby="error16"  type="password" class="form-control" id="confirmPassword" maxlength="25" placeholder="Confirmation nouveau mot de passe">
+									    <label for="confirmPassword">Confirmation nouveau mot de passe</label>
+									    <input aria-describedby="error16"  type="password" class="form-control" id="confirmPassword" maxlength="25" placeholder="">
 									    <div id="error16" class="messages error">Merci de renseigner ce champ. <!-- (si vide) --></div>
 									  </div>
 

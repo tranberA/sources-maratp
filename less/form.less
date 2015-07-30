@@ -89,6 +89,7 @@
 		width: 100%;
 		.appearance(none);
 		.placeholder;
+		border: none;
 	}
 
 	input[type="text"],
@@ -97,7 +98,6 @@
 	input[type="number"],
 	input[type="tel"],
 	input[type="date"],
-	textarea,
 	select {
 		/* general style for input elements */
 		display: inline-block;
@@ -273,6 +273,10 @@
 		min-height: 200px;
 		resize: vertical;
 		overflow: auto;
+
+		&:focus { 
+			background: @vert-lighter;
+		}
 	}
 
 	input[type="submit"],

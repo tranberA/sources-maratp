@@ -12,7 +12,7 @@
 				}
 			});
 
-			var survol = jQuery('.form-item input, .form-item select',rootElement);
+			var survol = jQuery('.form-item input, .form-item select, .form-item textarea',rootElement);
 
 			survol.focus(function(){
 		    jQuery(this).parent('.form-item').addClass('focus');

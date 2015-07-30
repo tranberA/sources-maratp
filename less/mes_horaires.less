@@ -29,6 +29,7 @@
 			p {
 				display: inline-block; font-family: @primary-font-bold;
 				&:first-child {cursor: pointer;}
+				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
 			.supprimer {float: right; cursor: pointer;}
 			.supp-alerte {
@@ -41,6 +42,7 @@
 	.add {
 		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 123px; border: 1px dashed @border; cursor: pointer;
 		p {margin-top: 53px;}
+		&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 	}
 }
 
@@ -53,29 +55,31 @@
 		input {width: 100%; border: none; border-bottom: 1px solid @texte; display: inline-block; height: 40px;padding-left: 30px;}
 		.error { display:none; font-family: @primary-font;font-weight: normal; font-size: 1.250em; color: #b02e2e; margin-top: 7px;}
 	}
-}
-.results {
-	margin-left: 40px;
-	.rer > p, .metro > p, .bus-ratp > p { text-transform: uppercase; background-color: #f5f5f5; font-family: @primary-font-black; font-size: 1.125em; padding-left: 23px; margin-top: 0px; margin-bottom: 0px;}
-	.rer > p {margin-top: 0px;}
-	.bus-ratp  {
-		> p {line-height: 36px; margin-top: 0;margin-bottom: 0px;}
+	h3 {margin-left: 0px;}
+	.results {
+		// margin-left: 40px;
+		.rer > p, .metro > p, .bus-ratp > p { text-transform: uppercase; background-color: #f5f5f5; font-family: @primary-font-black; font-size: 1.125em; padding-left: 23px; margin-top: 0px; margin-bottom: 0px;}
+		.rer > p {margin-top: 0px;}
+		.bus-ratp  {
+			> p {line-height: 36px; margin-top: 0;margin-bottom: 0px;}
+			.bloc-ligne { 
+				line-height: 32px ; padding-top: 16px; padding-bottom: 16px;
+				.numero-ligne {margin-top: 8px;}
+			}
+		}
 		.bloc-ligne { 
-			line-height: 32px ; padding-top: 16px; padding-bottom: 16px;
-			.numero-ligne {margin-top: 8px;}
+			padding-left: 14px; padding-top: 16px; padding-bottom: 16px; border-left: 9px solid #fff;
+			.numero-ligne, .directions {display: inline-block;}
+			.numero-ligne {float: left;margin-right: 24px;}
+			.directions {line-height: 1.3;}
+			.direction-1, .direction-2 {margin: 0px; font-family: @primary-font; font-weight: normal; color: @texte2;}
+			&:hover {border-left: 9px solid @vertAplat; }
+		}
+		.rer, .metro, .bus-ratp {
+			.bloc-ligne:not(:last-child) {border-bottom: 1px solid @texte;}
 		}
 	}
-	.bloc-ligne { 
-		padding-left: 14px; padding-top: 16px; padding-bottom: 16px; border-left: 9px solid #fff;
-		.numero-ligne, .directions {display: inline-block;}
-		.numero-ligne {float: left;margin-right: 24px;}
-		.directions {line-height: 1.3;}
-		.direction-1, .direction-2 {margin: 0px; font-family: @primary-font; font-weight: normal; color: @texte2;}
-		&:hover {border-left: 9px solid @vertAplat; }
-	}
-	.rer, .metro, .bus-ratp {
-		.bloc-ligne:not(:last-child) {border-bottom: 1px solid @texte;}
-	}
+	.transports {margin-left: 0px;}
 }
 
 

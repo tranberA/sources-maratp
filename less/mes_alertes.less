@@ -6,6 +6,7 @@
 			font-family: @primary-font-bold; color: #3f4a48; border: 1px solid @border;
 			p {display: inline-block; margin: 0px;}
 			.number {color: #fff; background-color: @vertTexte; padding: 4px 10px; margin-right: 12px; }
+			.desactiver:hover {color: @vertAplat;text-decoration: underline;cursor: pointer;}
 			.classer {
 				float: right; margin-right: 10px; margin-top: 4px;
 				.ico-caret-up {margin-left: 11px; margin-right: 6px;}
@@ -32,6 +33,7 @@
 			p {
 				display: inline-block; font-family: @primary-font-bold;
 				&:first-child {cursor: pointer;}
+				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
 			.supprimer {float: right; cursor: pointer;}
 			.supp-alerte {
@@ -44,6 +46,7 @@
 	.empty {
 		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 123px; border: 1px dashed @border; cursor: pointer;
 		p {margin-top: 53px;}
+		&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 	}
 }
 
@@ -111,7 +114,10 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 			p {display: inline-block; font-family: @primary-font; font-weight: normal; font-size: 1.250em; color: @texte2; }
 			input {margin: 0 15px; height: 40px;width: 175px; }
 		}
-		.supprimer {float: right; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer;}
+		.supprimer {
+			float: right; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer;
+			&:hover {color: @vertAplat; text-decoration: underline;}
+		}
 		.supp-alerte {
 			float: right; font-family: @primary-font; display: none;
 			span {font-family: @primary-font-bold; color: #3f4a48; cursor: pointer;}
@@ -120,6 +126,7 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 	.add {
 		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 85px; border: 1px dashed @border; margin-bottom: 42px;cursor: pointer;
 		p {margin-top: 30px;}
+		&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 	}
 	.validate {
 		text-align: center;

@@ -7,20 +7,31 @@
 	
 
 	.bloc-favoris {
-		.favoris {
+		.favori {
+			clear: both;
 			p {
 				border: 1px solid @border;padding:16px 20px;margin-bottom: 8px;
 				span {color: @vertTexte;}
 				.ico-home, .ico-travail {margin-right: 7px;}
 			}
-			button {
-				border: none; background: none;cursor: pointer;font-family: @primary-font-bold; font-size: 0.875em;
-				&:hover {color: @vertTexte; text-decoration: underline;}
-				.ico-pencil {font-size: 1.250em;}
+			.modifier-supprimer {
+				button {
+					border: none; background: none;cursor: pointer;font-family: @primary-font-bold; font-size: 0.875em;
+					&:hover {color: @vertTexte; text-decoration: underline;}
+					.ico-pencil {font-size: 1.250em;}
+				}
+				.supprimer { 
+					float: right; cursor: pointer; border:none; background: none;font-family: @primary-font-bold; margin-top: 5px; 
+					&:hover {color: @vertAplat; text-decoration: underline;}
+				}
+				.supp-alerte {
+					float: right; font-family: @primary-font; margin-top: 5px; border:none; padding: 0; margin-bottom: 0; display: none;
+					button {font-family: @primary-font-bold; color: #3f4a48; border:none; background: none; cursor: pointer; }
+				}
 			}
 		}
 		.add {
-			text-align: center;  height: 79px; border: 1px dashed @border; cursor: pointer; margin-top: 25px;
+			text-align: center;  height: 79px; border: 1px dashed @border; cursor: pointer; margin-top: 25px; clear: both;
 			a {display:block; margin-top: 25px; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase;}
 			&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 		}
@@ -88,6 +99,7 @@
 		.profil-header, .profil-historique {
 			.title.left { padding-left: 0px;}
 		} 
+		.bloc-favoris .favori .modifier-supprimer .supp-alerte {margin-bottom: 20px;}
 		.historique .infos {
 			display: table; padding: 19px 18px 10px 18px; 
 			.d-a, .rue {display: table-cell;}

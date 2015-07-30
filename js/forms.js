@@ -111,7 +111,7 @@ if(window.jQuery !== undefined)
       currentBlock.outerHeight(formSlide.outerHeight()).outerWidth(blockWidth);
     });
 
-    form.width(formWidth);
+    //form.width(formWidth);
 
     var currentPanel = null;
     jQuery('.panel-action').on('click',function(event)

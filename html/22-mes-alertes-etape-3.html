@@ -25,65 +25,99 @@
 							<p>Pour paraméter votre alerte, <br> choisissez le créneau horaire de votre ligne :</p>
 						</div>
 
-						<div class="choix-ligne">
-							<div>
-								<img src="img/alertes/m2.png" alt="Ligne2">
-							</div>
-							<div>
-								<span>Porte Dauphine / Nation</span>
-							</div>
+						<div class="bloc-formulaire">
+							<form accept-charset="UTF-8" method="" action="">
 
-						</div>
+								<div class="choix-ligne">
+									<div>
+										<img src="img/alertes/m2.png" alt="Ligne2">
+									</div>
+									<div>
+										<span>Porte Dauphine / Nation</span>
+									</div>
 
-						<h3>Horaire / Jour</h3>
-
-						<div class="jours clearfix">
-							<ul>
-								<li><a href="#">L</a></li>
-								<li><a href="#">M</a></li>
-								<li><a href="#">Me</a></li>
-								<li><a href="#">J</a></li>
-								<li><a href="#">V</a></li>
-								<li class="weekend"><a href="#">S</a></li>
-								<li class="weekend"><a href="#">D</a></li>
-							</ul>
-						</div>
-
-						<div class="all-creneaux">
-
-							<div class="creneau">
-								<div class="date">
-									<p>De <input type="time" name=""></p>
-									<p>à <input type="time" name=""></p>
 								</div>
-								<div>
-									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
-									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
-									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+
+								<h3>Horaire / Jour</h3>
+
+								<div class="jours liste-jours clearfix">
+									
+
+									<div class="form-item form-type-checkbox">
+										<input id="lundi"  type="checkbox" value="Lundi">
+									  <label for="lundi"><abbr title="Lundi">L</abbr></label>
+									</div>
+
+									<div class="form-item form-type-checkbox">
+										<input id="mardi"  type="checkbox" value="">
+									  <label for="mardi"><abbr title="Mardi">M</abbr></label>
+									</div>
+
+									<div class="form-item form-type-checkbox">
+										<input id="mercredi"  type="checkbox" value="">
+									  <label for="mercredi"><abbr title="Mercredi">Me</abbr></label>
+									</div>
+
+									<div class="form-item form-type-checkbox">
+										<input id="jeudi"  type="checkbox" value="">
+									  <label for="jeudi"><abbr title="Jeudi">J</abbr></label>
+									</div>
+
+									<div class="form-item form-type-checkbox">
+										<input id="vendredi"  type="checkbox" value="">
+									  <label for="vendredi"><abbr title="Vendredi">V</abbr></label>
+									</div>
+
+									<div class="form-item form-type-checkbox form-type-checkbox-samedi">
+										<input id="samedi" type="checkbox" value="">
+									  <label for="samedi"><abbr title="Samedi">S</abbr></label>
+									</div>
+
+									<div class="form-item form-type-checkbox form-type-checkbox-dimanche">
+										<input id="dimanche" type="checkbox" value="">
+									  <label for="dimanche"><abbr title="Dimanche">D</abbr></label>
+									</div>
+
 								</div>
-							</div>
 
-							<div class="creneau">
-								<div class="date">
-									<p>De <input type="time" name=""></p>
-									<p>à <input type="time" name=""></p>
+								<div class="all-creneaux">
+
+									<div class="creneau">
+										<div class="date">
+											<p>De <input type="time" name=""></p>
+											<p>à <input type="time" name=""></p>
+										</div>
+										<div>
+											<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+											<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+										</div>
+									</div>
+
+									<div class="creneau">
+										<div class="date">
+											<p>De <input type="time" name=""></p>
+											<p>à <input type="time" name=""></p>
+										</div>
+										<div>
+											<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+											<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+										</div>
+									</div>
+
+									<div class="creneau add">
+										<p><span class="ico-plus"></span> J'ajoute un nouveau créneau</p>
+									</div>
+
+									<div class="validate">
+										<button class="btn-valide">Je valide mon alerte</button>
+									</div>
+
 								</div>
-								<div>
-									<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
-									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
-									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
-								</div>
-							</div>
 
-							<div class="creneau add">
-								<p><span class="ico-plus"></span> J'ajoute un nouveau créneau</p>
-							</div>
-
-							<div class="validate">
-								<button class="btn-valide">Je valide mon alerte</button>
-							</div>
-
-						</div>
+							</form>
+						</div> <!-- fin bloc-formulaire -->
 
 
 					</section>

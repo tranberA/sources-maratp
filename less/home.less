@@ -143,7 +143,7 @@
 	}
 	
 	.account {
-		background: transparent url("../../../img/pages/home_non-loguee/account.png") repeat scroll top left;
+		background: transparent url("@{imageDir}pages/home_non-loguee/account.png") repeat scroll top left;
 		bottom: 0;
 		font-family: 'brandon_grotesquebold';
 		left: 0;
@@ -177,8 +177,16 @@
 		text-transform: uppercase;
 	}
 	
-	.account a:hover, .account a:focus {
-		border-color: #fff;
+	.account a.subscribe:hover, .account a.subscribe:focus {
+		background-color: #fff;
+		border-color: #0d3b93;
+		color: #0d3b93;
+	}
+	
+	.account a.login:hover, .account a.login:focus {
+		background-color: #fff;
+		border-color: #008672;
+		color: #008672;
 	}
 	
 	.account span span {

@@ -3,12 +3,16 @@
 	.bloc {
 		margin-top: 30px;
 		.entete {
-			font-family: @primary-font-bold; color: #3f4a48; border: 1px solid @border;
+			border: 1px solid @border;
 			p {display: inline-block; margin: 0px;}
 			.number {color: #fff; background-color: @vertTexte; padding: 4px 10px; margin-right: 12px; }
-			.desactiver:hover {color: @vertAplat;text-decoration: underline;cursor: pointer;}
+			.desactiver {
+				border:none; background: none; font-family: @primary-font-bold; color: #3f4a48; font-size: 1em;
+				&:hover {color: @vertAplat;text-decoration: underline;cursor: pointer;}
+			}
 			.classer {
-				float: right; margin-right: 10px; margin-top: 4px;
+				float: right; margin-right: 10px; margin-top: 4px; 
+				button {border: none; background: none; padding: 0; font-size: 1em;}
 				.ico-caret-up {margin-left: 11px; margin-right: 6px;}
 				.ico-caret-up, .ico-caret-down {cursor: pointer;}
 			}
@@ -30,22 +34,22 @@
 			.creneau-1 { margin-left: 40px; margin-right: 36px;}
 		}
 		.modifier-supprimer { 
-			p {
-				display: inline-block; font-family: @primary-font-bold;
+			button {
+				display: inline-block; font-family: @primary-font-bold; border: none; background: none; margin-top: 5px; font-size: 0.875em; color: #3f4a48;
 				&:first-child {cursor: pointer;}
 				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
-			.supprimer {float: right; cursor: pointer;}
+			.supprimer {float: right; cursor: pointer; }
 			.supp-alerte {
-				float: right; font-family: @primary-font; display: none;
-				a {font-family: @primary-font-bold; color: #3f4a48;}
+				float: right; font-family: @primary-font; margin-top: 0px; display: none;
+				button {font-family: @primary-font-bold; color: #3f4a48;}
 			}
 		}
 	}
 	.separation {border-top: 1px dashed @border;margin: 15px 0px;}
 	.empty {
 		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 123px; border: 1px dashed @border; cursor: pointer;
-		p {margin-top: 53px;}
+		a {display:block;margin-top: 53px;}
 		&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 	}
 }
@@ -209,6 +213,8 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 }
 
 @media only screen and (max-width: 480px) {
+
+	.all-alertes .bloc {clear: both;}
 
 	.alertes-3 {
 		.chapo-profil {

@@ -557,27 +557,53 @@
 
 .form-panel
 {
+  /*position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;*/
+}
+
+.form-slide
+{
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  left: 0;
+  overflow: hidden;
+
+  //.transition(left 1s);
+}
+
+.form-panel
+{
   @panelSpacing: 2em;
 
   background-color: @vertTexte;
   color: #fff;
   padding: @panelSpacing;
-  position: absolute;
-  top: 0;
-  left: 100%;
+  //left: 100%;
   //right: 0;
-  width: 100%;
-  bottom: 0;
+  float: left;
+  position: relative;
 
   font-family: 'brandon_grotesquelight';
 
-  .transition(left 1s);
 
-  &.panel-active
+  //
+  // &.panel-active,&[aria-hidden='false']
+  // {
+  //   left: 0;
+  // }
+
+  &[aria-hidden='false']
   {
-    left: 0;
+    display:block;
   }
-
+  &[aria-hidden='true']
+  {
+    display:none;
+  }
   &.message-panel
   {
     text-align: center;
@@ -916,3 +942,24 @@ p.metro
     background-image: url('@{imageDir}metro.png');
   }
 }
+
+
+
+
+
+
+.panel-action
+{
+  &:focus
+  {
+    outline: 2px @vertAplat dashed;
+  }
+}
+//
+// .form-panel
+// {
+//   &:focus
+//   {
+//     outline: 4px #c0c solid;
+//   }
+// }

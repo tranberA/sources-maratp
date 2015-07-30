@@ -143,7 +143,8 @@
 		width: 45%;
 	}
 
-	.form-type-checkbox { border: none;
+	.form-type-checkbox,
+	.form-type-radio { border: none;
 		label {
 
 			color: @texte;
@@ -212,10 +213,10 @@
 		padding-left: 24px;
 	}
 
-	input[type="radio"] + label::before,
-	input[type="radio"] + label::after,
-	input[type="checkbox"] + label::before,
-	input[type="checkbox"] + label::after {
+	input[type="radio"] + label:before,
+	input[type="radio"] + label:after,
+	input[type="checkbox"] + label:before,
+	input[type="checkbox"] + label:after {
 		/* custom radio and check boxes */
 		content: '';
 		display: block;
@@ -228,44 +229,44 @@
 		color: @vertTexte;
 	}
 
-	input[type="radio"] + label::before,
-	input[type="checkbox"] + label::before {
+	input[type="radio"] + label:before,
+	input[type="checkbox"] + label:before {
 		border: 1px solid @border;
 		background: #FFF;
 	}
 
-	input[type="radio"] + label::after,
-	input[type="checkbox"] + label::after {
+	input[type="radio"] + label:after,
+	input[type="checkbox"] + label:after {
 		background-position: center center;
 		background-repeat: no-repeat;
 		display: none;
 	}
 
-	input[type="radio"] + label::after {
+	input[type="radio"] + label:after {
 		/* custom image for radio button */
 		content: "●";
-		font-size: 0.9em;
+		font-size: 0.7em;
 		padding-left: 2px;
 	}
 
-	input[type="checkbox"] + label::after,
-	input[type="checkbox"]:focus + label::after {
+	input[type="checkbox"] + label:after,
+	input[type="checkbox"]:focus + label:after {
 		/* custom image for checkbox */
 		content: "✔";
 		font-size: 0.9em;
 		padding-left: 2px;
 	}
 
-	input[type="radio"]:focus + label::before,
-	input[type="checkbox"]:focus + label::before {
+	input[type="radio"]:focus + label:before,
+	input[type="checkbox"]:focus + label:before {
   	/* add focus effect for radio and check buttons */
   	outline: none;
 		background: @vert-lighter;
 		border-color: @vertTexte;
 	}
 
-	input[type="radio"]:checked + label::after,
-	input[type="checkbox"]:checked + label::after {
+	input[type="radio"]:checked + label:after,
+	input[type="checkbox"]:checked + label:after {
 		display: block;
 	}
 

@@ -45,11 +45,11 @@
 	jQuery('<p id="navigationbutton"><span role="button" tabindex="0"><img src="img/navigation/mobile/burger.png" alt="Afficher le menu principal ci-après" /></span></p>').prependTo('#navigation');
 	jQuery('#navigationbutton span').first().click(function () {
 		if (jQuery(this).parent().next().attr('hidden') == 'hidden') {
-			jQuery(this).first().attr('alt', 'Masquer le menu principal');
+			jQuery(this).find('img').attr('alt', 'Masquer le menu principal');
 			jQuery(this).parent().next().removeAttr('hidden');
 		}
 		else {
-			jQuery(this).first().attr('alt', 'Afficher le menu principal ci-après');
+			jQuery(this).find('img').attr('alt', 'Afficher le menu principal ci-après');
 			jQuery(this).parent().next().attr('hidden', 'hidden');
 		}
 	}).keydown(function (event) {
@@ -68,11 +68,11 @@
 			if (jQuery(window).width() <= navviewportwidth) {
 				jQuery('#navigationbutton').removeAttr('hidden');
 				jQuery('#navigationbutton img').first().attr('alt', 'Afficher le menu principal ci-après');
-				jQuery('#navigation ul').first().attr('hidden', 'hidden');
+				jQuery('#navigation > ul').first().attr('hidden', 'hidden');
 			}
 			else {
 				jQuery('#navigationbutton').attr('hidden', 'hidden');
-				jQuery('#navigation ul').first().removeAttr('hidden');
+				jQuery('#navigation > ul').first().removeAttr('hidden');
 			}
 		}
 		navoldviewportwidth = jQuery(window).width();

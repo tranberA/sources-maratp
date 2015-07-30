@@ -6,7 +6,7 @@
 	function manageResponsivePersonalHome() {
 		if (jQuery(window).width() != personalhomeoldviewportwidth) {
 			if (jQuery(window).width() <= personalhomeviewportwidth) {
-				jQuery('span.button').each(function () {
+				jQuery('.dashbord span.button').each(function () {
 					jQuery(this).attr('role', 'button').attr('tabindex', '0').attr('aria-label', jQuery(this).parent().text() + ', afficher le contenu ci-après');
 					var parent = jQuery(this).parent();
 					if (parent.hasClass('visually-hidden')) {
@@ -33,7 +33,7 @@
 				});
 			}
 			else {
-				jQuery('span.button').each(function () {
+				jQuery('.dashbord span.button').each(function () {
 					jQuery(this).removeAttr('role').removeAttr('tabindex').removeAttr('aria-label');
 					var parent = jQuery(this).parent();
 					if (parent.attr('data-class') != '') {

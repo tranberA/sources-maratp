@@ -13,19 +13,14 @@
 					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
 				  <h1><span class="button">Mon dashboard</span></h1>
 				</header>
-				
+
 
 				<main role="main" id="main" tabindex="-1">
 					<section class="container">
 
-						<div class="menu-dashboard">
-							<ul class="menu">
-								<li class="first"><a href="#">Mon profil <span class="visually-hidden">(Rubrique active)</span></a></li>
-								<li><a href="#">Mes alertes</a></li>
-								<li><a href="#">Mes horaires</a></li>
-								<li class="last"><a class="active" href="#">Mes itinéraires</a></li>
-							</ul>
-						</div>
+@@include('./inc/parts/menu-dashboard.html',{"entry": 4})
+
+						
 
 
 						<article class="bloc-itineraires">

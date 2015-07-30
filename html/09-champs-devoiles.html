@@ -13,19 +13,13 @@
 					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
 				  <h1><span class="button">Mon dashboard</span></h1>
 				</header>
-				
+
 
 				<main role="main" id="main" tabindex="-1">
 					<section class="container">
 
-						<div class="menu-dashboard">
-							<ul class="menu">
-								<li class="first"><a class="active" href="09-champs-devoiles.html">Mon profil <span class="visually-hidden">(Rubrique active)</span></a></li>
-								<li><a href="20-mes-alertes-liste.html">Mes alertes</a></li>
-								<li><a href="#">Mes horaires</a></li>
-								<li class="last"><a href="#">Mes itinéraires</a></li>
-							</ul>
-						</div>
+@@include('./inc/parts/menu-dashboard.html',{"entry": 1})
+
 
 						<div class="chapo-profil">
 							<p>Complétez votre profil pour profiter de tous les avantages<br>et de toutes les petites attentions personnalisées qui vous attendent !</p>
@@ -113,7 +107,7 @@
 							<div class="profil-body">
 
 								<div class="bloc-formulaire">
-									<form accept-charset="UTF-8" method="" action=""> 
+									<form accept-charset="UTF-8" method="" action="">
 
 									  <div class="form-item">
 									    <label for="oldPassword">Ancien mot de passe</label>

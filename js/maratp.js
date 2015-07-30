@@ -1,5 +1,14 @@
 (function()
 {
+	var slider;
+
+	// fonctions privées
+
+	function reloadSlider()
+	{
+		slider.reloadSlider();
+	}
+
 	var _lib = {
 		configureItem: function(root)
 		{
@@ -29,13 +38,20 @@
 
 			// bxSlider : carrousel pour les articles priviléges
 			if (jQuery.isFunction(jQuery.fn.bxSlider)) {
-		  	jQuery('.slide-privileges',rootElement).bxSlider({
+		  	slider = jQuery('.slide-privileges',rootElement).bxSlider({
 				  mode: 'fade',
 				  captions: true,
 				  controls: true,
 				  auto: true,
 				  pager: false
 				});
+
+				// if(root !== document)
+				// {
+					//slider.reloadSlider();
+				// }
+				//
+				//window.setTimeout(reloadSlider,100);
 		  }
 		}
 	};

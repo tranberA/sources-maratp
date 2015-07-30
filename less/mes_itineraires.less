@@ -1,3 +1,58 @@
+// Mes itinéraires étape 1
+.bloc-itineraires {
+	.profil-header {
+
+		.title.left {text-align: left; padding-left: 37px;}
+	}
+	
+
+	.bloc-favoris {
+		.favoris {
+			p {
+				border: 1px solid @border;padding:16px 20px;margin-bottom: 8px;
+				span {color: @vertTexte;}
+			}
+			button {
+				border: none; background: none;cursor: pointer;font-family: @primary-font-bold; font-size: 0.875em;
+				&:hover {color: @vertTexte; text-decoration: underline;}
+				.ico-pencil {font-size: 1.250em;}
+			}
+		}
+		.add {
+			text-align: center;  height: 79px; border: 1px dashed @border; cursor: pointer; margin-top: 25px;
+			a {display:block; margin-top: 25px; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase;}
+			&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
+		}
+	}
+
+	.profil-historique {
+		margin-bottom: 17px;
+		.title.left { display: inline-block; width: 58%; text-align: left; padding-left: 37px; margin: 73px 0 0 0; font-family: @primary-font-black; font-size: 1.15em; font-weight: normal; text-transform: uppercase; vertical-align: top;}
+	}
+
+	.historique {
+		clear: both; margin-bottom: 50px;
+		.infos {
+			padding: 13px 35px 35px 35px; border: 1px solid @border; 
+			> div { margin-bottom: 15px;}
+			.d-a, .rue {display: inline-block;}
+			.d-a {color: @vertTexte;margin-right: 11px;}
+			.calculer {
+				text-align: center;margin-top: 35px;
+				a { padding: 13px 27px; background-color: @vertTexte; color: #fff; text-transform: uppercase; font-family: @primary-font-bold; font-size: 0.875em;}
+			}
+		}
+		.supprimer {
+			float: right; cursor: pointer; border:none; background: none;font-family: @primary-font-bold; margin-top: 5px;
+			&:hover {color: @vertAplat; text-decoration: underline;}
+		}
+		.supp-alerte {
+			float: right; font-family: @primary-font; margin-top: 5px; display: none;
+			button {font-family: @primary-font-bold; color: #3f4a48; border:none; background: none; cursor: pointer; }
+		}
+	}
+}
+
 .bloc-itineraires {
 	
 
@@ -27,6 +82,14 @@
 			}
 			.title { width: 85%; padding-left: 0; text-align: left; }
 
+		}
+		.profil-header, .profil-historique {
+			.title.left { padding-left: 0px;}
+		} 
+		.historique .infos {
+			display: table; padding: 19px 18px 10px 18px; 
+			.d-a, .rue {display: table-cell;}
+			.calculer a {display: block; width: 100%;}
 		}
 	}
 

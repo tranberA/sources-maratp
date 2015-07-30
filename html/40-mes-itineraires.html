@@ -1,0 +1,106 @@
+
+@@include('./inc/parts/head.html',{"pageTitle": "Mes itinéraires - Ajouter une adresse favorite"})
+
+<body>
+
+	<div id="maratp">
+
+			@@include('./inc/parts/skip-links.html')
+
+			<section>
+
+				<header class="mini-header" role="banner">
+					<div class="closePage"><a href="">Retour à la page précédente<img src="img/maRATP-mini@2x.png" alt="maRATP" height="18" width="98" /></a></div>
+				  <h1><span class="button">Mon dashboard</span></h1>
+				</header>
+
+
+				<main role="main" id="main" tabindex="-1">
+					<section class="container">
+
+
+@@include('./inc/parts/menu-dashboard.html',{"entry": 4})
+
+
+						<article class="bloc-itineraires">
+							<div class="chapo-profil">
+							<p>Enregistrez et personnalisez vos adresses préférées.<br />Retrouvez également l'historique de vos itinéraires dans votre dashboard.</p>
+						</div>
+							<div class="profil-header">
+								<h2 class="title left">Mes favoris</h2>
+							</div>
+
+							<div class="bloc-favoris">
+								
+								<div class="favoris">
+									<p><span>Maison : </span>13 rue Carpeaux, 75010 Paris</p>
+									<button type="button">Modifier <span class="ico-pencil"></span></button>
+								</div>
+
+								<div class="favoris">
+									<p><span>Maison : </span>13 rue Carpeaux, 75010 Paris</p>
+									<button type="button">Modifier <span class="ico-pencil"></span></button>
+								</div>
+
+								<div class="add">
+									<a href="#"><span class="ico-plus"></span> J'ajoute une alerte</a>
+								</div>
+
+							</div>
+
+							<div class="profil-historique">
+								<h2 class="title left">Mon historique</h2>
+							</div>
+
+							<div class="historique">
+								<div class="infos">
+									<div>
+										<div class="d-a">Départ&nbsp;:&nbsp;</div>
+										<div class="rue"> 13 Rue Carpeaux, 75010 Paris</div><br>
+									</div>
+									<div>
+										<div class="d-a">Arrivée&nbsp;:&nbsp;</div><div class="rue"> 12 Avenue du Capitaine Glarner, 93400 St Ouen</div>
+									</div>
+									<div class="calculer clearfix">
+										<a href="">Calculer</a>
+									</div>
+								</div>
+								<div class="modifier-supprimer">
+									<button type="button" class="supprimer">Supprimer <span class="ico-trash"></span></button>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <button type="button" class="oui">Oui</button> / <button type="button" class="non">Non</button></p>
+								</div>
+							</div>
+
+							<div class="historique">
+								<div class="infos">
+									<div>
+										<div class="d-a">Départ&nbsp;:&nbsp;</div>
+										<div class="rue"> 13 Rue Carpeaux, 75010 Paris</div><br>
+									</div>
+									<div>
+										<div class="d-a">Arrivée&nbsp;:&nbsp;</div><div class="rue"> 12 Avenue du Capitaine Glarner, 93400 St Ouen</div>
+									</div>
+									<div class="calculer clearfix">
+										<a href="">Calculer</a>
+									</div>
+								</div>
+								<div class="modifier-supprimer">
+									<button type="button" class="supprimer">Supprimer <span class="ico-trash"></span></button>
+									<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+									<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <button type="button" class="oui">Oui</button> / <button type="button" class="non">Non</button></p>
+								</div>
+							</div>
+
+						</article>
+
+					</section>
+				</main>
+			</section>
+
+
+
+	</div>
+
+	@@include('./inc/parts/foot.html')
+</body>

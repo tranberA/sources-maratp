@@ -36,6 +36,11 @@
 		{
 			var rootElement = jQuery(root);
 
+			function initSlider()
+			{
+				//alert(this.toSource())
+			}
+
 			// bxSlider : carrousel pour les articles priviléges
 			if (jQuery.isFunction(jQuery.fn.bxSlider)) {
 		  	slider = jQuery('.slide-privileges',rootElement).bxSlider({
@@ -43,7 +48,8 @@
 				  captions: true,
 				  controls: true,
 				  auto: true,
-				  pager: false
+				  pager: false/*,
+					onSliderLoad: initSlider*/
 				});
 
 				// if(root !== document)
@@ -59,11 +65,50 @@
 	window.FormUtils = _lib;
 })();
 
-jQuery(document).ready(function(){
+(function()
+{
+	var popin;
 
+	var _lib = {
+		initFullPopin: function()
+		{
+			jQuery('.full-popin-action').on('click',function(event)
+			{
+				if(popin === undefined || popin.length == 0)
+				{
+					jQuery('body').append('<iframe id="full-popin" frameborder="0"/>');
+					popin = jQuery('#full-popin');
+				}
+
+				popin.attr('aria-hidden',false);
+
+				var src = jQuery(this).attr('href');
+				popin.attr('src',src);
+
+				var popinDocument = jQuery(popin.get(0).contentDocument);
+
+				popinDocument.focus();
+
+				event.preventDefault();
+			});
+		},
+		closePopin: function()
+		{
+			popin.attr('aria-hidden',true);
+			jQuery(document).focus();
+		}
+	};
+
+	window.PopinUtils = _lib;
+})();
+
+//full-popin-action
+
+jQuery(document).ready(function()
+{
 	FormUtils.configureItem(document);
-
 	FormUtils.configureSlider(document);
+	PopinUtils.initFullPopin();
 });
 
 // Mini header.

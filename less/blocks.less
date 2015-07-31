@@ -518,7 +518,7 @@
   }
 }
 
-.block-privilege, .block-service
+.block-privilege, .block-service,.block-coupsdecoeur
 {
   .block
   {
@@ -566,18 +566,40 @@
 {
   border-top-color: #1D3768;
 
-  &.block-article
+  .action .block-action,.btn,.bx-next,.bx-prev,.bx-wrapper .bx-controls-direction a::before
   {
-    .action
-    {
-      .block-action
-      {
-        background-color: #1D3768;
-        border: 1px solid #1D3768;
+    background-color: #1D3768;
+  }
 
-        &:hover, &:focus { background-color: #FFF; }
-      }
-    }
+  .action .block-action,.btn
+  {
+    border: 1px solid #1D3768 !important;
+  }
+
+.action .block-action,.btn,.bx-next,.bx-prev
+{
+    &:hover, &:focus { background-color: #FFF; }
+  }
+}
+
+.block-coupsdecoeur
+{
+  border-top-color: #d2388c;
+
+  .action .block-action,.btn,.bx-next,.bx-prev,.bx-wrapper .bx-controls-direction a::before
+  {
+    background-color: #d2388c;
+  }
+
+  .action .block-action,.btn
+  {
+    border: 1px solid #d2388c !important;
+  }
+
+    .action .block-action,.btn,.bx-next,.bx-prev
+    {
+
+    &:hover, &:focus { background-color: #FFF; }
   }
 }
 
@@ -975,14 +997,14 @@ p.metro
 
 
 
-
-.panel-action
-{
-  &:focus
-  {
-    outline: 1px #333 dotted;
-  }
-}
+//
+// .panel-action
+// {
+//   &:focus
+//   {
+//     outline: 1px #333 dotted;
+//   }
+// }
 //
 // .form-panel
 // {

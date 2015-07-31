@@ -67,7 +67,7 @@
 
 (function()
 {
-	var popin;
+	var popin,popinWin;
 
 	var _lib = {
 		initFullPopin: function()
@@ -85,9 +85,10 @@
 				var src = jQuery(this).attr('href');
 				popin.attr('src',src);
 
-				var popinDocument = jQuery(popin.get(0).contentDocument);
+				popinWin = jQuery(popin.get(0).contentWindow);
 
-				popinDocument.focus();
+				jQuery(window).blur();
+				popinWin.focus();
 
 				event.preventDefault();
 			});
@@ -95,7 +96,8 @@
 		closePopin: function()
 		{
 			popin.attr('aria-hidden',true);
-			jQuery(document).focus();
+			popinWin.blur();
+			jQuery(window).focus();
 		}
 	};
 

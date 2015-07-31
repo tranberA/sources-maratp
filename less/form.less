@@ -378,13 +378,14 @@
 		cursor: pointer;
 		text-transform: uppercase;
 		font-family: @primary-font-bold;
+		border: 1px solid @vertAplat;
 		.font-smoothing;
 		.appearance(none);
 
 
-		&:focus {
+		&:focus, &:hover {
 			//outline: none;
-			background: @vertTexte;
+			background: #FFF; color: @texte;
 		}
 
 		&:active {

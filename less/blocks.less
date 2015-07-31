@@ -275,12 +275,18 @@
     {
       background-color: #fdcf00;
       color: @texte;
+      border: 1px solid #fdcf00;
+
+      &:hover, &:focus { background: #FFF; }
     }
 
     &.share
     {
       background-color: #ebebeb;
       color: @texte;
+      border: 1px solid #ebebeb;
+
+      &:hover, &:focus { background: #FFF; }
     }
 
     & + .block-action
@@ -300,6 +306,9 @@
       color: #fff;
       padding-left: 5em;
       padding-right: 5em;
+      border: 1px solid @vertAplat;
+
+      &:hover, &:focus { background: #FFF; border-color: @vertAplat; color: @texte; }
     }
   }
 
@@ -509,7 +518,7 @@
   }
 }
 
-.block-privilege,.block-service
+.block-privilege, .block-service
 {
   .block
   {
@@ -564,6 +573,9 @@
       .block-action
       {
         background-color: #1D3768;
+        border: 1px solid #1D3768;
+
+        &:hover, &:focus { background-color: #FFF; }
       }
     }
   }

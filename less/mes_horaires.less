@@ -5,9 +5,13 @@
 		.entete {
 			font-family: @primary-font-bold; color: #3f4a48; border: 1px solid @border;
 			p {display: inline-block; margin: 0px;}
-			.number {color: #fff; background-color: @vertTexte; padding: 4px 10px; margin-right: 12px; }
+			.number {color: #fff; background-color: @vertTexte; padding: 4px 10px; margin-right: 12px; display: inline-block;margin: 0px; font-family: @primary-font;}
 			.classer {
 				float: right; margin-right: 10px; margin-top: 4px;
+				a {
+					color: #3f4a48;
+					&:hover {color: @vertTexte;}
+				}
 				.ico-caret-up {margin-left: 11px; margin-right: 6px;}
 				.ico-caret-up, .ico-caret-down {cursor: pointer;}
 			}
@@ -26,22 +30,22 @@
 			}
 		}
 		.modifier-supprimer { 
-			p {
-				display: inline-block; font-family: @primary-font-bold;
+			button, a {
+				display: inline-block; font-family: @primary-font-bold; border: none; background: none; margin-top: 5px; font-size: 0.875em; color: #3f4a48; 
 				&:first-child {cursor: pointer;}
 				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
-			.supprimer {float: right; cursor: pointer;}
+			.supprimer {float: right; cursor: pointer;  }
 			.supp-alerte {
-				float: right; font-family: @primary-font; display: none;
-				span {font-family: @primary-font-bold; color: #3f4a48;}
+				float: right; font-family: @primary-font; margin-top: 0px; margin-bottom: 0px; display: none;
+				button {font-family: @primary-font-bold; color: #3f4a48;}
 			}
 		}
 	}
 	.separation {border-top: 1px dashed @border;margin: 15px 0px;}
 	.add {
 		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 123px; border: 1px dashed @border; cursor: pointer;
-		p {margin-top: 53px;}
+		a { display:block; margin-top: 53px;}
 		&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 	}
 }
@@ -207,6 +211,7 @@
 	.transports li a { padding: 0 15px 5px;}
 	.all-horaires {
 		.bloc {
+			clear: both; margin-top: 40px;
 			.metro {
 				.nom-ligne {
 					line-height: 1.3;
@@ -215,6 +220,7 @@
 				}
 			}
 		}
+		.separation {margin-top: 50px;}
 	}
 	.recherche-direction .add .ajout-horaire {width: 100%;}
 

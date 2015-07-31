@@ -14,9 +14,12 @@
 				span {color: @vertTexte;}
 				span[class^="ico"] {margin-right: 7px;}
 			}
-			
+			a {
+				font-family: @primary-font-bold; font-size: 0.875em; color: #3f4a48;
+				&:hover {color: @vertTexte; text-decoration: underline;}
+			}
 			button {
-				border: none; background: none;cursor: pointer;font-family: @primary-font-bold; font-size: 0.875em;
+				border: none; background: none;cursor: pointer;font-family: @primary-font-bold; font-size: 0.875em; color: #3f4a48;
 				&:hover {color: @vertTexte; text-decoration: underline;}
 				.ico-pencil {font-size: 1.250em;}
 			}
@@ -24,7 +27,7 @@
 		.new {
 			.modifier-supprimer {
 				.supprimer { 
-					float: right; cursor: pointer; border:none; background: none;font-family: @primary-font-bold; margin-top: 5px; 
+					float: right; cursor: pointer; border:none; background: none;font-family: @primary-font-bold; margin-top: 5px;  color: #3f4a48;
 					&:hover {color: @vertAplat; text-decoration: underline;}
 				}
 				.supp-alerte {

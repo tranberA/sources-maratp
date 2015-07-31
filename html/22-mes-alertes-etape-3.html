@@ -19,6 +19,7 @@
 
 						@@include('./inc/parts/menu-dashboard.html',{"entry": 2})
 
+						<h2 class="visually-hidden">Mes alertes étape 3</h2>
 
 						<div class="chapo-profil">
 							<p class="btn-retour"><a href=""><span class="ico-circle-prev"></span> Retour</a></p>
@@ -87,10 +88,10 @@
 											<p>De <input type="text" name=""></p>
 											<p>à <input type="text" name=""></p>
 										</div>
-										<div>
-											<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+										<div class="modifier-supprimer">
+											<button type="button" class="supprimer">Supprimer <span class="ico-trash"></span></button>
 											<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
-											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <button type="submit" class="oui">Oui</button> / <button type="button" class="non">Non</button></p>
 										</div>
 									</div>
 
@@ -99,15 +100,15 @@
 											<p>De <input type="text" name=""></p>
 											<p>à <input type="text" name=""></p>
 										</div>
-										<div>
-											<p class="supprimer">Supprimer <span class="ico-trash"></span></p>
+										<div class="modifier-supprimer">
+											<button type="button" class="supprimer">Supprimer <span class="ico-trash"></span></button>
 											<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
-											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <span class="oui">Oui</span> / <span class="non">Non</span></p>
+											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <button type="submit" class="oui">Oui</button> / <button type="button" class="non">Non</button></p>
 										</div>
 									</div>
 
 									<div class="creneau add">
-										<a href=""><span class="ico-plus"></span> J'ajoute un nouveau créneau</a>
+										<button type="submit"><span class="ico-plus"></span> J'ajoute un nouveau créneau</button>
 									</div>
 
 									<div class="validate">

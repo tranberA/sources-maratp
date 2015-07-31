@@ -36,7 +36,7 @@
 		cursor: pointer;
 
 		&:focus {
-			outline: none;
+			// outline: none;
 			background-color: @vert-lighter;
 			border-color: @vertTexte;
 		}
@@ -109,7 +109,7 @@
 		
 
 		&:focus {
-			outline: none;
+			//outline: none;
 		}
 	}
 
@@ -260,7 +260,7 @@
 	input[type="radio"]:focus + label:before,
 	input[type="checkbox"]:focus + label:before {
   	/* add focus effect for radio and check buttons */
-  	outline: none;
+  	//outline: none;
 		background: @vert-lighter;
 		border-color: @vertTexte;
 	}
@@ -291,6 +291,7 @@
 		color: #FFF;
 		font-size: @primary-font-bold;
 		font-weight: normal;
+		border: 1px solid @vertAplat;
 		cursor: pointer;
 		text-transform: uppercase;
 		.font-smoothing;
@@ -300,10 +301,13 @@
 			background: @vertTexte;
 		}
 
-		&:focus {
-			outline: none;
-			background: @vertTexte;
+		&:focus, &:hover {
+			background: #FFF;
+			border-color: @vertAplat;
+			color: @vertAplat;
 		}
+
+
 
 		&:active {
 			.transform(scale(.9));
@@ -379,7 +383,7 @@
 
 
 		&:focus {
-			outline: none;
+			//outline: none;
 			background: @vertTexte;
 		}
 

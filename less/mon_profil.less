@@ -16,7 +16,7 @@
 					.check { position: absolute; top: 0; left: 0; .text-hidden; .ico-check;
 						&:before { position: absolute; top: 0; left: 0; font-size: 3em; line-height: 0.5; color: @vertTexte; }
 					}
-					h2 { margin-top: 2em; padding: 0 5em; font-family: 'brandon_grotesqueblack'; font-size: 1.15em; font-weight: normal; text-align: center; text-transform: uppercase; }
+					.title { margin: 2em 1em 1em; margin-top: 2em; padding: 0 5em; font-family: 'brandon_grotesqueblack'; font-size: 1.15em; font-weight: normal; text-align: center; text-transform: uppercase; }
 					.btn-edit { position: absolute; top: 0; right: 0;
 						button {  .ico-pencil; background: none; color: @texte; border: none; cursor: pointer;
 							&:after { margin-left: 5px; }
@@ -38,8 +38,6 @@
 
 		@media only screen and (max-width: 480px) {
 
-		
-
 			.menu-dashboard { margin: -20px -5% 0 -5%; border: none;
 				.menu {
 					li { float: none; width: 100%;
@@ -52,7 +50,7 @@
 
 			.bloc-profil {
 				 .profil-header {
-				 		h2 { padding-left: 0; padding-right: 6em; font-size: 1em; text-align: left; }
+				 		.title { padding-left: 0; padding-right: 6em; font-size: 1em; text-align: left; }
 				 	 .check { display: none; }
 				 	 .btn-edit { bottom: 15px; top: auto; }
 				 	}
@@ -62,4 +60,5 @@
 			.bloc-formulaire form button[type="submit"], 
 			.bloc-formulaire form input[type="submit"], 
 			.btn { width: 100%; }
+			
 		}

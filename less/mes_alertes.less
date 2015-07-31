@@ -5,14 +5,19 @@
 		.entete {
 			border: 1px solid @border;
 			p {display: inline-block; margin: 0px;}
-			.number {color: #fff; background-color: @vertTexte; padding: 4px 10px; margin-right: 12px; }
-			.desactiver {
-				border:none; background: none; font-family: @primary-font-bold; color: #3f4a48; font-size: 1em;
+			.number {color: #fff; background-color: @vertTexte; padding: 4px 10px; margin-right: 12px; display: inline-block;margin: 0px; font-family: @primary-font;}
+			.desact-activ {
+				border:none; background: none; font-family: @primary-font-bold; color: #3f4a48; font-size: 1em; margin-left: 5px;
 				&:hover {color: @vertAplat;text-decoration: underline;cursor: pointer;}
+				&.activer:after {content:"\f1f6";font-family: "icomoon";}
+				&.desactiver:after {content: "\f1f7"; font-family: "icomoon";}
 			}
 			.classer {
 				float: right; margin-right: 10px; margin-top: 4px; 
-				button {border: none; background: none; padding: 0; font-size: 1em;}
+				a {
+					color: #3f4a48;
+					&:hover {color: @vertTexte;}
+				}
 				.ico-caret-up {margin-left: 11px; margin-right: 6px;}
 				.ico-caret-up, .ico-caret-down {cursor: pointer;}
 			}
@@ -35,18 +40,18 @@
 		}
 		.modifier-supprimer { 
 			button {
-				display: inline-block; font-family: @primary-font-bold; border: none; background: none; margin-top: 5px; font-size: 0.875em; color: #3f4a48;
+				display: inline-block; font-family: @primary-font-bold; border: none; background: none; margin-top: 5px; font-size: 0.875em; color: #3f4a48; 
 				&:first-child {cursor: pointer;}
 				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
-			.supprimer {float: right; cursor: pointer; }
+			.supprimer {float: right; cursor: pointer;  }
 			.supp-alerte {
-				float: right; font-family: @primary-font; margin-top: 0px; display: none;
+				float: right; font-family: @primary-font; margin-top: 0px; margin-bottom: 0px; display: none;
 				button {font-family: @primary-font-bold; color: #3f4a48;}
 			}
 		}
 	}
-	.separation {border-top: 1px dashed @border;margin: 15px 0px;}
+	.separation {border-top: 1px dashed @border;margin: 25px 0px;}
 	.empty {
 		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 123px; border: 1px dashed @border; cursor: pointer;
 		a {display:block;margin-top: 53px;}
@@ -80,8 +85,8 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 		list-style: none;
 		li {
 			margin-bottom: 20px;
-			img { padding-right: 20px; display: block; float: left; }
-			a {color: @texte2}
+			img { padding-right: 20px; display: block; float: left; margin-top: -7px;}
+			button {color: @texte2; border: none; background: none; cursor: pointer; padding-top: 8px; text-align: left; font-family: @primary-font; font-weight: normal; font-size: 1em;}
 		}
 	}
 }
@@ -133,38 +138,42 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 }
 
 
+.bloc-formulaire {
+	.all-creneaux {
+		margin-top: 50px;
+		.creneau {
+			margin-bottom: 53px;	
+			.date {
+				text-align: center; border: 1px dashed @border;
+				p {display: inline-block; font-family: @primary-font; font-weight: normal; font-size: 1.250em; color: @texte2; }
+				input { margin: 0 15px; height: 40px; width: 175px;  }
 
-.all-creneaux {
-	margin-top: 50px;
-	.creneau {
-		margin-bottom: 53px;	
-		.date {
-			text-align: center; border: 1px dashed @border;
-			p {display: inline-block; font-family: @primary-font; font-weight: normal; font-size: 1.250em; color: @texte2; }
-			input { margin: 0 15px; height: 40px; width: 175px;  }
+				input { padding: 5px; font-family: @primary-font; font-size: 1em; color: @texte; border: 1px solid @border;
+					&:focus { background-color: @vert-lighter; border-color: @vertTexte; }
+				}
 
-			input { padding: 5px; font-family: @primary-font; font-size: 1em; color: @texte; border: 1px solid @border;
-				&:focus { background-color: @vert-lighter; border-color: @vertTexte; }
 			}
-
+			.modifier-supprimer {
+				.supprimer {
+					float: right; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer; border: none; background: none;  display: none;
+					&:hover {color: @vertAplat; text-decoration: underline;}
+				}
+				.supp-alerte {
+					float: right; font-family: @primary-font;
+					button[type="submit"] { margin: 0; padding: 0;text-transform: none;}
+					button {font-family: @primary-font-bold; color: #3f4a48; cursor: pointer; background: none; border: none;}
+				}
+			}
 		}
-		.supprimer {
-			float: right; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer;
-			&:hover {color: @vertAplat; text-decoration: underline;}
+		.add {
+			text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 85px; border: 1px dashed @border; margin-bottom: 42px;cursor: pointer;
+			button[type="submit"] { margin-top: 18px; background: none; color: @vertTexte; border: none;font-family: @primary-font-bold; font-size: 1em;}
+			&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
 		}
-		.supp-alerte {
-			float: right; font-family: @primary-font; display: none;
-			span {font-family: @primary-font-bold; color: #3f4a48; cursor: pointer;}
+		.validate {
+			text-align: center;
+			.btn-valide {padding: 20px 24px; font-family: @primary-font-bold; font-size: 0.875em; background-color: @vertTexte; color: #fff; text-transform: uppercase; border: none;cursor: pointer;}
 		}
-	}
-	.add {
-		text-align: center; font-family: @primary-font-bold; color: @vertTexte; font-size: 1.125em;text-transform: uppercase; height: 85px; border: 1px dashed @border; margin-bottom: 42px;cursor: pointer;
-		a { display:block; margin-top: 30px;}
-		&:hover {background-color: @vert-lighter;border:1px dashed @vertTexte;}
-	}
-	.validate {
-		text-align: center;
-		.btn-valide {padding: 20px 24px; font-family: @primary-font-bold; font-size: 0.875em; background-color: @vertTexte; color: #fff; text-transform: uppercase; border: none;cursor: pointer;}
 	}
 }
 
@@ -217,7 +226,14 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 
 @media only screen and (max-width: 480px) {
 
-	.all-alertes .bloc {clear: both;}
+	.all-alertes {
+		.bloc {
+			clear: both;
+			.modifier-supprimer .supp-alerte {text-align: right;}
+		}
+		.separation {margin-top: 50px;}
+	}
+
 
 	.alertes-3 {
 		.chapo-profil {
@@ -229,10 +245,17 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 		}
 		.all-creneaux {
 			margin-top: 35px;
+			.creneau {clear: both;}
 			.date {
 				p:last-child {margin-top: 0px; margin-left: 16px;}
 			}
 		}
+	}
+
+	.bloc-formulaire .all-creneaux {
+		button[type=submit] {width: inherit;}
+		.add button[type=submit] {font-size: 0.889em;}
+		.creneau .modifier-supprimer .supp-alerte {text-align: right;}
 	}
 
 }

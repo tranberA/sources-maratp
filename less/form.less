@@ -28,11 +28,11 @@
 
 	.form-item {
 		/* form element wrapper */
-		position: relative; 
+		position: relative;
 		margin: 40px 0;
 		background-color:#FFF;
 		border: 1px solid @border;
-		z-index: 1; 
+		z-index: 1;
 		cursor: pointer;
 
 		&:focus {
@@ -47,7 +47,7 @@
 		}
 	}
 
-	p + .form-item { 
+	p + .form-item {
 		margin-top: 10px;
 	}
 
@@ -106,7 +106,7 @@
 		background: #FFF;
 		border: none;
 		vertical-align: middle;
-		
+
 
 		&:focus {
 			//outline: none;
@@ -156,7 +156,7 @@
 	}
 
 
-	.form-type-checkbox, 
+	.form-type-checkbox,
 	.form-type-radio {
 		input {
 
@@ -164,7 +164,7 @@
 		label {
 			pointer-events: auto;
 			position: static;
-			font-size: 1em; 
+			font-size: 1em;
 			font-weight: normal;
 			-webkit-transform: translate3d(0, 0, 0);
 			transform: translate3d(0, 0, 0);
@@ -275,7 +275,7 @@
 		resize: vertical;
 		overflow: auto;
 
-		&:focus { 
+		&:focus {
 			background: @vert-lighter;
 		}
 	}
@@ -314,7 +314,7 @@
 		}
 
 		a { color: #FFF; text-decoration: none; }
-	}	
+	}
 
 	.form-actions {
 		clear: both;
@@ -329,7 +329,7 @@
 	}
 
 
-	.messages {  display:none; // A EFFACER 
+	.messages {  display:none; // A EFFACER
 		color: @texte;
 		font-family: @primary-font;
 		font-size: 1em;
@@ -356,7 +356,6 @@
 			&:hover, &:focus { color: @vertTexte; text-decoration: underline; }
 	  }
 	}
-
 }
 
 // boutons > lien
@@ -409,7 +408,7 @@
 .bloc-formulaire form .focus { background-color: @vert-lighter; border: 1px solid @vertTexte;
 
 	input, select {
-	 background-color: @vert-lighter; 
+	 background-color: @vert-lighter;
 	 width: 100%;
 	}
 
@@ -426,11 +425,11 @@
 	}
 
 	//annuler l'effet quand c'est des boutons radio et checkbox
-	&.form-type-checkbox, 
+	&.form-type-checkbox,
 	&.form-type-radio { background: transparent; border: none;
 		label {
 			position: static;
-			font-size: 1em; 
+			font-size: 1em;
 			font-weight: normal;
 			-webkit-transform: translate3d(0, 0, 0);
 			transform: translate3d(0, 0, 0);
@@ -448,7 +447,7 @@
 		.message { margin-bottom: 10px; }
 
 		.password-indicator { font-family: @primary-font-bold;
-			.case { 
+			.case {
 				display: inline-block; width: 33.33%; padding-top: 10px; border-top: 10px solid; text-align: center;
 
 				&.faible { border-color: #ff0000; }

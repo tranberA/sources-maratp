@@ -442,49 +442,20 @@
 
 // confirmation mot de passe
 
-	div.password-confirm,
-	div.password-strength-title,
-	div.password-strength { 
-		display: none;  //A EFFACER 
-	}
 
-	.bloc-formulaire form .input--filled div.password-confirm,
-	.bloc-formulaire form .input--filled div.password-strength { 
-		display: block;  //A EFFACER 
-	}
+	#password-strength {
 
-	.bloc-formulaire form .password-parent.input--filled {
-		margin-bottom: 80px;
-	}
+		.message { margin-bottom: 10px; }
 
-	.bloc-formulaire form .password-parent.input--filled +.bloc-formulaire form .confirm-parent.input--filled {
-		margin-top: 80px;
-	}
+		.password-indicator { font-family: @primary-font-bold;
+			.case { 
+				display: inline-block; width: 33.33%; padding-top: 10px; border-top: 10px solid; text-align: center;
 
-	.password-strength {
-	  position: absolute;
-	  left: 0;
-	  bottom:-40px;
-	  right: 0;
-	  overflow:hidden;
-	}
+				&.faible { border-color: #ff0000; }
+				&.moyen { border-color: #e9ff00; margin-left: -4px;}
+				&.fort { border-color: #0fff00; margin-left: -4px;}
+			}
 
-	div.password-confirm {
-	  position: absolute;
-	  left: 0;
-	  top:-40px;
-	  right: 0;
-	  overflow:hidden;
-	}
+		}
 
-	.password-indicator {
-	  border: 1px solid #ccc;
-	  vertical-align: middle;
-	  position: relative;
-	}
-
-	.indicator {
-		#gradient > .rainbow;
-	  height: 10px;
-	  width: 0;
 	}

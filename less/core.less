@@ -10,7 +10,7 @@
 **
 ** RESET
 ** BASE
-** TYPO
+** TYPO / BOUTONS
 ** STRUCTURE
 **  Skiplinks
 **	Header
@@ -26,6 +26,10 @@
 **   Mes alertes
 **   Mes horaires
 **   Mes itinéraires
+** 	 Mes privilèges
+** 	 Mes services
+** 	 Désinscription
+**	 CGV
 **
  */
 
@@ -76,7 +80,7 @@ article, header, main, nav, section {
 	padding-top: 3em;
 }
 
-/* ==> TYPO */
+/* ==> TYPO / BOUTON */
 
 a {
 	color: @vertTexte;
@@ -87,10 +91,20 @@ abbr {
 	border-bottom: none;
 }
 
+
+.btn-back { display: inline-block; width: 20%; vertical-align: top; 
+	a { position: relative; .ico-circle-prev; padding-left: 30px;
+		&:before { position: absolute; top: 2px; left: 0; margin-right: 5px; font-size: 20px; font-weight: bold; color: @vertTexte; }
+	}
+}
+
+
 /* ==> STRUCTURE */
 
 	#maratp { position: relative; max-width: @L; min-height: 100%; margin: 0 auto; background-color: #fff;
-		 h1.page-title { font-family: @primary-font-bold; font-size: 1.3em; font-weight: normal; text-align: center; text-transform: uppercase; }
+		 .page-title { font-family: @primary-font-bold; font-size: 1.3em; font-weight: normal; text-align: center; text-transform: uppercase; 
+		 	i { text-transform: none; }
+		 }
 		 .chapo { font-family: @primary-font-bold; font-size: 1.15em; text-align: center; }
 
 		 #main { padding: 10px 0; }
@@ -261,6 +275,7 @@ body
 	@import 'mes_privileges';
 	@import 'mes_services';
 	@import 'desinscription';
+	@import 'cgv';
 
 	@import 'blocks.less';
 	@import 'popin.less';

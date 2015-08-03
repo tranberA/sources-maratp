@@ -21,13 +21,17 @@
 						button {  .ico-pencil; background: none; color: @texte; border: none; cursor: pointer;
 							&:after { margin-left: 5px; }
 							&.cancel { .ico-cancel;  }
+
+							&:hover, &:focus { color: @vertAplat;  }
 						}
 					}
 				}
 			}
 
 			.btn-desinscription { text-align: center;
-				a { font-family: @primary-font-bold; color: @texte; text-decoration: underline; }
+				a { font-family: @primary-font-bold; color: @texte; text-decoration: underline; 
+					&:hover, &:focus { color: @vertAplat;  }
+				}
 			}
 
 

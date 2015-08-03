@@ -8,37 +8,35 @@
 
  @media only screen and (max-width: @S)
  {
-   
-
-   .block-article.block-full
+   .block-article
    {
-     figure
-     {
-       text-align: center;
-     }
+     text-align: center;
 
-     .meta,aside
+     &.block-full
      {
-       width: auto;
-       //float: none;
-       position: static;
-     }
-
-     .block-content
-     {
-       //margin: 0;
-       border-left: none;
-       border-right: none;
-       margin: 2em 0 0;
-       padding-bottom: 1em;
-       padding-top: 6em;
-
-       .action
+       .meta,aside
        {
-         top: 0;
-         bottom: auto;
-         left: 1em;
-         right: 1em;
+         width: auto;
+         //float: none;
+         position: static;
+       }
+
+       .block-content
+       {
+         //margin: 0;
+         border-left: none;
+         border-right: none;
+         margin: 2em 0 0;
+         padding-bottom: 1em;
+         padding-top: 6em;
+
+         .action
+         {
+           top: 0;
+           bottom: auto;
+           left: 1em;
+           right: 1em;
+         }
        }
      }
    }
@@ -46,6 +44,11 @@
    .form-panel
    {
      padding: 1em;
+   }
+
+   .screen-nav
+   {
+     display: none;
    }
  }
 

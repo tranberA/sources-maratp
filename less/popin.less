@@ -17,12 +17,13 @@
 
 #cboxOverlay
 {
-  background-color: #fff;
+  //background-color: #fff;
+  background-color: rgba(0,0,0,0.5);
 }
 
 #cboxWrapper
 {
-  //background-color: #fff;
+  background-color: #fff;
 
   #cboxClose
   {
@@ -136,7 +137,7 @@
 
 .popin-full
 {
-  .btn-privileges
+  .btn-privileges,.action
   {
     text-align: center;
   }
@@ -145,5 +146,59 @@
   {
     text-transform: uppercase;
     font-family: 'brandon_grotesquebold';//'brandon_grotesque_regularRg';
+  }
+
+  .action
+  {
+    i
+    {
+      text-transform: none;
+    }
+
+    .panel-action
+    {
+      position: relative;
+      padding-right: 3.5em;
+
+      &:before
+      {
+        position: absolute;
+        top: 50%;
+        right: 0.5em;
+        font-size: 1.6em;
+        line-height: 1;
+        margin-top: -0.6em;
+      }
+    }
+  }
+
+  #main
+  {
+    @screenButtonSpace: 1em;
+
+    position: relative;
+
+    .screen-action
+    {
+      position: absolute;
+      top: 50%;
+      line-height: 1;
+      font-size: 3em;
+      color: #000;
+    	text-align: center;
+      .text-hidden;
+    }
+
+    .screen-prev
+    {
+    	left: @screenButtonSpace;
+    	.ico-fleche-left;
+    }
+
+    .screen-next
+    {
+    	right: @screenButtonSpace;
+    	.ico-fleche-right;
+    }
   }
 }

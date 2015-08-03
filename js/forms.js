@@ -189,8 +189,8 @@ if(window.jQuery !== undefined)
     {
       jQuery('.popin-action').colorbox({
         'opacity': 1,
-        'width': '100%',
-        'height': '100%'
+        'width': '60%'/*,
+        'height': '50%'*/
       });
     }
 

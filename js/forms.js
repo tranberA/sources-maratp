@@ -185,14 +185,39 @@ if(window.jQuery !== undefined)
       jQuery('#merci').addClass('ui-state-active');
     });
 */
-    if(jQuery.fn.colorbox !== undefined)
+    var _colorboxConfig = {
+      'opacity': 1
+    };
+
+    function setColorbox()
     {
-      jQuery('.popin-action').colorbox({
-        'opacity': 1,
-        'width': '60%'/*,
-        'height': '50%'*/
-      });
+      var windowWidth = jQuery(window).width();
+
+      console.log(windowWidth);
+
+      if(windowWidth < 480)
+      {
+        _colorboxConfig.width = '100%';
+        _colorboxConfig.height = '100%';
+      }
+      else
+      {
+        _colorboxConfig.width = '60%';
+        _colorboxConfig.height = false;
+      }
+
+      if(jQuery.fn.colorbox !== undefined)
+      {
+        jQuery('.popin-action').colorbox(_colorboxConfig);
+      }
     }
+
+    setColorbox();
+
+    jQuery(window).on('resize',function()
+    {
+      setColorbox();
+    });
 
     jQuery('.styled-check > [type=checkbox]').on('click',function(ev)
   	{

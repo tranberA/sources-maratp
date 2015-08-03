@@ -9,11 +9,17 @@
 			.desact-activ {
 				border:none; background: none; font-family: @primary-font-bold; color: #3f4a48; font-size: 1em; margin-left: 5px;
 				&:hover {color: @vertAplat;text-decoration: underline;cursor: pointer;}
-				&.activer:after {content:"\f1f6";font-family: "icomoon";}
-				&.desactiver:after {content: "\f1f7"; font-family: "icomoon";}
+				&.activer span:after {content:"\f1f6";font-family: "icomoon";}
+				&.desactiver span:after {content: "\f1f7"; font-family: "icomoon";}
 			}
 			.classer {
 				float: right; margin-right: 10px; margin-top: 4px; 
+				p { float: left;}
+
+				ul { 
+					list-style: none; margin: 0px; padding: 0px; float: left;
+					li, span {float: left;}
+				}
 				a {
 					color: #3f4a48;
 					&:hover {color: @vertTexte;}
@@ -28,26 +34,32 @@
 				display: inline-block;
 				img { margin-top: -7px;}
 			}
-			.nom-ligne { margin-left: 22px; display: inline-block;}
+			.nom-ligne { margin-left: 22px; margin-top: 0px; margin-bottom: 0px; display: inline-block;}
 		}
 		.horaires {
 			background-color: #f6f6f6; padding-left: 28px; border: 1px solid @border; border-top: none;
-			p { 
-				display: inline-block;
+			p {display: inline-block;}
+			ol { 
+				display: inline-block;padding-left: 0px;
+				li {display: inline-block;}
 				span {color: @vertTexte;}
 			}
 			.creneau-1 { margin-left: 40px; margin-right: 36px;}
 		}
-		.modifier-supprimer { 
+		.modifier-supprimer {
+			p {display: inline-block; margin: 0px;} 
 			button, a {
 				display: inline-block; font-family: @primary-font-bold; border: none; background: none; margin-top: 5px; font-size: 0.875em; color: #3f4a48; 
 				&:first-child {cursor: pointer;}
 				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
-			.supprimer {float: right; cursor: pointer;  }
-			.supp-alerte {
-				float: right; font-family: @primary-font; margin-top: 0px; margin-bottom: 0px; display: none;
-				button {font-family: @primary-font-bold; color: #3f4a48;}
+			.bloc-supprimer {
+				display: inline-block; float: right;
+				.supprimer {float: right; cursor: pointer;  }
+				.supp-alerte {
+					float: right; font-family: @primary-font; margin-top: 0px; margin-bottom: 0px; 
+					button {font-family: @primary-font-bold; color: #3f4a48;}
+				}
 			}
 		}
 	}
@@ -207,7 +219,7 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 				.numero-ligne { display: block; float: left;}
 				.nom-ligne { 
 					font-size: 1em; display: block; margin-left: 65px; padding-bottom: 25px; line-height: 1.4;
-					p { 
+					span { 
 						display: block; margin-top: 0px; margin-bottom: 0px;
 						&:first-child {padding-top: 15px;}
 					}
@@ -232,8 +244,8 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 			.modifier-supprimer .supp-alerte {text-align: right;}
 		}
 		.separation {margin-top: 50px;}
+		.horaires ol {margin-top: 0px;}
 	}
-
 
 	.alertes-3 {
 		.chapo-profil {

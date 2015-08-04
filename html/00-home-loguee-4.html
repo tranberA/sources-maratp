@@ -15,20 +15,25 @@
 						<p><a href="#">Accueil</a> > <strong>maRATP</strong></p>
 						<p><a href="#">Se déconnecter</a></p>
 					</div>
-					<!-- Dashboard 1 -->
+					
+					<!-- Dashboard 4 -->
 					<article class="dashboard">
 						<div>
 							<h1><span>Bonjour </span><span class="button">Patrick</span> <img src="img/attention.png" alt="(attention)" /></h1>
 							<div>
-								<p><strong><img src="img/attention.png" alt="Attention :" height="30" width="30" /> profil complet <span class="percent">50%</span></strong></p>
+								<p><strong><img src="img/attention.png" alt="Attention :" height="30" width="30" /> votre pass Navigo expire dans <span>3 jours</span></strong></p>
 								<p><a href="#">Gérer mon compte</a></p>
 							</div>
 						</div>
 						<div class="alertes">
-							<h2><span class="button">Mes alertes</span></h2>
-							<div><!-- Ajout -->
+							<h2><span class="button">Mes alertes</span> <span class="type perturbe">(trafic perturbé)</span></h2>
+							<div>
 								<div>
-									<p class="empty"><strong>&Ecirc;tre informé de l'état du trafic</strong> sur mes lignes et horaires préférés</p>
+									<ul>
+										<li class="fluide"><img src="img/m.png" alt="Métro" /> <img src="img/m13.png" alt="ligne 13 :" /> Trafic fluide</li>
+										<li class="perturbe"><img src="img/m.png" alt="Métro" /> <img src="img/m7.png" alt="ligne 7 :" /> Trafic perturbé</li>
+										<li class="fluide"><img src="img/t.png" alt="Tramway" /> <img src="img/t3b.png" alt="ligne 3b :" /> Trafic fluide</li>
+									</ul>
 								</div>
 								<p><a href="#" aria-label="Ajouter une alerte">+ Ajouter une alerte</a></p>
 							</div>
@@ -36,9 +41,30 @@
 						<div class="horaires">
 							<h2><span class="button">Mes horaires</span></h2>
 							<div>
-								<div>
+								<div id="horaires">
 									<div>
-										<p class="empty"><strong>Enregistrer mes horaires</strong> sur mes lignes préférées</p>
+										<h3><img src="img/bus.png" alt="Bus" height="20" width="20" /> <img src="img/bus60.png" alt="60" height="20" width="21" /></h3>
+										<p><span class="visually-hidden">De</span> <span class="de">Place des Fêtes</span> <span class="visually-hidden">à</span> Porte de Montmartre</p>
+										<ul>
+											<li><strong><span class="visually-hidden">Prochain passage : </span>7 mn</strong></li>
+											<li><span class="visually-hidden">Passage suivant : </span>13 mn</li>
+										</ul>
+									</div><!-- @whitespace 
+									--><div>
+										<h3><img src="img/bus.png" alt="Bus" height="20" width="20" /> <img src="img/bus60.png" alt="60" height="20" width="21" /></h3>
+										<p><span class="visually-hidden">De</span> <span class="de">Place des Fêtes</span> <span class="visually-hidden">à</span> Porte de Montmartre</p>
+										<ul>
+											<li><strong><span class="visually-hidden">Prochain passage : </span>7 mn</strong></li>
+											<li><span class="visually-hidden">Passage suivant : </span>13 mn</li>
+										</ul>
+									</div><!-- @whitespace 
+									--><div>
+										<h3><img src="img/bus.png" alt="Bus" height="20" width="20" /> <img src="img/bus60.png" alt="60" height="20" width="21" /></h3>
+										<p><span class="visually-hidden">De</span> <span class="de">Place des Fêtes</span> <span class="visually-hidden">à</span> Porte de Montmartre</p>
+										<ul>
+											<li><strong><span class="visually-hidden">Prochain passage : </span>7 mn</strong></li>
+											<li><span class="visually-hidden">Passage suivant : </span>13 mn</li>
+										</ul>
 									</div>
 								</div>
 								<p><a href="#" aria-label="Ajouter un horaire">+ Ajouter un horaire</a></p>
@@ -48,9 +74,9 @@
 							<h2><span class="button">Itinéraires</span></h2>
 							<div>
 								<form action="#" method="get">
-									<div class="donnees">
-										<p class="depart"><label for="depart">Départ :</label> <input type="text" id="depart" name="depart" placeholder="Station, lieu ou adresse" /></p>
-										<p class="arrivee"><label for="arrivee">Arrivée :</label> <input type="text" id="arrivee" name="arrivee" placeholder="Station, lieu ou adresse" /></p>
+									<div class="donnees donnees-remplies">
+										<p class="depart"><label for="depart">Départ :</label> <input type="text" id="depart" name="depart" placeholder="Station, lieu ou adresse" value="13 rue Carpeaux, 75018 Paris" /></p>
+										<p class="arrivee"><label for="arrivee">Arrivée :</label> <input type="text" id="arrivee" name="arrivee" placeholder="Station, lieu ou adresse" value="12 avenue du Capitaine Glarner, 93400 Saint-Ouen" /></p>
 									</div>
 									<div class="actions">
 										<p><input type="submit" aria-label="Calculer l'itinéraire" value="Calculer" /></p>
@@ -60,7 +86,6 @@
 							</div>
 						</div>
 					</article>
-					
 					<!-- Anti train-train -->
 					<article class="antitraintrain">
 						<div class="title">

@@ -1,38 +1,38 @@
 .home-loguee {
 	
 	/* Fil d'ariane + déco */
-	#maratp > div:first-of-type {
+	.breadcrumbnlogout {
 		overflow: hidden;
 		padding: 20px 1px;
 	}
-	#maratp > div:first-of-type p:first-child {
+	.breadcrumbnlogout p:first-child {
 		float: left;
 		font-family: Arial, sans-serif;
 		font-size: 0.75em;
 		margin: 5px 0 0 0;
 	}
-	#maratp > div:first-of-type p:first-child a {
+	.breadcrumbnlogout p:first-child a {
 		color: #000;
 		text-decoration: none;
 	}
-	#maratp > div:first-of-type p:first-child a:hover, #maratp > div:first-of-type p:first-child a:focus {
+	.breadcrumbnlogout p:first-child a:hover, .breadcrumbnlogout p:first-child a:focus {
 		text-decoration: underline;
 	}
-	#maratp > div:first-of-type p:last-child {
+	.breadcrumbnlogout p:last-child {
 		background: transparent url("@{imageDir}signout.png") no-repeat scroll center left;
 		background-size: 21px 18px;
 		float: right;
 		margin: 0;
 		padding: 0 0 0 31px;
 	}
-	#maratp > div:first-of-type p:last-child a {
+	.breadcrumbnlogout p:last-child a {
 		color: #008672;
 		font-family: "brandon_grotesquelight";
 		font-size: 0.95em;
 		font-weight: bold;
 		text-decoration: none;
 	}
-	#maratp > div:first-of-type p:last-child a:hover, #maratp > div:first-of-type p:last-child a:focus {
+	.breadcrumbnlogout p:last-child a:hover, .breadcrumbnlogout p:last-child a:focus {
 		text-decoration: underline;
 	}
 	
@@ -170,9 +170,59 @@
 		float: none;
 		vertical-align: bottom;
 	}
-	.dashboard > div h2 + div > div {
+	/*.dashboard > div h2 + div > div*/ #horaires {
 		min-height: 145px;
 	}
+	
+	.horaires-js {
+		overflow: hidden;
+		position: relative;
+		white-space: nowrap;
+		width: 239px;
+	}
+	.horaires-js > div {
+		box-sizing: border-box;
+	    display: inline-block;
+	    position: relative;
+	    width: 100%;
+	    
+	    padding: 0 21px;
+	    
+	    white-space: normal;
+	}
+	.horaires-js .horaire-precedent, .horaires-js .horaire-suivant {
+		margin: -16px 0 0 0 !important;
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+	}
+	.horaires-js .horaire-precedent button, .horaires-js .horaire-suivant button {
+		background-color: transparent;
+		border: solid 1px transparent;
+		padding: 5px 0;
+		text-align: center;
+		vertical-align: bottom;
+		width: 27px;
+	}
+	.horaires-js .disabled {
+		display: none;
+	}
+	.horaires-js .horaire-precedent img, .horaires-js .horaire-suivant img {
+		vertical-align: bottom;
+	}
+	.horaires-js .horaire-precedent button:hover, .horaires-js .horaire-precedent button:focus, 
+	.horaires-js .horaire-suivant button:hover, .horaires-js .horaire-suivant button:focus {
+		background-color: #ecfdfb;
+		border-color: #008672;
+	}
+	.horaires-js .horaire-precedent {
+		left: 0;
+	}
+	.horaires-js .horaire-suivant {
+		right: 0;
+	}
+	
+
 	.dashboard > div:last-child h2 + div > div {
 		min-height: 0;
 	}
@@ -488,7 +538,7 @@
 	
 	
 	/*.itineraires .donnees a span:first-child, */.itineraires .donnees label {
-		color: #595959; float: left; font-family: 'Brandon Grotesque Light'; font-weight: bold;
+		color: #595959; float: left;/* font-family: 'Brandon Grotesque Light';*/ font-weight: bold;
 	}
 	.itineraires .donnees label {
 		min-width: 65px;
@@ -506,7 +556,8 @@
 		color: #fff;
 		cursor: pointer;
 		display: block;
-		font-family: 'Brandon Grotesque Bold';
+		// font-family: 'Brandon Grotesque Bold';
+		font-weight: bold;
 		font-size: 0.85em;
 		margin: 0;
 		padding: 12px 0;
@@ -722,7 +773,9 @@
 			display: none;
 		}
 		
-		
+		.horaires-js {
+			width: 100%;
+		}
 		
 		
 		

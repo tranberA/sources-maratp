@@ -19,7 +19,7 @@
       <p>@@texte</p>
       @@if(participe !== '' && participe === 'true')
       {
-        <p class="action"><a href="#" id="start-form" class="block-action panel-action" data-target="panel-1">Je participe</a></p>
+        <p class="action"><a title="@@title-lien" href="#" id="start-form" class="block-action panel-action" data-target="panel-1">Je participe</a></p>
       }
       </div>
 
@@ -78,11 +78,11 @@
 </div>
 
 
-    <aside role="contentinfo">
+    <aside>
       <div class="inner-content">
         @@if (logo !== '')
         {
-          <p class="logo"><img src="img/@@logo" alt="" /></p>
+          <p class="logo"><img src="img/@@logo" alt="@@logo-alt" /></p>
         }
 
         @@if (links !== '')

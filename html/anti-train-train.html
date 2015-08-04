@@ -1,14 +1,12 @@
-@@include('./inc/parts/head.html',{"pageTitle": "L'anti Train-Train"})
+@@include('./inc/parts/head.html',{"pageTitle": "L'anti Train-Train - maRATP"})
 
 <body>
 
   <div id="maratp">
 
-      @@include('./inc/parts/skip-links.html',{"pageTitle": "L'anti Train-Train"})
-
       <section>
 
-				@@include('./inc/parts/mini-header.html',{"pageTitle": "L'anti Train-Train"})
+				@@include('./inc/parts/mini-header.html',{"pageTitle": "L'anti Train-Train - maRATP"})
 
 
 				<main role="main" id="main" tabindex="-1">
@@ -25,6 +23,7 @@
             "chapo": "En quelques clics, sélectionnez vos photos préférées, imprimez-les au format de votre choix, et réunissez-les dans un joli coffret. Tentez de gagner 1 Polabox de 30 photos ou 1 Polabox ID incluant 5 bandelettes de 4 photos.",
             "sousTitre": "Cheerz",
             "texte": "C’est avant tout une histoire de photo, celle des petits moments ou de grands souvenirs… La photo prise sur le vif, instantanée, impulsive, qu’on a envie de partager avec ses amis ! Polabox c’est le plaisir d’offrir les photos qui touchent, le plaisir de tenir entre ses mains les meilleurs souvenirs des dernières années. C’est le plaisir de suspendre le temps en matérialisant les événements de sa vie.",
+            "title-lien": "Je participe pour gagner une Polabox de 30 photos",
             "lieu": "",
             "metro": "",
             "form": "",
@@ -33,6 +32,7 @@
             "bottomPanel": "",
 
             "logo": "logo-cheerz.png",
+            "logo-alt": "Cheerz",
             "links": "<ul class=\"links\"><li><a href=\"\">Cheerz.com</a></li><li><a href=\"\">polabox</a></li><li><a href=\"\">polabox ID</a></li></ul>"
           })
 
@@ -45,14 +45,16 @@
             "chapo": "Girafes, loups, lions, lémuriens, découvrez-les au fil d’un parcours très sauvage. Un vrai dépaysement aux portes de la ville ! Tentez votre chance pour gagner 1 pass annuel, 2 entrées gratuites ou le livre de l’histoire du zoo.",
             "sousTitre": "Parc zoologique de Paris",
             "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor diam quis velit ultrices lobortis. Quisque pharetra, dui quis luctus mattis, felis nunc volutpat dolor, sit amet ornare risus ipsum sed est. Sed in velit libero. Cras molestie venenatis congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sed justo purus. Mauris at dictum magna, ut egestas sapien. Mauris diam purus, consequat at ante et, gravida pulvinar elit.",
+            "title-lien": "Je participe pour gagner 5 pass annuels, 20 entrées et 9 livres",
             "lieu": "Centre Pompidou, Place Georges-Pompidou, 75004 Paris",
-            "metro": "<ul class=\"metro\" aria-label=\"Métro\"><li><!--span class=\"ligne ligne-2\">2</span--><img src=\"img/m2.png\" alt=\"Ligne 2\" /> Anvers</li><li><img src=\"img/m12.png\" alt=\"Ligne 12\" /> Abesses</li></ul>",
+            "metro": "<ul class=\"metro\"><li><!--span class=\"ligne ligne-2\">2</span--><span class=\"visually-hidden\">Métro </span><img src=\"img/m2.png\" alt=\"Ligne 2\" /> Anvers</li><li><span class=\"visually-hidden\">Métro </span><img src=\"img/m12.png\" alt=\"Ligne 12\" /> Abesses</li></ul>",
             "form": "",
             "message": "",
             "participe": "true",
             "bottomPanel": "",
 
             "logo": "logo-parczoologiquedeparis.png",
+            "logo-alt": "Parc Zoologique de Paris",
             "links": "<ul class=\"links\"><li><a href=\"\">www.parczoologique<wbr/>deparis.fr</a></li></ul>"
           })
           </div>
@@ -75,7 +77,7 @@
 
             "adresse": "221, avenue Jean-Jaurès, 75019 Paris",
             "tel": "",
-            "metro": "<p class=\"metro\" aria-label=\"Métro\"><img src=\"img/m5.png\" alt=\"Ligne 5\" /> Porte de Pantin</p>",
+            "metro": "<p class=\"metro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m5.png\" alt=\"Ligne 5\" /> Porte de Pantin</p>",
             "rer": ""
           })
 
@@ -93,8 +95,8 @@
 
             "adresse": "Port de Solférino",
             "tel": "",
-            "metro": "<p class=\"metro\" aria-label=\"Métro\"><img src=\"img/m12.png\" alt=\"Ligne 12\" /> Assemblée Nationale</p>",
-            "rer": "<p class=\"rer\" aria-label=\"RER\"><img src=\"img/rerc.png\" alt=\"Ligne C\" /> Musée d’Orsay</p>"
+            "metro": "<p class=\"metro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m12.png\" alt=\"Ligne 12\" /> Assemblée Nationale</p>",
+            "rer": "<p class=\"rer\"><img class=\"imgLigne\" src=\"img/rer.png\" alt=\"RER\" /><img src=\"img/rerc.png\" alt=\"Ligne C\" /> Musée d’Orsay</p>"
           })
 
 
@@ -112,7 +114,7 @@
 
             "adresse": "40 rue Riquet , 75019 Paris",
             "tel": "",
-            "metro": "<p class=\"metro\" aria-label=\"Métro\"><img src=\"img/m7.png\" alt=\"Ligne 7\" /> Riquet</p>",
+            "metro": "<p class=\"metro\" aria-label=\"Métro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m7.png\" alt=\"Ligne 7\" /> Riquet</p>",
             "rer": ""
           })
 
@@ -131,7 +133,7 @@
 
             "adresse": "21, rue des Jeûneurs , 75002 Paris",
             "tel": "09 83 25 05 74",
-            "metro": "<p class=\"metro\" aria-label=\"Métro\"><img src=\"img/m3.png\" alt=\"Ligne 3\" /> Sentier</p><p class=\"metro\"><img src=\"img/m8.png\" alt=\"\" /> <img src=\"img/m9.png\" alt=\"\" /> Saint-Lazare</p>",
+            "metro": "<p class=\"metro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m3.png\" alt=\"Ligne 3\" /> Sentier</p><p class=\"metro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m8.png\" alt=\"Ligne 8\" /> <img src=\"img/m9.png\" alt=\"Ligne 9\" /> Saint-Lazare</p>",
             "rer": ""
           })
 
@@ -150,7 +152,7 @@
 
             "adresse": "Rue Brisemiche, 75004 Paris",
             "tel": "",
-            "metro": "<p class=\"metro\" aria-label=\"Métro\"><img src=\"img/m1.png\" alt=\"Ligne 1\" /> <img src=\"img/m11.png\" alt=\"\" /> Hôtel de Ville</p>",
+            "metro": "<p class=\"metro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m1.png\" alt=\"Ligne 1\" /> <img src=\"img/m11.png\" alt=\"Ligne 11\" /> Hôtel de Ville</p>",
             "rer": ""
           })
 
@@ -168,7 +170,7 @@
 
           "adresse": "21, rue des Jeûneurs , 75002 Paris",
           "tel": "09 83 25 05 74",
-          "metro": "<p class=\"metro\" aria-label=\"Métro\"><img src=\"img/m13.png\" alt=\"Ligne 13\" /> Guy Mocquet</p>",
+          "metro": "<p class=\"metro\"><img class=\"imgLigne\" src=\"img/m.png\" alt=\"Métro\" /><img src=\"img/m13.png\" alt=\"Ligne 13\" /> Guy Mocquet</p>",
           "rer": ""
         })
           </div>
@@ -176,9 +178,6 @@
         </div>
         </main>
       </section>
-
-      @@include('./inc/parts/footer.html')
-
 
   </div>
 

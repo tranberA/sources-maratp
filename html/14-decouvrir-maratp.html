@@ -9,8 +9,8 @@
     <div class="bloc-formulaire">
     <form>
     <div class="form-item">
-    <label>Envoyer à ?</label>
-    <input type="text" name="" value="" placeholder="(ex: mail@domaine.com)*" />
+    <label for="email">Envoyer à ?<span class="visually-hidden"> (ex: mail@domaine.com) </span><span title="Ce champ est requis." class="form-required">*</span> :</label>
+    <input type="email" id="email" name="" value="" placeholder="(ex: mail@domaine.com)" aria-required="true" />
     </div>
     <div class="form-item form-type-textarea large">
     <label for="message">Mon message</label>
@@ -18,7 +18,7 @@
     </div>
     <p class="note">*Champ obligatoire</p>
     <div class="form-actions">
-    <button aria-label="Je valide la récupération de mon mot de passe" type="submit" class="btn">J'envoie</button>
+    <button aria-label="Je valide et fais découvrir maRATP" type="submit" class="btn">J'envoie</button>
     </div>
     </form>
     </div>

@@ -463,46 +463,50 @@
 	.itineraires .donnees p + p {
 		margin-top: 2px !important;
 	}
-	.itineraires .donnees a {
-		background-color: #fafafa;
-		border: solid 1px #fafafa;
-		color: #5d5d5d;
-		display: block;
-		font-family: 'Open Sans';
-		overflow: hidden;
-		padding-left: 8px;
-	}
 	.itineraires form .donnees p {
 		background-color: #fafafa;
+		border: solid 1px #fafafa;
 		padding: 4px 0;
 	}
 	.itineraires form input[type="text"] {
+		color: #5d5d5d;
+		font-family: 'Open Sans';
 		width: 134px;
-	} 
-	.itineraires .donnees a:hover, .itineraires .donnees a:focus {
+	}
+	.itineraires form input[type="text"][value] {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	
+	
+	
+	.itineraires form p.focus {
 		background-color: #ecfdfb;
 		border-color: #008672;
 	}
-	.itineraires .donnees a span:first-child, .itineraires .donnees label {
-		color: #595959; float: left; font-family: 'brandon_grotesquelight'; font-weight: bold;
+	
+	
+	
+	/*.itineraires .donnees a span:first-child, */.itineraires .donnees label {
+		color: #595959; float: left; font-family: 'Brandon Grotesque Light'; font-weight: bold;
 	}
 	.itineraires .donnees label {
 		min-width: 65px;
 		padding-left: 24px;
 	}
-	.itineraires .donnees a span:last-child {
+	/*.itineraires .donnees a span:last-child {
 		float: left; font-size: 0.7em; max-width: 140px; padding: 2px 5px;
-	}
+	}*/
 	.itineraires .actions p:first-child {
 		margin: 0;
 	}
-	.itineraires .actions p:first-child a, .itineraires .actions p:first-child input {
+	/*.itineraires .actions p:first-child a, */.itineraires .actions p:first-child input {
 		background-color: #1d3667;
 		border: none;
 		color: #fff;
 		cursor: pointer;
 		display: block;
-		font-family: 'brandon_grotesquebold';
+		font-family: 'Brandon Grotesque Bold';
 		font-size: 0.85em;
 		margin: 0;
 		padding: 12px 0;

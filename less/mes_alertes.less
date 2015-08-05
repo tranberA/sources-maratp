@@ -53,7 +53,7 @@
 				&:first-child {cursor: pointer;}
 				&:hover {color: @vertAplat; text-decoration: underline;}
 			}
-			.bloc-supprimer {
+			.bloc-supprimer { 
 				display: inline-block; float: right;
 				.supprimer {float: right; cursor: pointer;  }
 				.supp-alerte {
@@ -82,8 +82,10 @@
 		span {margin-right: 5px;}
 	}
 }
-h3, h4 { font-size: 1.125em; font-family: @primary-font;text-transform: uppercase;font-weight: normal; margin: 15px 0 25px 40px;}
-h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
+h3, h4, .h3 { font-size: 1.125em; font-family: @primary-font;text-transform: uppercase;font-weight: normal; margin: 15px 0 25px 40px;}
+h3, .h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
+
+
 .transports {
 	list-style: none; display: inline-block; margin: 0px 0px 35px 40px; padding: 0px; height: 48px; border-bottom: 1px solid @texte2;
 	li { 
@@ -121,6 +123,9 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 // bouton personnalisés pour les pages alertes
 .bloc-formulaire form {
 
+		fieldset { border: none; margin: 0; padding:0; }
+		legend.h3 { font-size: 1.125em; margin: 20px 0;	padding:0; }
+
 		.liste-jours {
 
 			.form-type-checkbox { display: inline-block; margin: 0 5px 10px; min-height: 40px; 
@@ -155,25 +160,28 @@ h3 {font-family: @primary-font-black; font-weight: normal; margin-bottom: 30px;}
 		margin-top: 40px;
 		.creneau {
 			margin-bottom: 53px;	
-			.date {
+			.date { margin-bottom: 10px;
 				text-align: center; border: 1px dashed @border;
 				p {display: inline-block; font-family: @primary-font; font-weight: normal; font-size: 1.250em; color: @texte2; }
-				input { margin: 0 15px; height: 40px; width: 175px;  }
+				label { pointer-events: auto; }
 
-				input { padding: 5px; font-family: @primary-font; font-size: 1em; color: @texte; border: 1px solid @border;
+				input { margin: 0 15px; height: 40px; width: 175px;  padding: 5px; font-family: @primary-font; font-size: 1em; color: @texte; border: 1px solid @border;
 					&:focus { background-color: @vert-lighter; border-color: @vertTexte; }
 				}
 
 			}
-			.modifier-supprimer {
+			.modifier-supprimer { text-align: right;
 				.supprimer {
-					float: right; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer; border: none; background: none;  display: none;
+					margin-top: 0; font-size:0.875em; font-family: @primary-font-bold; cursor: pointer; border: none; background: none; 
 					&:hover {color: @vertAplat; text-decoration: underline;}
 				}
 				.supp-alerte {
-					float: right; font-family: @primary-font;
+					margin-top: 0; font-family: @primary-font;
 					button[type="submit"] { margin: 0; padding: 0;text-transform: none;}
 					button {font-family: @primary-font-bold; color: #3f4a48; cursor: pointer; background: none; border: none;}
+				}
+				.bloc-supprimer {
+					p { margin: 0;}
 				}
 			}
 		}

@@ -158,19 +158,19 @@ jQuery(document).ready(function()
 	jQuery(window).resize(manageResponsiveDashboard);
 
 // Suppression d'une alerte.
-$('.bloc-supprimer').each(function (event) {
-	$('<p><button type="button" class="supprimer" aria-label="Affcher ci-après la procédure de suppresion de ' + $(this).parent().parent().find('.number').text() + '">Supprimer<span class="ico-trash" aria-hidden="true"> </span></button></p>').prependTo($(this));
-	var suppalerte = $(this).find('.supp-alerte');
+jQuery('.bloc-supprimer').each(function (event) {
+	jQuery('<p><button type="button" class="supprimer" aria-label="Afficher ci-après la procédure de suppresion de ' + jQuery(this).parent().parent().find('.number').text() + '">Supprimer<span class="ico-trash" aria-hidden="true"> </span></button></p>').prependTo(jQuery(this));
+	var suppalerte = jQuery(this).find('.supp-alerte');
 	suppalerte.attr('hidden', 'hidden');
-	$('<button type="button" class="non" aria-label="Je ne souhaite pas supprimer ' + $(this).parent().parent().find('.number').text() + '">Non</button>').appendTo(suppalerte);
-	$(this).find('button.supprimer').click(function () {
-		var next = $(this).parent().next();
+	jQuery('<button type="button" class="non" aria-label="Je ne souhaite pas supprimer ' + jQuery(this).parent().parent().find('.number').text() + '">Non</button>').appendTo(suppalerte);
+	jQuery(this).find('button.supprimer').click(function () {
+		var next = jQuery(this).parent().next();
 		next.removeAttr('hidden');
-		$(this).parent().attr('hidden', 'hidden');
+		jQuery(this).parent().attr('hidden', 'hidden');
 		next.find('button')[0].focus();
 	});
-	$(this).find('.non').click(function () {
-		var suppalerte = $(this).parent();
+	jQuery(this).find('.non').click(function () {
+		var suppalerte = jQuery(this).parent();
 		suppalerte.attr('hidden', 'hidden');
 		suppalerte.prev().removeAttr('hidden');
 		suppalerte.prev().find('button').focus();

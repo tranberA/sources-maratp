@@ -18,20 +18,15 @@
 						<div class="bloc-formulaire">
 							<form accept-charset="UTF-8" method="" action="">
 
-								<div class="messages error" id="erreur1">
-									<p>Les identifiants que vous avez saisis sont incorrects.</p>
-								</div>
 
 							  <div class="form-item">
 							    <label for="mail">Email<span class="form-required" title="Ce champ est requis.">*</span></label>
-							    <input type="email" class="form-control" id="mail" aria-required="true" maxlength="50" placeholder="(ex: mail@domaine.com)">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <input type="email" class="form-control" id="mail" data-blank="Merci de renseigner ce champ." aria-required="true" required="required" maxlength="50" placeholder="(ex: mail@domaine.com)" data-type="Merci de saisir une adresse e-mail valide.">
 							  </div>
 
 							  <div class="form-item">
 							    <label for="password">Mot de passe<span class="visually-hidden"> (8 caractères min.) </span><span class="form-required" title="Ce champ est requis.">*</span></label>
-							    <input type="password" class="form-control" id="password" aria-required="true" maxlength="25" placeholder="(8 caractères min.)">
-							    <div class="messages error">Veuillez saisir le champs</div>
+							    <input type="password" class="form-control" id="password" data-blank="Merci de saisir votre mot de passe." aria-required="true" required="required" maxlength="25" placeholder="(8 caractères min.)" data-minlength="8" data-minlengthinvalid="Votre mot passe doit contenir au moins 8 caractères.">
 							  </div>
 
 								<div class="form-item form-type-checkbox">

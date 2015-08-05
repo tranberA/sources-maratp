@@ -39,71 +39,89 @@
 
 								</div>
 
-								<h3>Horaire / Jour</h3>
+								<fieldset>
+									<legend class="h3">Horaire / Jour</legend>
 
-								<div class="jours liste-jours clearfix">
-									
+									<div class="jours liste-jours clearfix">
+										
 
-									<div class="form-item form-type-checkbox">
-										<input id="lundi"  type="checkbox" value="Lundi">
-									  <label for="lundi"><abbr title="Lundi">L</abbr></label>
+										<div class="form-item form-type-checkbox">
+											<input id="lundi"  type="checkbox" value="Lundi">
+										  <label for="lundi"><abbr title="Lundi">L</abbr></label>
+										</div>
+
+										<div class="form-item form-type-checkbox">
+											<input id="mardi"  type="checkbox" value="">
+										  <label for="mardi"><abbr title="Mardi">M</abbr></label>
+										</div>
+
+										<div class="form-item form-type-checkbox">
+											<input id="mercredi"  type="checkbox" value="">
+										  <label for="mercredi"><abbr title="Mercredi">Me</abbr></label>
+										</div>
+
+										<div class="form-item form-type-checkbox">
+											<input id="jeudi"  type="checkbox" value="">
+										  <label for="jeudi"><abbr title="Jeudi">J</abbr></label>
+										</div>
+
+										<div class="form-item form-type-checkbox">
+											<input id="vendredi"  type="checkbox" value="">
+										  <label for="vendredi"><abbr title="Vendredi">V</abbr></label>
+										</div>
+
+										<div class="form-item form-type-checkbox form-type-checkbox-samedi">
+											<input id="samedi" type="checkbox" value="">
+										  <label for="samedi"><abbr title="Samedi">S</abbr></label>
+										</div>
+
+										<div class="form-item form-type-checkbox form-type-checkbox-dimanche">
+											<input id="dimanche" type="checkbox" value="">
+										  <label for="dimanche"><abbr title="Dimanche">D</abbr></label>
+										</div>
+
 									</div>
-
-									<div class="form-item form-type-checkbox">
-										<input id="mardi"  type="checkbox" value="">
-									  <label for="mardi"><abbr title="Mardi">M</abbr></label>
-									</div>
-
-									<div class="form-item form-type-checkbox">
-										<input id="mercredi"  type="checkbox" value="">
-									  <label for="mercredi"><abbr title="Mercredi">Me</abbr></label>
-									</div>
-
-									<div class="form-item form-type-checkbox">
-										<input id="jeudi"  type="checkbox" value="">
-									  <label for="jeudi"><abbr title="Jeudi">J</abbr></label>
-									</div>
-
-									<div class="form-item form-type-checkbox">
-										<input id="vendredi"  type="checkbox" value="">
-									  <label for="vendredi"><abbr title="Vendredi">V</abbr></label>
-									</div>
-
-									<div class="form-item form-type-checkbox form-type-checkbox-samedi">
-										<input id="samedi" type="checkbox" value="">
-									  <label for="samedi"><abbr title="Samedi">S</abbr></label>
-									</div>
-
-									<div class="form-item form-type-checkbox form-type-checkbox-dimanche">
-										<input id="dimanche" type="checkbox" value="">
-									  <label for="dimanche"><abbr title="Dimanche">D</abbr></label>
-									</div>
-
-								</div>
+								</fieldset>
 
 								<div class="all-creneaux">
 
 									<div class="creneau">
-										<div class="date">
-											<p>De <input type="text" name=""></p>
-											<p>à <input type="text" name=""></p>
-										</div>
-										<div class="modifier-supprimer">
-											<button type="button" class="supprimer">Supprimer <span class="ico-trash"></span></button>
-											<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
-											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <button type="submit" class="oui">Oui</button> / <button type="button" class="non">Non</button></p>
+										<fieldset class="date">
+											<legend class="visually-hidden">Créneaux 1</legend>
+											<p>
+												<label for="de-1">De</label> 
+												<input id="de-1" type="text" name="">
+											</p>
+											<p>
+												<label for="a-1">à</label> 
+												<input id="a-1" type="text" name="">
+											</p>
+										</fieldset>
+										<div class="modifier-supprimer clearfix">
+											<div class="bloc-supprimer">
+												<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+												<p class="supp-alerte">Êtes-vous sûrs de supprimer ce créneau ? <button type="submit" class="oui" aria-label="Je confirme la suppression de ce créneau 1">Oui</button></p>
+											</div>
 										</div>
 									</div>
 
 									<div class="creneau">
-										<div class="date">
-											<p>De <input type="text" name=""></p>
-											<p>à <input type="text" name=""></p>
-										</div>
-										<div class="modifier-supprimer">
-											<button type="button" class="supprimer">Supprimer <span class="ico-trash"></span></button>
-											<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
-											<p class="supp-alerte">Êtes-vous sûrs de supprimer cette alerte ? <button type="submit" class="oui">Oui</button> / <button type="button" class="non">Non</button></p>
+										<fieldset class="date">
+											<legend class="visually-hidden">Créneaux 2</legend>
+											<p>
+												<label for="de-2">De</label> 
+												<input id="de-2" type="text" name="">
+											</p>
+											<p>
+												<label for="a-2">à</label> 
+												<input id="a-2" type="text" name="">
+											</p>
+										</fieldset>
+										<div class="modifier-supprimer clearfix">
+											<div class="bloc-supprimer">
+												<!-- Ce message s'affiche quand on clique sur le bouton supprimer : -->
+												<p class="supp-alerte">Êtes-vous sûrs de supprimer ce créneau ? <button type="submit" class="oui" aria-label="Je confirme la suppression de ce créneau 2">Oui</button></p>
+											</div>
 										</div>
 									</div>
 

@@ -45,9 +45,11 @@
 			if (jQuery.isFunction(jQuery.fn.bxSlider)) {
 		  	slider = jQuery('.slide-privileges',rootElement).bxSlider({
 				  mode: 'fade',
-				  captions: true,
+				  captions: false,
 				  controls: true,
-				  auto: true,
+				  auto: false,
+				  nextText: 'Photo suivante',
+				  prevText: 'Photo précédente',
 				  pager: false/*,
 					onSliderLoad: initSlider*/
 				});

@@ -308,12 +308,23 @@
 
 
 // mini Header
-		header[role="banner"].mini-header { .clearfix; background-color: @vertAplat; padding: 0 1em;
+		header[role="banner"].mini-header { .clearfix; background-color: @vertTexte; padding: 0 1em 0 0;
 			//.logo {display: inline-block; vertical-align: middle; width: 15%; }
-			h1 { position: static; display: inline-block; vertical-align: middle; width: 60%; font-family: @primary-font-bold; font-weight: normal; font-size: 1.2em;color: #FFF; text-align: center; text-transform: uppercase;}
+			h1 { 
+				position: static; display: inline-block; vertical-align: middle; line-height: 0; width: 60%; font-family: @primary-font-bold; font-weight: normal; font-size: 1.125em;color: #FFF; text-align: center; text-transform: uppercase;
+				.number {
+					position: relative; font-family: @primary-font-bold; color: @vertTexte; background: #e9e9e9; margin-left: 10px; padding: 3px 13px 7px; font-size: 1.8em;
+					&:before {position: absolute; content:""; height: 7px; background: #e9e9e9; top: 100%; left: 0; right: 0;}
+					&:after {position: absolute; content: ""; background: url('../img/corner.png') no-repeat; width: 6px; height: 7px; top: 100%; left: 100%;}
+				}
+			}
 			.closePage { display: inline-block; width: 19%; background: none; text-align: left; vertical-align: middle;
-				a { .ico-circle-prev; .text-hidden; color: #FFF;
-					&:before { font-size: 1.6em;  margin-right: 10px;}
+				a { .ico-fleche-header; .text-hidden; color: #FFF; display: inline-block; padding: 11px 1em 12px 1em;
+					&:before { 
+						font-size: 2em;  margin-right: 10px;
+					}
+					&:hover, &:focus {color: @vertTexte;background-color: #fff;}
+					img {vertical-align: super;}
 				}
 			}
 		}
@@ -331,11 +342,15 @@
 @media only screen and (max-width: 480px) {
 
 	header.mini-header[role="banner"] { padding: 0;
-		.closePage { width: 100%; padding: 1em; text-align: center; border-bottom: 1px solid @vert-light; }
-		h1 { display: block; width: 100%; margin-top: 0; padding: 1em 15%; margin: 0; cursor: pointer; text-align: left;
-			span.button { .ico-menu; display: block; 
+		.closePage { 
+			width: 100%; text-align: center; border-bottom: 1px solid @vert-light; 
+			a { display: block; padding: 1em;}
+		}
+		h1 { display: block; width: 100%; margin-top: 0; padding: 1.69em 15%; margin: 0; 
+			span.button { .ico-menu; display: block; cursor: pointer;
 				&:before { margin-right: 5px; }
 			}
+			.number {display: none;}
 		}
 	}
 

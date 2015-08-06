@@ -117,6 +117,17 @@ jQuery(document).ready(function()
 
 // Mini header.
 
+	jQuery('.closePage a').mouseover(function () {
+		jQuery(this).find('img').attr('src', 'img/maRATP-mini-hover.png');
+	}).focus(function () {
+		jQuery(this).mouseover();
+	}).mouseout(function () {
+		jQuery(this).find('img').attr('src', 'img/maRATP-mini@2x.png');
+	}).blur(function () {
+		jQuery(this).mouseout();
+	});
+
+
    // A déporter dans un fichier commun pour gérer le responsive en contexte script.
 	var dashboardviewportwidth = 480;
 	var dashboardoldviewportwidth = false;

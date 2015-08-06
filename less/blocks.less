@@ -5,7 +5,7 @@
       .chapo
       {
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1em;
         font-family: inherit !important;
         text-align: inherit;
       }
@@ -130,6 +130,7 @@
     p
     {
       margin: 0 0 0.4em;
+      font-size: 0.85em;
 
       &.rubrique
       {
@@ -192,7 +193,8 @@
       {
         margin: 1em 0;
         font-weight: normal;
-        font-size: 1.5em;
+        font-size: 1.25em;
+        text-transform: none;
       }
     }
 
@@ -213,19 +215,20 @@
       h3
       {
         margin: 0 0 1em;
-        font-size: 1.9em;
-        line-height: 1.4;
+        font-size: 1.5em;
+        line-height: 1.1;
+        font-family: @primary-font-black;
       }
 
       .rubrique
       {
-        font-size: 0.9em;
+        font-size: 0.688em;
         margin: 1em 0 0.2em;
       }
 
       .date
       {
-        font-size: 1.3em;
+        font-size: 1.125em;
       }
     }
 
@@ -360,6 +363,7 @@
 
   ul
   {
+    &.links {line-height: 2.2em;}
     &.links,&.metro
     {
       margin: 1em 0;
@@ -370,6 +374,7 @@
       li
       {
         margin: 0 0 0.6em;
+        a {color: #333333; font-size: 1em;text-decoration: underline;}
       }
     }
 

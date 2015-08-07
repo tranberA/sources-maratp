@@ -43,6 +43,17 @@
 			event.preventDefault();
 		}
 	});
+	jQuery('#search input[type="image"]').keypress(function (event) {
+		var searchbutton = jQuery('#searchbutton');
+		if (!searchbutton.is('[hidden]')) {
+			if (event.keyCode == 9 && !event.shiftKey) {
+				searchbutton.find('span[role="button"]').click();
+				window.setTimeout(function () {
+					jQuery('#langbutton span[role="button"]').focus();
+				}, 1);
+			}	
+		}
+	});
 		
 	// Lang.
 	jQuery('<p id="langbutton"><span role="button" lang="en" tabindex="0"><img src="img/header/mobile/lang.png" alt="Choose your language (display languages below)" /></span></p>').prependTo('#lang');
@@ -71,6 +82,18 @@
 	});
 	lang.prependTo('#lang div div');
 	jQuery('<p lang="en">Languages</p>').prependTo('#lang div div');
+	jQuery('#lang a').last().keypress(function (event) {
+		var langbutton = jQuery('#langbutton');
+		if (!langbutton.is('[hidden]')) {
+			if (event.keyCode == 9 && !event.shiftKey) {
+				langbutton.find('span[role="button"]').click();
+				window.setTimeout(function () {
+					jQuery('#navbutton span[role="button"]').focus();
+				}, 1);
+			}
+		}
+	});
+	
 	
 	// A déporter dans un fichier commun pour gérer le responsive en contexte script.
 	var headerviewportwidth = 800;

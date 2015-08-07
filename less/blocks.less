@@ -681,11 +681,18 @@
     //display:none;
   }
 
+  .panel-5-content
+  {
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+
   &.message-panel
   {
     text-align: center;
     font-size: 1.8em;
-    padding-top: 6em;
+    //padding-top: 6em;
 
     .action-focus
     {
@@ -751,6 +758,11 @@
     border-bottom: 2px solid #fff;
     color: inherit;
     line-height: 3;
+
+    &.error
+    {
+       border-color: red;
+    }
   }
 
   button

@@ -1,6 +1,6 @@
 if(window.jQuery !== undefined)
 {
-  function activatePanel(panel)
+  function activatePanel(panel,errors)
   {
     var nextFocus = panel.data('next-focus');
 
@@ -9,9 +9,21 @@ if(window.jQuery !== undefined)
       //jQuery(nextFocus).focus();
     }
 
-    panel.attr('aria-hidden','false');
+    if(errors.length === 0)
+    {
+      panel.attr('aria-hidden','false');
+      panel.find('[tabindex=-1]').attr('data-ti','true').removeAttr('tabindex');
+    }
+    else
+    {
+      if(arguments.length >= 3)
+      {
+        var element = arguments[2];
 
-    panel.find('[tabindex=-1]').attr('data-ti','true').removeAttr('tabindex');
+        FormValidator.displayError(element,errors.join('<br />'));
+      }
+    }
+
     //panel.focus();
 
     //panel.animate({'top': 0},5000);
@@ -62,6 +74,8 @@ if(window.jQuery !== undefined)
     var currentPanel = null;
     jQuery('.panel-action').on('click',function(event)
   	{
+      var errors = [];
+
   		var current = jQuery(this);
 
   		var target = current.data('target');
@@ -121,8 +135,69 @@ if(window.jQuery !== undefined)
           // {
           //   formSlide.addClass('form-active');
           // }
+          if(current.is('#start-form') || current.is('#last-step') || current.hasClass('panel-next'))
+          {
+            if(current.hasClass('panel-next') || current.is('#last-step'))
+            {
+              var validation = current.data('validationTarget');
+              if(validation !== undefined)
+              {
+                var valTarget = jQuery('#'+validation);
+                var type = valTarget.attr('type');
 
-          activatePanel(targetPanel);
+                if(type === 'text')
+                {
+                  if(valTarget.is(':blank'))
+                  {
+                    var blankMessage = valTarget.data('blank');
+                    var blankString = 'Vide';
+                    if(blankMessage !== undefined)
+                    {
+                      blankString = blankMessage;
+                    }
+
+                    errors.push(blankString);
+                  }
+else {
+
+
+
+                    if(validation === 'cp-field')
+                    {
+                      if(FormValidator.checkPostalCode(valTarget.val()))
+                      {
+                        var invalidMessage = valTarget.data('codeinvalid');
+                        var invalidString = 'Invalide';
+                        if(invalidMessage !== undefined)
+                        {
+                          invalidString = invalidMessage;
+                        }
+
+                        errors.push(invalidString);
+                      }
+                    }
+                  }
+
+                }
+                if(type === 'checkbox' && !valTarget.is(':checked'))
+                {
+                  var uncheckedMessage = valTarget.data('required');
+                  var uncheckedString = 'Non coché';
+                  if(uncheckedMessage !== undefined)
+                  {
+                    uncheckedString = uncheckedMessage;
+                  }
+
+                  errors.push(uncheckedString);
+                }
+
+                activatePanel(targetPanel,errors,valTarget);
+              }
+            }
+            else {
+              activatePanel(targetPanel,errors);
+            }
+          }
 
         	currentPanel = targetPanel;
         }
@@ -169,6 +244,15 @@ if(window.jQuery !== undefined)
       //ev.stopPropagation();
     });
 
-    //
+    // Centrage vertical du contenu du dernier bloc du formulaire
+
+    var panel5 = jQuery('#panel-5');
+    panel5.wrapInner('<div class="panel-5-content"/>');
+    var panelContent = panel5.find('.panel-5-content');
+
+    var panelHeight = panel5.outerHeight();
+    var panelContentHeight = panelContent.outerHeight();
+
+    panelContent.css({'top': (panelHeight-panelContentHeight)/2});
   });
 }

@@ -13,18 +13,31 @@
       displayError: function(element,message)
       {
         var messageId = element.attr('id') + '-error';
+
+        var errorMessage = '';
+        if((typeof message) === 'string')
+        {
+          errorMessage = message;
+        }
+        else {
+          errorMessage = element.attr(message);
+        }
 					if (!element.is('[aria-describedby]')) {
-						jQuery('<div id="'+messageId+'" class="messages error">' + element.attr(message) + '</div>').insertAfter(element.parent());
+						jQuery('<div id="'+messageId+'" class="messages error">' + errorMessage + '</div>').insertAfter(element.parent());
 		        element.attr('aria-describedby',messageId);
 	        }
 	        else {
-	        	jQuery('#' + messageId).text(element.attr(message));
+	        	jQuery('#' + messageId).text(errorMessage);
 	        }
       },
       hideError: function(element)
       {
         jQuery('#' + element.attr('aria-describedby')).remove();
         element.removeAttr('aria-describedby');
+      },
+      checkPostalCode: function (value) {
+      	 var cpPattern = /^[0-9]{5}$/;
+      	 return value.search(cpPattern) === -1;
       }
     };
 
@@ -76,9 +89,9 @@
 						}
 					}
 					else { // Autres champs.
-						
-						
-						
+
+
+
 						// Champs obligatoires.
 						if (jQuery(this).is('[aria-required]')) {
 							if (jQuery(this).is(':blank')) { // valueMissing
@@ -99,9 +112,9 @@
 								jQuery(this).removeAttr('aria-describedby');
 							}
 						}
-						
-						
-						
+
+
+
 						// Mobile.
 						if (formElement.is('[type="tel"]')) {
 							var telPattern = /^0[6,7,8][0-9]{8}$/;
@@ -118,15 +131,15 @@
 							 	}
 							 }
 						}
-						
-						
-						
+
+
+
 						// Code postal.
 						if (formElement.hasClass('codepostal')) {
 			                var cpPattern = /^[0-9]{5}$/;
-			
+
 			                var value = formElement.val();
-			
+
 			                if(value != '')
 			                {
 			                  if(value.search(cpPattern) === -1)
@@ -140,9 +153,9 @@
 			                  }
 			                }
 			              }
-						
-						
-						
+
+
+
 						// Dates personnalisées.
 						if (jQuery(this).hasClass('date') && jQuery(this).is(':filled')) {
 
@@ -192,9 +205,9 @@
 
 			           	if (formElement.is('[type="email"]')) {
 			                var mailPattern = /^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z]{2,})+$/;
-			
+
 			                var value = formElement.val();
-			
+
 			                if(value != '')
 			                {
 			                  if(value.search(mailPattern) === -1)
@@ -216,11 +229,11 @@
 			              if(value != '')
 			              {
 			                var verif = formElement.data('equal');
-			
+
 			                if(verif !== undefined)
 			                {
 			                  var first = jQuery('#'+verif);
-			
+
 			                  if(first.val() == value)
 			                  {
 			                    FormValidator.hideError(formElement);
@@ -230,7 +243,7 @@
 			                    {
 			                      FormValidator.displayError(formElement,'data-confirm');
 			                    }
-			
+
 			                }
 			              }
 			            }
@@ -251,16 +264,16 @@
 								jQuery(this).removeAttr('aria-describedby');
 							}
 						}
-						
-						
+
+
 						// Champ vide non obligatoire avec erreur en présence.
 						if (!jQuery(this).is('[aria-required]') && jQuery(this).is(':blank') && jQuery(this).is('[aria-describedby]')) {
 							jQuery('#' + jQuery(this).attr('aria-describedby')).remove();
 							jQuery(this).removeAttr('aria-describedby');
 						}
-						
-						
-						
+
+
+
 
 					}
 				}
@@ -309,7 +322,7 @@
 	}
 
 
- 
+
   (function() {
     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
     if (!String.prototype.trim) {

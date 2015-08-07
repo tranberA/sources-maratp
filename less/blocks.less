@@ -609,34 +609,42 @@
   }
 }
 
-// Form panels
-
-.form-panel
+.block-panel
 {
-  /*position: absolute;
-  top: 0;
-  width: 100%;
-  bottom: 0;*/
+  .action
+  {
+    z-index: 2;
+  }
 }
+// Form panels
 
 .form-slide
 {
   position:absolute;
   top: 0;
   bottom: 0;
-  left: 100%;
-  left: 0;
+  left: 0;//100%;
+  right: 0;
   overflow: hidden;
 
-  //.transition(left 1s);
+  z-index: 1;
 }
 
+#form-slide-block
+{
+  &.form-active
+  {
+    .action
+    {
+      z-index: 0;
+    }
+  }
+}
 
 .block-article .block-content .form-panel .top-space { font-size: 1.2em;}
 
 .form-panel
 {
-
   @panelSpacing: 2em;
 
   background-color: @vertTexte;
@@ -644,11 +652,16 @@
   padding: @panelSpacing;
   //left: 100%;
   //right: 0;
-  float: left;
-  position: relative;
+  //
+  // float: left;
+  // position: relative;
+
+  .transition(top 1s);
+
+  position: absolute;
+  left: 0;
 
   font-family: 'brandon_grotesquelight';
-
 
   //
   // &.panel-active,&[aria-hidden='false']
@@ -658,12 +671,15 @@
 
   &[aria-hidden='false']
   {
-    display:block;
+    //display:block;
+    top: 0 !important;
+
   }
   &[aria-hidden='true']
   {
-    display:none;
+    //display:none;
   }
+
   &.message-panel
   {
     text-align: center;
@@ -1004,24 +1020,3 @@ p.metro
   //   background-image: url('@{imageDir}metro.png');
   // }
 }
-
-
-
-
-
-//
-// .panel-action
-// {
-//   &:focus
-//   {
-//     outline: 1px #333 dotted;
-//   }
-// }
-//
-// .form-panel
-// {
-//   &:focus
-//   {
-//     outline: 4px #c0c solid;
-//   }
-// }

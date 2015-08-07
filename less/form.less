@@ -171,6 +171,10 @@
 			-webkit-transform: translate3d(0, 0, 0);
 			transform: translate3d(0, 0, 0);
 		}
+
+		&.form-connect { font-size: 1.25em;
+			label {  font-family: @primary-font-bold; }
+		}
 	}
 
 
@@ -356,10 +360,10 @@
 // ajustements
 
 .bloc-formulaire form {
-	.user-links { float: right; margin: 0;
+	.user-links { float: right; margin: 0; font-size: 1em;
 		p { margin: 0; }
-		a { font-family: @primary-font-bold; color: @texte;
-			&:hover, &:focus { color: @vertTexte; text-decoration: underline; }
+		a { font-family: @primary-font-bold; color: @texte; text-decoration: underline;
+			&:hover, &:focus { color: @vertTexte; }
 	  }
 	}
 }

@@ -1,51 +1,51 @@
 // Horaires (Slider).
 	
-	var horaires = $('#horaires');
+	var horaires = jQuery('#horaires');
 	horaires.attr('class', 'horaires-js');
 	var horairesitems = horaires.find('div');
 	if (horairesitems.length > 1) {
-		$('<p class="horaire-precedent disabled"><button type="button" disabled="disabled"><img src="img/horaire-precedent.png" alt="Horaire précédent" title="Horaire précédent" /></button></p>').prependTo(horaires);
-		$('.horaire-precedent button').click(function () {
-			var horairenext = $(this).parent().parent().find('.horaire-suivant');
+		jQuery('<p class="horaire-precedent disabled"><button type="button" disabled="disabled"><img src="img/horaire-precedent.png" alt="Horaire précédent" title="Horaire précédent" /></button></p>').prependTo(horaires);
+		jQuery('.horaire-precedent button').click(function () {
+			var horairenext = jQuery(this).parent().parent().find('.horaire-suivant');
 			horairenext.removeClass('disabled');
 			horairenext.find('button').removeAttr('disabled');
-			var horairescurrentitem = $(this).parent().parent().find('div:not([aria-hidden])');
+			var horairescurrentitem = jQuery(this).parent().parent().find('div:not([aria-hidden])');
 			horairescurrentitem.attr('aria-hidden', 'true');
 			var horairespreviousitem = horairescurrentitem.prev();
 			var n = horairespreviousitem.attr('data-index');
 			horairescurrentitem.parent().find('div').each(function () {
-				$(this).css('left', '-' + (100 * n) + '%');
+				jQuery(this).css('left', '-' + (100 * n) + '%');
 			});
 			horairespreviousitem.removeAttr('aria-hidden');
 			if (!horairespreviousitem.prev().is('div')) {
-				$(this).attr('disabled', 'disabled');
-				$(this).parent().addClass('disabled');
+				jQuery(this).attr('disabled', 'disabled');
+				jQuery(this).parent().addClass('disabled');
 			}
 			horairespreviousitem.focus();
 		});
 		horairesitems.each(function (index) {
 			if (index > 0) {
-				$(this).attr('aria-hidden', 'true');
+				jQuery(this).attr('aria-hidden', 'true');
 			}
-			$(this).attr('data-index', index);
-			$(this).attr('tabindex', '-1');
+			jQuery(this).attr('data-index', index);
+			jQuery(this).attr('tabindex', '-1');
 		});
-		$('<p class="horaire-suivant"><button type="button"><img src="img/horaire-suivant.png" alt="Horaire suivant" title="Horaire suivant" /></button></p>').appendTo(horaires);
-		$('.horaire-suivant button').click(function () {
-			var horaireprevious = $(this).parent().parent().find('.horaire-precedent');
+		jQuery('<p class="horaire-suivant"><button type="button"><img src="img/horaire-suivant.png" alt="Horaire suivant" title="Horaire suivant" /></button></p>').appendTo(horaires);
+		jQuery('.horaire-suivant button').click(function () {
+			var horaireprevious = jQuery(this).parent().parent().find('.horaire-precedent');
 			horaireprevious.removeClass('disabled');
 			horaireprevious.find('button').removeAttr('disabled');
-			var horairescurrentitem = $(this).parent().parent().find('div:not([aria-hidden])');
+			var horairescurrentitem = jQuery(this).parent().parent().find('div:not([aria-hidden])');
 			horairescurrentitem.attr('aria-hidden', 'true');
 			var horairesnextitem = horairescurrentitem.next();
 			var n = horairesnextitem.attr('data-index');
 			horairescurrentitem.parent().find('div').each(function () {
-				$(this).css('left', '-' + (100 * n) + '%');
+				jQuery(this).css('left', '-' + (100 * n) + '%');
 			});
 			horairesnextitem.removeAttr('aria-hidden');
 			if (!horairesnextitem.next().is('div')) {
-				$(this).attr('disabled', 'disabled');
-				$(this).parent().addClass('disabled');
+				jQuery(this).attr('disabled', 'disabled');
+				jQuery(this).parent().addClass('disabled');
 			}
 			horairesnextitem.focus();
 		});
@@ -53,10 +53,14 @@
 	
 // Inputs Focus (Block).
 
-	$('.donnees-remplies input[type="text"]').focus(function () {
-		$(this).parent().addClass('focus');
+	jQuery('.donnees-remplies input[type="text"]').focus(function () {
+		if (!jQuery(this).is('[data-firstfocus]')) {
+			jQuery(this).val('');
+			jQuery(this).attr('data-firstfocus', 'true');
+		}
+		jQuery(this).parent().addClass('focus');
 	}).blur(function () {
-		$(this).parent().removeClass('focus');
+		jQuery(this).parent().removeClass('focus');
 	});
 
 // Responsive Dashboard.
@@ -65,51 +69,51 @@
 	var personalhomeoldviewportwidth = false;
 	
 	function manageResponsivePersonalHome() {
-		if ($(window).width() != personalhomeoldviewportwidth) {
-			if ($(window).width() <= personalhomeviewportwidth) {
-				$('.dashboard span.button').each(function () {
-					$(this).attr('role', 'button').attr('tabindex', '0').attr('aria-label', $(this).parent().text() + ', afficher le contenu ci-après');
-					var parent = $(this).parent();
+		if (jQuery(window).width() != personalhomeoldviewportwidth) {
+			if (jQuery(window).width() <= personalhomeviewportwidth) {
+				jQuery('.dashboard span.button').each(function () {
+					jQuery(this).attr('role', 'button').attr('tabindex', '0').attr('aria-label', jQuery(this).parent().text() + ', afficher le contenu ci-après');
+					var parent = jQuery(this).parent();
 					if (parent.hasClass('visually-hidden')) {
 						parent.attr('data-class', 'visually-hidden');
 						parent.removeAttr('class');
 					}
 					parent.next().attr('hidden', 'hidden');
-					$(this).click(function () {
-						var content = $(this).parent().next();
+					jQuery(this).click(function () {
+						var content = jQuery(this).parent().next();
 						if (content.is('[hidden]')) {
-							$(this).attr('aria-label', $(this).parent().text() + ', masquer le contenu');
+							jQuery(this).attr('aria-label', jQuery(this).parent().text() + ', masquer le contenu');
 							content.removeAttr('hidden');
 						}
 						else {
-							$(this).attr('aria-label', $(this).parent().text() + ', afficher le contenu ci-après');
+							jQuery(this).attr('aria-label', jQuery(this).parent().text() + ', afficher le contenu ci-après');
 							content.attr('hidden', 'hidden');
 						}
 					}).keydown(function (event) {
 						if (event.which == 13 || event.which == 32) {
-							$(this).click();
+							jQuery(this).click();
 							event.preventDefault();
 						}
 					});
 				});
 			}
 			else {
-				$('.dashboard span.button').each(function () {
-					$(this).removeAttr('role').removeAttr('tabindex').removeAttr('aria-label');
-					var parent = $(this).parent();
+				jQuery('.dashboard span.button').each(function () {
+					jQuery(this).removeAttr('role').removeAttr('tabindex').removeAttr('aria-label');
+					var parent = jQuery(this).parent();
 					if (parent.attr('data-class') != '') {
 						parent.attr('class', parent.attr('data-class'));
 						parent.removeAttr('data-class');
 					}
 					parent.next().removeAttr('hidden');
-					$(this).off();
+					jQuery(this).off();
 				});
 			}	
 		}
-		personalhomeoldviewportwidth = $(window).width();
+		personalhomeoldviewportwidth = jQuery(window).width();
 	}
-	$(window).ready(manageResponsivePersonalHome);
-	$(window).resize(manageResponsivePersonalHome);
+	jQuery(window).ready(manageResponsivePersonalHome);
+	jQuery(window).resize(manageResponsivePersonalHome);
 
 
 // // Responsive Dashboard.

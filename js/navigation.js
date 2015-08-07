@@ -58,6 +58,18 @@
 			event.preventDefault();
 		}
 	});
+	jQuery('#navigation a').last().keypress(function (event) {
+		var navigationbutton = jQuery('#navigationbutton');
+		if (!navigationbutton.is('[hidden]')) {
+			if (event.keyCode == 9 && !event.shiftKey) {
+				navigationbutton.find('span[role="button"]').click();
+				window.setTimeout(function () {
+					jQuery('#main').focus();
+				}, 1);
+			}
+		}
+	});
+	
 
 	// A déporter dans un fichier commun pour gérer le responsive en contexte script.
 	var navviewportwidth = 800;

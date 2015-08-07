@@ -76,7 +76,9 @@
 						}
 					}
 					else { // Autres champs.
-
+						
+						
+						
 						// Champs obligatoires.
 						if (jQuery(this).is('[aria-required]')) {
 							if (jQuery(this).is(':blank')) { // valueMissing
@@ -116,6 +118,9 @@
 							 	}
 							 }
 						}
+						
+						
+						
 						// Code postal.
 						if (formElement.hasClass('codepostal')) {
 			                var cpPattern = /^[0-9]{5}$/;
@@ -141,8 +146,8 @@
 						// Dates personnalisées.
 						if (jQuery(this).hasClass('date') && jQuery(this).is(':filled')) {
 
-              var datePattern = /^\d{2}\/\d{2}\/\d{4}$/;
-              var dateValue = formElement.val();
+			                var datePattern = /^\d{2}\/\d{2}\/\d{4}$/;
+			                var dateValue = formElement.val();
 
 							if (dateValue.search(datePattern) !== -1) { // Date Ok ?
 								if (jQuery(this).is('[data-minage]')) {
@@ -158,7 +163,7 @@
 									var age = nowYear - pastYear;
 									if (now.getMonth() < past.getMonth()) { age--; }
 									if (past.getMonth() == now.getMonth() && now.getDate() < past.getDate()) { age--; }
-									if (age <= jQuery(this).attr('data-minage')) { // Date Ok : 30/07/1998 - Date NOk : 30/07/1999
+									if (age < jQuery(this).attr('data-minage')) { // Date Ok : 30/07/1998 - Date NOk : 30/07/1999
 										if (jQuery(this).is('[aria-describedby]')) {
 											// On met à jour juste le contenu de l'élément référence.
 											jQuery('#' + jQuery(this).attr('aria-describedby')).text(jQuery(this).attr('data-underage'));
@@ -178,57 +183,57 @@
 								}
 							}
 							else { // Date NOK.
-FormValidator.displayError(formElement,'data-badformat');
+								FormValidator.displayError(formElement,'data-badformat');
 							}
 
 						}
 
 						// Email incorrecte ou existe déjà.
 
-            	if (formElement.is('[type="email"]')) {
-                var mailPattern = /^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z]{2,})+$/;
-
-                var value = formElement.val();
-
-                if(value != '')
-                {
-                  if(value.search(mailPattern) === -1)
-                  {
-                    FormValidator.displayError(formElement,'data-type');
-                    errors = true;
-                  }
-                  else
-                  {
-                    FormValidator.hideError(formElement);
-                  }
-                }
-              }
+			           	if (formElement.is('[type="email"]')) {
+			                var mailPattern = /^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z]{2,})+$/;
+			
+			                var value = formElement.val();
+			
+			                if(value != '')
+			                {
+			                  if(value.search(mailPattern) === -1)
+			                  {
+			                    FormValidator.displayError(formElement,'data-type');
+			                    errors = true;
+			                  }
+			                  else
+			                  {
+			                    FormValidator.hideError(formElement);
+			                  }
+			                }
+			            }
 
 						// Concordance (pass) + force.
 
-            if (formElement.is('[type="password"]')) {
-              var value = formElement.val();
-              if(value != '')
-              {
-                var verif = formElement.data('equal');
-
-                if(verif !== undefined)
-                {
-                  var first = jQuery('#'+verif);
-
-                  if(first.val() == value)
-                  {
-                    FormValidator.hideError(formElement);
-                    errors = true;
-                  }
-                  else
-                    {
-                      FormValidator.displayError(formElement,'data-confirm');
-                    }
-
-                }
-              }
-            }
+			            if (formElement.is('[type="password"]')) {
+			              var value = formElement.val();
+			              if(value != '')
+			              {
+			                var verif = formElement.data('equal');
+			
+			                if(verif !== undefined)
+			                {
+			                  var first = jQuery('#'+verif);
+			
+			                  if(first.val() == value)
+			                  {
+			                    FormValidator.hideError(formElement);
+			                    errors = true;
+			                  }
+			                  else
+			                    {
+			                      FormValidator.displayError(formElement,'data-confirm');
+			                    }
+			
+			                }
+			              }
+			            }
 
 						// Longueur minimale.
 						if (jQuery(this).is('[data-minlength]') && jQuery(this).is(':filled')) {
@@ -246,6 +251,16 @@ FormValidator.displayError(formElement,'data-badformat');
 								jQuery(this).removeAttr('aria-describedby');
 							}
 						}
+						
+						
+						// Champ vide non obligatoire avec erreur en présence.
+						if (!jQuery(this).is('[aria-required]') && jQuery(this).is(':blank') && jQuery(this).is('[aria-describedby]')) {
+							jQuery('#' + jQuery(this).attr('aria-describedby')).remove();
+							jQuery(this).removeAttr('aria-describedby');
+						}
+						
+						
+						
 
 					}
 				}
@@ -283,6 +298,15 @@ FormValidator.displayError(formElement,'data-badformat');
 	});
 
 
+	// Password Strength.
+	var passwordstrength = jQuery('#password-strength');
+	if (passwordstrength) {
+		passwordstrength.prev().find('input').focus(function () {
+			jQuery('#password-strength').removeAttr('hidden');
+		}).blur(function () {
+			jQuery('#password-strength').attr('hidden', 'hidden');
+		});
+	}
 
 
  
